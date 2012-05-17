@@ -242,22 +242,24 @@
     </sect2>
   </sect1>
   <sect1 id="sect-subversion">
-    <title>Configuring Source Code Management</title>
-    <para>In<indexterm class="startofrange" id="ch05-scm" significance="normal"><primary>SCM (Source Code Management)</primary></indexterm> its most basic role, a Continuous Integration server
-    monitors your version control system, and checks out the latest changes as
-    they occur. The server then compiles and tests the most recent version of
-    the code. Alternatively, it may simply check out and build the latest
-    version of your source code on a regular basis. In either case, tight
-    integration with your version control system is essential.</para>
-    <para>Because of its fundamental role, SCM configuration options in
-    Jenkins are identical across all sorts of build jobs. Jenkins <indexterm id="I_indexterm5_d1e5249" significance="normal"><primary>version control systems</primary><secondary>supported by Jenkins</secondary></indexterm><indexterm id="I_indexterm5_d1e5254" significance="normal"><primary>Jenkins</primary><secondary>version control systems supported by</secondary></indexterm>supports CVS and Subversion out of the box, with built-in
-    support for Git, and also integrates with a large number of other version
-    control systems via plugins. At the time of writing, SCM plugin support
-    includes Accurev, Bazaar, BitKeeper, ClearCase, CMVC, Dimensions, Git, CA
-    Harvest, Mercurial, Perforce, PVCS, StarTeam, CM/Synergy, Microsoft Team
-    Foundation Server, and even Visual SourceSafe. In the rest of this
-    section, we will look at how to configure some of the more common SCM
-    tools.</para>
+    <title>Configurer la Gestion du Code Source</title>
+    <para>Dans<indexterm class="startofrange" id="ch05-scm" significance="normal"><primary>SCM (Gestion du Code Source)</primary></indexterm> son rôle le plus basique, un serveur d'Intégration Continue
+        surveille votre système de gestion de version et vérifie les derniers
+        changements au fur et à mesure. Le serveur compile et test alors la
+        version la plus récente du code. Il peut alternativement récupérer
+        et construire simplement la dernière version de votre code source de
+        manière régulière. Dans tous les cas, une forte intégration avec votre
+        système de gestion de version est essentielle.</para>
+    <para>De part leur rôle fondamental, les options de configuration du
+        SCM sont identiques au travers de tous les types de tâches de build dans Jenkins. Jenkins <indexterm id="I_indexterm5_d1e5249" significance="normal"><primary>systèmes de gestion de version</primary><secondary>supporté par Jenkins</secondary></indexterm><indexterm id="I_indexterm5_d1e5254" significance="normal"><primary>Jenkins</primary><secondary>systèmes de gestion de version supportés par</secondary></indexterm>supporte CVS et Subversion nativement, embarque
+        un support pour Git et s'intègre avec un grand nombre d'autres systèmes
+        de gestion de version via des plugins. A l'écriture de ce livre, le
+        support par plugin inclus Accurev, Bazaar, BitKeeper, ClearCase, CMVC,
+        Darcs, Dimensions, Git, CA Harvest, Mercurial, Perforce, PVCS, Rational
+        Team Concert, StarTeam, Surround SCM, CM/Synergy, Microsoft Team
+        Foundation Server et même Visual SourceSafe. Dans le reste de cette
+        section, nous verrons comment configurer quelques uns des SCM les
+        plus courants.</para>
     <sect2>
       <title>Working with Subversion</title>
       <para>Subversion<indexterm class="startofrange" id="ch05-sub1" significance="normal"><primary>freestyle build jobs</primary><secondary>Subversion used with</secondary></indexterm><indexterm class="startofrange" id="ch05-sub2" significance="normal"><primary>Subversion</primary><secondary sortas="free-style">with freestyle build jobs</secondary></indexterm> is one of the most widely used version control systems,
