@@ -48,9 +48,9 @@
     permettant de déployer la dernière version de votre application soit automatiquement soit
     d'un simple click.</para>
     <para>Dans le fond, l'Intégration Continue c'est réduire les risques en fournissant 
-    des retours rapides. En premier lieu, de par sa conception elle permet d'identifier et
+    des retours rapides. En premier lieu, de par sa conception, elle permet d'identifier et
     de corriger les problèmes d'intégration et les regressions plus rapidement ce qui 
-    permet de livrer plus facilement, plus rpaidement et avec moins de bogues.
+    permet de livrer plus facilement, plus rapidement et avec moins de bogues.
     En donnant une meilleure visibilité sur l'état du projet à tous les membres de l'équipe,
     techniques comme non-techniques, l'Intégration Continue facilite la communication au sein de
     l'équipe et encourage la collaboration pour résoudre les problèmes ainsi que l'amélioration du
@@ -59,7 +59,7 @@
     avec plus de fiabilité et avec moins d'efforts.</para>
     <para>Ce concept de déploiement automatiséest important. En effet, si vous poussez ce
     concept de déploiement automatisé à sa conclusion logique, vous pourriez mettre en
-    production tout buildqui passerait sans encombre les tests automtisés nécessaires.
+    production tout build qui passerait sans encombre les tests automatisés nécessaires.
     Cette pratique de déployer en production tous les builds ayant réussi est appelée 
     communément <indexterm id="I_indexterm1_d1e563" significance="normal"><primary>déploiement continu</primary></indexterm> <emphasis>Déploiement <phrase role="keep-together">Continu</phrase></emphasis>.</para>
     <para>Cependant, une approche pure du Déploiement Continu n'est pas toujours souhaitable.
@@ -68,24 +68,23 @@
     prévisible (et transparent). Des considérations commerciales et marketing peuvent 
     aussi entrer en compte pour déterminer quand une nouvelle version doit être déployée.</para>
     <para>La notion de <emphasis><indexterm id="I_indexterm1_d1e577" significance="normal"><primary>livraison continue</primary></indexterm>Livraison Continue</emphasis> est très proche de cette idée
-    de Déploiement Continu en prenant ces considérations en compte. Lors d'une Livraison Continue tout
-    build qui a réussi à passer les tests automatisés pertinents et les filtres de la qualité 
+    de Déploiement Continu en prenant en compte ces considérations. Lors d'une Livraison Continue tout
+    build qui a réussi à passer les tests automatisés pertinents et les contrôles qualité 
     peut <emphasis>virtuellement</emphasis> être déployé en production au moyen d'un <phrase role="keep-together">processus</phrase> 
     lancé par un simple clic, et ainsi se retrouver dans les mains de l'utilisateur final en quelques minutes.
     Cependant, ce processus n'est pas automatique: c'est au métier, plutôt qu'à l'Informatique de 
     décider quel est le moment opportun pour livrer les dernières modifications.</para>
     <?dbfo-need height=”1in”?>
     <para>Ainsi les techniques d'Intégration Continue, et plus particulièrement 
-    le Déploiement Continu et la Livraison Continue, permettre d'apporter la
+    le Déploiement Continu et la Livraison Continue, permettent d'apporter la
     valeur à l'utilisateur final plus rapidement. Combien de temps faut-il à votre
     équipe pour mettre une petite modification du code en production ? Dans ce temps
     quelle est la part des problèmes qui auraient pu être corrigés plus tôt si vous
     aviez su quelles modifications faisait Joe au bout du couloir ? Quelle part
     est prise par le pénible travail des équipe de la qualité pour tester 
-    manuellement ? Combien d'étapes manuelles, dont les secrets sont connus 
-    de quelques initiés seulement, sont nécessaires à un déploiement ? L'Intégration
-    Continue n'est pas la solution mirace, mais elle permet de rationaliser
-    certains de ces problèmes.</para>
+    manuellement ? Combien d'étapes manuelles, dont les secrets ne sont connus 
+    que de quelques initiés seulement, sont nécessaires à un déploiement ? L'Intégration
+    Continue n'est pas la solution miracle, elle permet de rationaliser certains de ces problèmes.</para>
     <para>Mais l'Intégration Continue est tout autant une mentalité que des outils.
     Pour tirer un maximum de profit de l'IC, une équipe doit adopter un
     comportement IC. Par exemple, vos projets doivent avoir un build fiable,
