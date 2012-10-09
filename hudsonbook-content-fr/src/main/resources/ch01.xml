@@ -46,7 +46,7 @@
     affichant une image claire de l'état des développements en cours. Et elle peut simplifier
     et accélerer la livraison en vous aidant à automatiser le processus de déploiement, vous
     permettant de déployer la dernière version de votre application soit automatiquement soit
-    d'un simple click.</para>
+    d'un simple clic.</para>
     <para>Dans le fond, l'Intégration Continue c'est réduire les risques en fournissant 
     des retours rapides. En premier lieu, de par sa conception, elle permet d'identifier et
     de corriger les problèmes d'intégration et les regressions plus rapidement ce qui 
@@ -107,30 +107,29 @@
     Groovy, Grails, PHP et d'autres, ainsi que Java bien sûr. Qu'est ce 
     qui est à l'origine du succès de Jenkins ? Pourquoi utiliser Jenkins
     pour votre infrastructure d'IC ?</para>
-    <para>Tout d'abord, Jenkins est faicle à utiliser. L'interface utilisateur
-    est simple, inuitive et visuellement agréable, et Jenkins dans son ensemble
-    à une très petite courbe d'apprentissage. Comme nous le verrons dans 
+    <para>Tout d'abord, Jenkins est facile à utiliser. L'interface utilisateur
+    est simple, intuitive et visuellement agréable, et Jenkins dans son ensemble
+    a une très petite courbe d'apprentissage. Comme nous le verrons dans 
     le chapitre suivant, vous pouvez démarrer avec jenkins en quelques 
     minutes.</para>
     <para>Cependant jenkins n'a pas sacrifié puissance ou extensibilité : il est aussi
     extrêmement flexible et s'adapte facilement à vos moindres désirs. Des 
     centaines d'extensions open source sont disponibles, et de nouvelles 
-    aparaissent toutes les semaines. Ces extensions couvrent tout depuis les
+    aparaissent toutes les semaines. Ces extensions couvrent tout : les
     outils de gestion de configuration, les outils de build, les métriques de
     qualité de code, les annonceurs de build, l'intégration avec des 
     systèmes externes, la personalisation de l'interface utilisateur, des 
-    jeux et d'autres encore. Les installer est simple et rapide.</para>
+    jeux et bien d'autres fonctionnalités encore. Les installer est simple et rapide.</para>
     <para>Enfin, mais ce n'est pas négligeable, une bonne part de la 
     popularité de Jenkins vient de la taille <phrase role="keep-together">et</phrase> du
     dynamisme de sa communauté. La communauté Jenkins est immense, dynamique, 
-    réactive et c'est un groupe<phrase role="keep-together">accueillant</phrase>, avec
+    réactive et c'est un groupe <phrase role="keep-together">accueillant</phrase>, avec
     ses champions passionnés, ses listes de diffusion actives, ses canaux IRC et 
     son blog et son compte twitter très bruyants. Le rythme de développement
     est très intense, avec des livraisons hebdomadaires comportant les dernières
     évolutions, corrections et mises à jour des extensions.</para>
-    <para>Cependant, Jenkins répond aussi bien aux attentes desutilisateurs qui ne 
-    souhaitent pas mettre à jour toutes les semaines. However Jenkins also caters to users who are not comfortable with
-    upgrading on a weekly basis. Pour ceux qui veulent un rythme moins trépidant,
+    <para>Cependant, Jenkins répond tout aussi bien aux attentes des utilisateurs qui ne 
+    souhaitent pas mettre à jour toutes les semaines. Pour ceux qui veulent un rythme moins trépidant,
     il existe une version Long-term Support, ou <indexterm id="I_indexterm1_d1e628" significance="normal"><primary>livraisons LTS (Long-Term Support)</primary></indexterm>LTS, un ensemble
     de versions qui sont à la traine par rapport à la dernière en termes de nouveautés 
     mais qui apportent plus de stabilité et moins de changements. Les versions LTS
@@ -138,38 +137,24 @@
     intégrés. Ce concept est identique aux <phrase role="keep-together">versions</phrase> Ubuntu LTS .</para>
   </sect1>
   <sect1 id="intro-sect-history">
-    <title>De Hudosn à Jenkins — Un rapide historique</title>
-    <para>Jenkins<indexterm class="startofrange" id="ch01-history" significance="normal"><primary>Jenkins</primary><secondary>history of</secondary></indexterm> is the result of one visionary developer, <indexterm id="I_indexterm1_d1e646" significance="normal"><primary>Kawaguchi, Kohsuke (developer of Hudson)</primary></indexterm>Kohsuke Kawaguchi, who started the project as a hobby
-    project under the name of <indexterm id="I_indexterm1_d1e650" significance="normal"><primary>Hudson</primary></indexterm>Hudson in late 2004 whilst working at Sun. As Hudson evolved
-    over the years, it was adopted by more and more teams within Sun for their
-    own projects. By early 2008, Sun recognized the quality and value of the
-    tool, and ask Kohsuke to work on Hudson full-time, starting to provide
-    professional services and support around Hudson. By 2010, Hudson had
-    become the leading Continuous Integration solution with a market share of
-    over 70%.</para>
-    <para>In 2009, Oracle purchased Sun. Towards the end of 2010, tensions
-    arose between the Hudson developer community and Oracle, initially
-    triggered by problems with the Java.net infrastructure, and aggravated by
-    issues related to Oracle’s claim to the Hudson trademark. These tensions
-    also reflected strong underlying disagreements about the way the project
-    was being managed by Oracle. Indeed, Oracle wanted to move towards a more
-    strictly controlled development process with a slower release schedule,
-    whereas most of the core Hudson developers, led by Kohsuke, preferred to
-    continue with the open, flexible, and fast-paced community-focused model
-    that had worked so well for Hudson in the past.</para>
-    <para>In January 2011, the Hudson developer community decisively voted to
-    rename the project to Jenkins. They subsequently migrated the original
-    Hudson code base to a new <indexterm id="I_indexterm1_d1e658" significance="normal"><primary>GitHub project</primary></indexterm><ulink url="https://github.com/jenkinsci">GitHub
-    project</ulink> and continued their work there. The vast majority of core
-    and plugin developers upped camp and followed Kohsuke Kawaguchi and other
-    core contributors to the Jenkins camp, where the bulk of the development
-    activity can be seen today.</para>
-    <para>After the fork, a majority of users also followed the Jenkins
-    developer community and switched to Jenkins. At the time of writing, polls
-    show that some 75% of Hudson users had switched to Jenkins, while 13% were
-    still using Hudson, and another 12% were using both Hudson and Jenkins or
-    in the process of migrating to Jenkins.</para>
-    <para>Nevertheless, Oracle and Sonatype (the company behind Maven and
+    <title>De Hudson à Jenkins — Un rapide historique</title>
+    <para>Jenkins<indexterm class="startofrange" id="ch01-history" significance="normal"><primary>Jenkins</primary><secondary>historique</secondary></indexterm> est le produit d'un développeur visionnaire, <indexterm id="I_indexterm1_d1e646" significance="normal"><primary>Kawaguchi, Kohsuke (développeur d'Hudson)</primary></indexterm>Kohsuke Kawaguchi, qui a commencé ce projet comme un loisir sous le nom d'<indexterm id="I_indexterm1_d1e650" significance="normal"><primary>Hudson</primary></indexterm>Hudson à la fin de l'année 2004 alors qu'il travaillait chez Sun. Comme Hudson évoluait au cours des années, 
+	il était de plus en plus utilisé par les équipes de Sun pour leurs propres projets. Début 2008, Sun reconnaissait la qualité et la valeur
+	de cet outil et demandait à Kohsuke de travailler à plein temps sur Hudson, commençant ainsi à fournir des services professionnels et
+	du support sur Hudson. En 2010, Hudson était dévenu la principale solution d'Intégration Continue avec une part de amrché d'environ 70%.</para>
+    <para>En 2009, Oracle racheta Sun. Vers la fin 2010, des tensions apparurent entre la communauté de développeurs d'Hudson et Oracle, dont la source
+		était les problèmes de l'infrastructure Java.net, aggravée par la politique d'Oracle au sujet de la marque Hudson.Ces tensions révélaient de profonds
+		désaccords sur la gestion du projet par Oracle. En effet, Oracle voulait orienter le projet vers un processus de développement plus controlé, avec 
+		des livraisons moins fréquentes, alors que le coeur des développeurs d'Hudson, mené par Kohsuke, preferait continuer à fonctionner selon le modèle 
+		communautaire ouvert, flexible et rapide qui avait si bien fonctionné pour Hudson par le passé.</para>
+    <para>En Janvier 2011, la communauté des développeurs Hudson vota pour renommer le projet en Jenkins. Par la suite ils migrèrent le code originel d'Hudson vers un nouveau
+		<indexterm id="I_indexterm1_d1e658" significance="normal"><primary>projet Github</primary></indexterm><ulink url="https://github.com/jenkinsci">projet Github</ulink> 
+		et y poursuivirent leur travail. La grande majorité des développeurs du coeur et des plugins leva le camp et suivit Kohsuke Kawaguchi et les autres principaux contributeurs
+		dans le camp de Jenkins, où le gros de l'activité de développement peut être observée aujourd'hui.</para>
+    <para>Après ce fork, la majorité des utilisateurs suivit la communauté des développeurs Jenkins et passa à Jenkins. AU moment où ces lignessont écrites, 
+		les sondages montrent qu'environ 75% des utilisateurs d'Hudson sont passés à Jenkins, 13 % utilisent encore Hudson et 12% utilisent Jenkisn et Hudson ou
+		sont en cours de migration vers Jenkins.</para>
+    <para>Cependant, Oracle and Sonatype (the company behind Maven and
     Nexus) have continued to work on the Hudson code base (now also hosted on
     GitHub at <ulink url="https://github.com/hudson"/>), but with a
     very different focus. Indeed, the <indexterm id="I_indexterm1_d1e670" significance="normal"><primary>Sonatype tools</primary></indexterm>Sonatype developers have concentrating on major underlying
