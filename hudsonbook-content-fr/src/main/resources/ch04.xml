@@ -16,14 +16,14 @@
         <secondary>configurer</secondary>
 
         <see>configuration</see>
-      </indexterm>Avant de commencer à créer vos tâches de construction dans
+      </indexterm>Avant de commencer à créer vos tâches de build dans
     Jenkins, vous devez faire un peu de configuration pour vous assurer que
     votre serveur Jenkins fonctionnera sans problème dans votre environnement
     spécifique. Jenkins est hautement configurable, et bien que la plupart des
-    options soit fournie avec des valeurs raisonnables par défaut, ou que
-    l'outil soit capable de trouver les bons outils de construction dans le
+    options soient fournies avec des valeurs raisonnables par défaut, ou que
+    l'outil soit capable de trouver les bons outils de build dans le
     PATH ou dans les variables d'environnement, c'est toujours une bonne idée
-    de savoir exactement ce que votre serveur de construction fait.</para>
+    de savoir exactement ce que votre serveur de build fait.</para>
 
     <para>Jenkins est globalement très simple à configurer. Les écrans
     d'administration sont intuitifs, et l'aide contextuelle (les icônes en
@@ -31,7 +31,7 @@
     et précise. Dans ce chapitre, nous allons voir comment configurer votre
     serveur basique en détail. Nous verrons notamment comment configurer
     Jenkins pour qu'il utilise différentes versions de Java, d'outils de
-    construction comme Ant ou Maven, et d'outils de gestion de version comme
+    build comme Ant ou Maven, et d'outils de gestion de version comme
     CVS et Subversion. Plus loin dans le livre, nous regarderons aussi des
     configurations de serveur plus avancées, comme l'utilisation d'autres
     systèmes de gestion de version ou d'outils de notifications.</para>
