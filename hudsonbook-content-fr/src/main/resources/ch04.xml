@@ -86,7 +86,7 @@
               significance="normal">
               <primary>écran configurer système</primary>
             </indexterm>C'est là que vous gérez les chemins vers les
-          différents outils que vous utilisez dans vos constructions, comme
+          différents outils que vous utilisez dans vos builds, comme
           les JDKs, les versions de Ant et Maven, les options de sécurité, les
           serveurs d'email, et autres détails de configuration de niveau
           système. Plusieurs des plugins que vous installerez nécessiteront
@@ -110,21 +110,21 @@
               disque</primary>
             </indexterm>Comme nous l'avons vu dans le précédent chapitre,
           Jenkins stocke tous les détails de configuration du système et des
-          tâches de construction dans des fichiers XML localisés dans le
-          répertoire utilisateur de Jenkins (voir <xref
+          tâches de build dans des fichiers XML localisés dans le
+          répertoire de travail de Jenkins (voir <xref
           linkend="sec-hudson-home-directory" />). Il stocke aussi tout
-          l'historique des constructions dans le même répertoire. Si vous
-          migrez des tâches de construction d'une instance Jenkins à une
-          autre, ou archivez de vieilles tâches de construction, vous aurez
+          l'historique des builds dans le même répertoire. Si vous
+          migrez des tâches de build d'une instance Jenkins à une
+          autre, ou archivez de vieilles tâches de build, vous aurez
           besoin d'ajouter ou d'enlever les différents répertoires de tâches
-          de construction au répertoire de constructions de Jenkins. Vous
+          de build du répertoire <filename moreinfo="none">builds</filename> de Jenkins. Vous
           n'avez pas besoin de désactiver Jenkins pour faire cela — vous
           pouvez simplement utiliser l'option “Recharger la configuration à
           partir du disque” pour recharger directement la configuration
-          système de Jenkins et des tâches de construction. Ce processus peut
-          être un peu lent s'il y a beaucoup d'historique de construction,
+          système de Jenkins et des tâches de build. Ce processus peut
+          être un peu lent s'il y a beaucoup d'historique de build,
           pendant que Jenkins charge non seulement la configuration des
-          constructions mais aussi les données de l'historique.</para>
+          builds mais aussi les données de l'historique.</para>
         </listitem>
       </varlistentry>
 
@@ -147,7 +147,7 @@
             </indexterm>L'une des meilleures fonctionnalités de Jenkins est
           son architecture extensible. Il y a un large écosystème de plugins
           open source tierces disponibles, vous permettant d'ajouter des
-          fonctionnalités à votre serveur de construction, du support des
+          fonctionnalités à votre serveur de build, du support des
           différents outils de gestion de sources comme Git, Mercurial ou
           ClearCase, aux métriques de qualité du code et de couverture de
           code. Nous regarderons plusieurs des plugins les plus populaires et
@@ -172,13 +172,13 @@
               significance="normal">
               <primary>écran Information Système</primary>
             </indexterm>Cet écran affiche une liste de toutes les propriétés
-          systèmes Java et les variables d'environnement systèmes. Ici, vous
+          système Java et les variables d'environnement système. Ici, vous
           pouvez vérifier dans quelle version exacte de Java Jenkins est en
           train de fonctionner, avec quel utilisateur, etc. Vous pouvez aussi
           vérifier que Jenkins utilise le bon paramétrage des variables
           d'environnement. Cet écran sert principalement pour le dépannage. Il
           vous permet de vous assurer que votre serveur fonctionne avec les
-          propriétés systèmes et les variables d'environnement que vous
+          propriétés système et les variables d'environnement que vous
           pensez.</para>
         </listitem>
       </varlistentry>
@@ -190,11 +190,11 @@
           <para><indexterm id="I_indexterm4_d1e4230" significance="normal">
               <primary>configuration</primary>
 
-              <secondary>System Log screen</secondary>
+              <secondary>écran Log système</secondary>
             </indexterm><indexterm id="I_indexterm4_d1e4235"
               significance="normal">
-              <primary>System Log screen</primary>
-            </indexterm>L'écran de Log Système est un moyen pratique de voir
+              <primary>écran Log système</primary>
+            </indexterm>L'écran Log système est un moyen pratique de voir
           les fichiers de log Jenkins en temps réel. Encore une fois, ceci
           sert principalement au dépannage.</para>
 
@@ -212,15 +212,15 @@
           <para><indexterm id="I_indexterm4_d1e4246" significance="normal">
               <primary>configuration</primary>
 
-              <secondary>Ecran de Statistiques d'utilisation</secondary>
+              <secondary>écran Statistiques d'utilisation</secondary>
             </indexterm><indexterm id="I_indexterm4_d1e4251"
               significance="normal">
-              <primary>Ecran de Statistiques d'utilisation</primary>
+              <primary>écran Statistiques d'utilisation</primary>
             </indexterm>Jenkins garde la trace du niveau d'activité de votre
-          serveur en fonction du nombre de de constructions concurrentes et de
-          la longueur de la file d'attente de construction (ce qui vous donne
-          une idée de la durée pendant laquelle vos constructions doivent
-          attendre avant d'être exécutées). Ces statistiques peuvent vous
+          serveur en fonction du nombre de builds concurrents et de
+          la longueur de la file d'attente de build (ce qui vous donne
+          une idée de la durée pendant laquelle vos builds doivent
+          attendre avant d'être exécutés). Ces statistiques peuvent vous
           aider à savoir si vous avez besoin d'ajouter de la capacité
           additionnelle ou des nœuds supplémentaires à votre
           infrastructure.</para>
@@ -237,7 +237,7 @@
               <secondary>Console de script</secondary>
             </indexterm><indexterm id="I_indexterm4_d1e4265"
               significance="normal">
-              <primary>Ecran de Console de script</primary>
+              <primary>écran Console de script</primary>
             </indexterm><indexterm id="I_indexterm4_d1e4268"
               significance="normal">
               <primary>scripts Groovy</primary>
@@ -258,17 +258,17 @@
           <para><indexterm id="I_indexterm4_d1e4279" significance="normal">
               <primary>configuration</primary>
 
-              <secondary>Ecran Gérer les nœuds</secondary>
+              <secondary>écran Gérer les nœuds</secondary>
             </indexterm><indexterm id="I_indexterm4_d1e4284"
               significance="normal">
-              <primary>Ecran Gérer les nœuds</primary>
-            </indexterm>Jenkins gère aussi bien les constructions parallèles
-          que distribuées. Dans cet écran, vous pouvez configurer le nombre de
-          constructions que vous voulez. Jenkins les exécute simultanément,
-          et, si vous utilisez des constructions distribuées, configure
-		  les nœuds de construction. Un nœud de construction est une autre machine
-          que Jenkins peut utiliser pour exécuter ses constructions. Nous
-          regarderons comment configurer les constructions distribuées en
+              <primary>écran Gérer les nœuds</primary>
+            </indexterm>Jenkins gère aussi bien les builds parallèles
+          que distribués. Dans cet écran, vous pouvez configurer le nombre de
+          builds que vous voulez. Jenkins les exécute simultanément,
+          et, si vous utilisez des builds distribués, configure
+		  les nœuds de build. Un nœud de build est une autre machine
+          que Jenkins peut utiliser pour exécuter ses builds. Nous
+          regarderons comment configurer les builds distribués en
           détail dans <xref linkend="chapter-distributed-builds" />.</para>
         </listitem>
       </varlistentry>
@@ -280,16 +280,16 @@
           <para><indexterm id="I_indexterm4_d1e4295" significance="normal">
               <primary>configuration</primary>
 
-              <secondary>Ecran Préparer à la fermeture</secondary>
+              <secondary>écran Préparer à la fermeture</secondary>
             </indexterm><indexterm id="I_indexterm4_d1e4300"
               significance="normal">
-              <primary>Ecran Préparer à la fermeture</primary>
+              <primary>écran Préparer à la fermeture</primary>
             </indexterm>Si vous avez besoin d'éteindre Jenkins, ou le serveur
-          sur lequel il fonctionne, c'est mieux de ne pas le faire lorsqu'une
-          construction est en cours. Pour fermer Jenkins proprement, vous
+          sur lequel il fonctionne, c'est mieux de ne pas le faire lorsqu'un
+          build est en cours. Pour fermer Jenkins proprement, vous
           pouvez utiliser le lien Préparer à la fermeture, qui empêche le
-          démarrage de toute nouvelle construction. Finalement, lorsque toutes
-          les constructions en cours seront terminées, vous pourrez éteindre
+          démarrage de toute nouveau build. Finalement, lorsque tous
+          les builds en cours seront terminés, vous pourrez éteindre
           Jenkins proprement.</para>
         </listitem>
       </varlistentry>
