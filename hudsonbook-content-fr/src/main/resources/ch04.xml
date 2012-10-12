@@ -563,7 +563,7 @@
     <para>Par défaut, Jenkins construira les applications Java en utilisant la
     version de Java qu'il trouve dans le PATH, qui est habituellement celle
     avec laquelle Jenkins fonctionne. Toutefois, pour un serveur de
-    construction de production, vous voudrez probablement plus de contrôle que
+    build de production, vous voudrez probablement plus de contrôle que
     cela. Par exemple, vous pourriez exécuter votre serveur Jenkins avec Java
     6, pour des raisons de performance. Par contre, votre serveur de
     production pourrait tourner avec Java 5 ou même Java 1.4. Les grosses
@@ -590,19 +590,19 @@
 
     <para>Le moyen le plus simple de déclarer une installation de JDK est de
     fournir un nom approprié (qui sera ensuite utilisé pour identifier cette
-    installation de java lors de la configuration de vos constructions), et un
+    installation de Java lors de la configuration de vos builds), et un
     chemin vers le répertoire de l'installation Java (le même chemin que vous
     utiliseriez pour la <indexterm id="I_indexterm4_d1e4531"
         significance="normal">
-        <primary>JAVA_HOME variable d'environnement</primary>
+        <primary>variable d'environnement JAVA_HOME</primary>
       </indexterm> variable <literal moreinfo="none">JAVA_HOME</literal>),
     comme montré sur <xref linkend="fig-configure-jdk" />. Bien que vous
-    deviez taper le chemin manuellement, Jenkins vérifiera en temps réel à la
+    deviez entrer le chemin manuellement, Jenkins vérifiera en temps réel à la
     fois que le répertoire existe et que ça ressemble à un répertoire JDK
     valide.</para>
 
     <figure float="none" id="fig-configure-jdk">
-      <title>Configuration des JDK dans Jenkins</title>
+      <title>Configuration des JDKs dans Jenkins</title>
 
       <mediaobject id="I_mediaobject4_d1e4543">
         <imageobject role="print">
@@ -630,21 +630,21 @@
     première fois qu'une construction a besoin d'utiliser ce JDK, Jenkins
     téléchargera et installera la version spécifiée de Java dans le répertoire
     <filename moreinfo="none">tools</filename> du répertoire racine de
-    Jenkins. Si la construction est exécutée sur un nouvel agent de
-    construction qui n'a pas ce JDK installé, il le téléchargera et
+    Jenkins. Si le build est exécuté sur un nouvel agent de
+    build qui n'a pas ce JDK installé, il le téléchargera et
     l'installera sur celui-ci de la même façon.</para>
 
     <para>C'est<indexterm id="I_indexterm4_d1e4568" significance="normal">
         <primary>agents de constructions</primary>
 
-        <secondary>configurer de multiples versions de JDK</secondary>
+        <secondary>configurer de multiples versions du JDK</secondary>
       </indexterm> aussi un formidable moyen de configurer les agents de
     construction. Comme nous le verrons plus loin dans le livre, Jenkins peut
-    déléguer des tâches de construction à d'autres machines, ou d'autres
+    déléguer des tâches de build à d'autres machines, ou d'autres
     agents de construction. Un agent de construction (ou “esclave”) est
     simplement un autre ordinateur que Jenkins peut utiliser pour exécuter
-    certaines de ses constructions. Si vous utilisez l'option d'installation
-    automatique de Jenkins, vous n'avez pas à installer toutes les versions de
+    certains de ses builds. Si vous utilisez l'option d'installation
+    automatique de Jenkins, vous n'avez pas à installer toutes les versions du
     JDK dont vous avez besoin sur les machines agent de construction — Jenkins
     le fera pour vous la première fois que cela lui sera nécessaire.</para>
 
@@ -660,10 +660,10 @@
     sur un serveur local et d'accélérer les installations automatiques. Quand
     vous utilisez cette option, Jenkins vous permet aussi de spécifier un
     label, ce qui resteindra l'utilisation de cette installation aux noeuds
-    avec celui-ci. C'est une technique utile si vous avez besoin d'installer
-    une version spécifique d'un outil sur certaines machines de construction.
+    ayant ce label. C'est une technique utile si vous avez besoin d'installer
+    une version spécifique d'un outil sur certaines machines de build.
     La même approche peut aussi être utilisée pour les autres outils de
-    construction (comme Maven et Ant).</para>
+    build (comme Maven et Ant).</para>
 
     <figure float="0" id="fig-configure-jdk-installers">
       <title>Installer un JDK automatiquement</title>
@@ -683,7 +683,7 @@
     environnements (s'il ne parvient pas à trouver ou identifier un système
     d'exploitation satisfaisant, par exemple, l'installation échouera), mais
     c'est néanmoins un moyen utile et agréable de configurer de nouveaux
-    serveurs de construction ou des agents de construction distribués de
+    serveurs de build ou des agents de construction distribués de
     <indexterm class="endofrange" id="I_indexterm4_d1e4589"
         significance="normal" startref="ch04-jdk1">
         <primary></primary>
