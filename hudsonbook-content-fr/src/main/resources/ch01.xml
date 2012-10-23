@@ -154,130 +154,115 @@
     <para>Après ce fork, la majorité des utilisateurs suivit la communauté des développeurs Jenkins et passa à Jenkins. AU moment où ces lignessont écrites, 
 		les sondages montrent qu'environ 75% des utilisateurs d'Hudson sont passés à Jenkins, 13 % utilisent encore Hudson et 12% utilisent Jenkisn et Hudson ou
 		sont en cours de migration vers Jenkins.</para>
-    <para>Cependant, Oracle and Sonatype (the company behind Maven and
-    Nexus) have continued to work on the Hudson code base (now also hosted on
-    GitHub at <ulink url="https://github.com/hudson"/>), but with a
-    very different focus. Indeed, the <indexterm id="I_indexterm1_d1e670" significance="normal"><primary>Sonatype tools</primary></indexterm>Sonatype developers have concentrating on major underlying
-    infrastructure changes around, among other areas, Maven integration, the
-    dependency injection framework and the plugin <indexterm id="I_indexterm1_d1e674" class="endofrange" startref="ch01-jenkins" significance="normal"><primary/></indexterm><indexterm id="I_indexterm1_d1e676" class="endofrange" startref="ch01-history" significance="normal"><primary/></indexterm>architecture.</para>
+    <para>Cependant, Oracle et Sonatype (la compagnie derière Maven et Nexus) ont poursuivi leur travail à partir du code d'Hudson (qui est maintenant lui aussi hébergé chez GitHub à <ulink url="https://github.com/hudson"/>), 
+	mais selon un axe différent. En effet, les <indexterm id="I_indexterm1_d1e670" significance="normal"><primary>outils Sonatype</primary></indexterm>développeurs de Sonatype se sont concentrés sur 
+	des modifications dans l'architecture, notamment sur l'intégration de Maven, leframework d'injection de dépendances, et l'<indexterm id="I_indexterm1_d1e674" class="endofrange" startref="ch01-jenkins" significance="normal"><primary/></indexterm><indexterm id="I_indexterm1_d1e676" class="endofrange" startref="ch01-history" significance="normal"><primary/></indexterm>architecture des plugins.</para>
   </sect1>
   <sect1 id="intro-sect-jenkins-or-hudson">
-    <title>Should I Use Jenkins or Hudson?</title>
-    <para>So should<indexterm id="I_indexterm1_d1e684" significance="normal"><primary>Jenkins</primary><secondary>reasons to use</secondary></indexterm> you use Jenkins or Hudson? Since this is a book on Jenkins,
-    here are a few reasons why you might want to opt for Jenkins:</para>
+    <title>Dois-je utiliser Jenkins ou Hudson?</title>
+    <para>Donc faut-il <indexterm id="I_indexterm1_d1e684" significance="normal"><primary>Jenkins</primary><secondary>raisons pour utiliser</secondary></indexterm>utiliser Jenkins ou Hudson ? Puisqu'il s'agit 
+	ici d'un livre traitant de Jenkins, voici plusieurs raisons pour choisir Jenkins :</para>
     <itemizedlist>
       <listitem>
-        <para><emphasis>Jenkins is the new Hudson.</emphasis> In fact, Jenkins
-        is simply the old Hudson with a new name, so if you liked Hudson,
-        you’ll like Jenkins! Jenkins uses the Hudson code base, and the
-        development team and project philosophy remain the same. In a
-        nutshell, the original developers, who wrote the vast majority of the
-        Hudson core, simply resumed business as usual after the fork working
-        on the Jenkins project.</para>
+        <para><emphasis>Jenkins est le nouvel Hudson.</emphasis> En fait, Jenkins 
+        est simplement le bon vieil Hudson renommé, donc si vous avez apprécié
+        Hudson, vous aimerez Jenkins ! Jenkins utilise le code d'Hudson et
+        l'équipe de développement ainsi que la philosophie du projet sont restées
+        identiques. En résumé,  les développeurs initiaux qui ont écrit la plus grande partie
+        du coeur d'Hudson, ont simplement continué en travaillant sur le projet Jenkins
+        après la séparation.</para>
       </listitem>
       <listitem>
-        <para><emphasis>The Jenkins <indexterm id="I_indexterm1_d1e700" significance="normal"><primary>Jenkins</primary><secondary>community for</secondary></indexterm>community</emphasis>. Like many of the more successful
-        <indexterm id="I_indexterm1_d1e707" significance="normal"><primary>Jenkins</primary><secondary sortas="Open Source">as Open Source project</secondary></indexterm>Open Source projects, much of Hudson’s strength came
-        from its large and dynamic community, and its massive adoption. Bugs
-        are identified (and generally fixed) much more rapidly, and, if you
-        have a problem, chances are someone else will have had it too! If you
-        run into trouble, post a question on the mailing list or IRC
-        channel—there’s sure to be someone who can help.</para>
+        <para><emphasis>La communauté <indexterm id="I_indexterm1_d1e700" significance="normal"><primary>Jenkins</primary><secondary>communauté de</secondary></indexterm>Jenkins</emphasis>. Comme de nombreux projets
+        Open Source <indexterm id="I_indexterm1_d1e707" significance="normal"><primary>Jenkins</primary><secondary sortas="Open Source">comme un projet Open Source</secondary></indexterm>ayant du succès, la force
+        d'Hudson venait de sa grande et dynamique communauté et de son adoption massive.
+        Les bogues sont détéctés (et généralement corrigés) beaucoup plus rapidement, et
+        si par malheur vous rencontrez un souci il y a de fortes chances que quelqu'un d'autre l'ait déjà
+        rencontré ! Si vous avez un problème, écrivez une question sur la liste de diffusion ou sur le canal IRC —
+        vous trouverez sûrement quelqu'un pour vous aider.</para>
       </listitem>
       <listitem>
-        <para><emphasis>The fast <indexterm id="I_indexterm1_d1e717" significance="normal"><primary>Jenkins</primary><secondary>rapid release cycle of</secondary></indexterm>development pace</emphasis>. Jenkins continues the rapid
-        release cycles that typified Hudson, which many developers love. New
-        features, new plugins and bug fixes come out weekly, and the
-        turn-around time for bug fixes can be very short indeed. And, if you
-        prefer more stability, there are always the LTS releases</para>
+        <para><emphasis>Le rythme de développement <indexterm id="I_indexterm1_d1e717" significance="normal"><primary>Jenkins</primary><secondary>cycle de livraisons rapide de</secondary></indexterm>intense</emphasis>. 
+        Jenkins conserve la fréquence élévée des sorties typique d'Hudson et que de
+        nombreux développeurs apprécient. Les nouvelles fonctionnalités, les nouveaux plugins
+        et les corrections de bogues apparaissent hebdomadairement et le temps de correction
+        des bogues est vraiment très court. Si, par contre, vous préferrez plus de stabilité, il y a toujours les versions LTS.</para>
       </listitem>
     </itemizedlist>
-    <para>And, <indexterm id="I_indexterm1_d1e726" significance="normal"><primary>Hudson</primary></indexterm>in the interest of balance, here are some reasons you might
-    prefer to stick with Hudson:</para>
+    <para>Et, <indexterm id="I_indexterm1_d1e726" significance="normal"><primary>Hudson</primary></indexterm>pour équilibrer les choses, voici quelques raisons qui peuvent vous faire préferrer Hudson :</para>
     <itemizedlist>
       <listitem>
-        <para><emphasis>If it ain’t broke, don’t fix it.</emphasis> You
-        already have a Hudson installation that you are happy with, and don’t
-        feel the need to upgrade to the latest version.</para>
+        <para><emphasis>Siça fonctionne, ne le touchez pas.</emphasis> Vous
+        avez déjà un Hudson installé dont vous êtes très satisfait et vous ne 
+        ressentez pas le besoin d'installer la dernière version.</para>
       </listitem>
       <listitem>
-        <para><emphasis>Enterprise integration and <indexterm id="I_indexterm1_d1e740" significance="normal"><primary>Sonatype tools</primary></indexterm>Sonatype tools.</emphasis> Hudson is likely to place a
-        strong emphasis on integration with enterprise tools such as
-        <indexterm id="I_indexterm1_d1e745" significance="normal"><primary>LDAP/Active Directory</primary></indexterm>LDAP/Active Directory, and the Sonatype products such as
-        <indexterm id="I_indexterm1_d1e749" significance="normal"><primary>Maven</primary><secondary>Hudson support for</secondary></indexterm>Maven 3, <indexterm id="I_indexterm1_d1e755" significance="normal"><primary>Nexus</primary><secondary>Hudson support for</secondary></indexterm>Nexus and <indexterm id="I_indexterm1_d1e761" significance="normal"><primary>M2Eclipse</primary></indexterm>M2Ecipse, whereas Jenkins is more open to other
-        competing tools such as <indexterm id="I_indexterm1_d1e765" significance="normal"><primary>Artifactory</primary><secondary>Jenkins support for</secondary></indexterm>Artifactory and <indexterm id="I_indexterm1_d1e772" significance="normal"><primary>Gradle</primary><secondary>Jenkins support for</secondary></indexterm>Gradle.</para>
+        <para><emphasis>L'intégration professionnelle et <indexterm id="I_indexterm1_d1e740" significance="normal"><primary>outils Sonatype</primary></indexterm>les outils Sonatype.</emphasis> Hudson va probablement
+        mettre l'accent sur son intégration avec des outils professionnels comme 
+        <indexterm id="I_indexterm1_d1e745" significance="normal"><primary>LDAP/Active Directory</primary></indexterm>un annuaireLDAP/Active Director et les produits de Sonatype tels que
+        <indexterm id="I_indexterm1_d1e749" significance="normal"><primary>Maven</primary><secondary>support d'Hudson pour</secondary></indexterm>Maven 3, <indexterm id="I_indexterm1_d1e755" significance="normal"><primary>Nexus</primary><secondary>support d'Hudson pour</secondary></indexterm>Nexus et <indexterm id="I_indexterm1_d1e761" significance="normal"><primary>M2Eclipse</primary></indexterm>M2Ecipse,alors que Jenkins
+        sera plus ouvert à des outils concurrents comme  <indexterm id="I_indexterm1_d1e765" significance="normal"><primary>Artifactory</primary><secondary>support de Jenkins pour</secondary></indexterm>Artifactory et <indexterm id="I_indexterm1_d1e772" significance="normal"><primary>Gradle</primary><secondary>support de Jenkins pour</secondary></indexterm>Gradle.</para>
       </listitem>
       <listitem>
-        <para><emphasis>Plugin <indexterm id="I_indexterm1_d1e782" significance="normal"><primary>plugins</primary><secondary>architecture of, Jenkins compared to Hudson</secondary></indexterm>architecture.</emphasis> If you intend to write your own
-        Jenkins/Hudson plugins, you should be aware that Sonatype is working
-        on providing JSR-330 dependency injection for Hudson plugins. New
-        developers may find this approach easier to use, though it does raise
-        issues about future plugin compatibility between Jenkins and
-        Hudson.</para>
+        <para><emphasis>L'architecture <indexterm id="I_indexterm1_d1e782" significance="normal"><primary>plugins</primary><secondary>architecture de, Jenkins comparé à Hudson</secondary></indexterm>des plugins.</emphasis> 
+        Si vous avez l'intention d'écrire vos propres plugins Jenkins/Hudson plugins, il vous faut savoir 
+        que Sonatype travaille  pour proposer une injection de dépendance JSR-330 pour les plugins
+        d'Hudson. Les nouveaux développeurs peuvent trouver cette approche plus facile à utiliser 
+        même si cela soulève des questions quant à la compatibilité entre Jenkins et Hudson.</para>
       </listitem>
     </itemizedlist>
-    <para>The good news is, no matter whether you are using Jenkins or Hudson,
-    the products remain very similar, and the vast majority of techniques and
-    tips discussed in this book will apply equally well to both. Indeed, to
-    illustrate this point, many screenshots in this book refer to Hudson
-    rather than Jenkins.</para>
+    <para>La bonne nouvelle est que quelque soit l'outil que vous utilisiez entre Hudson et Jenkins, ils restent
+    globalement très proches et la plupart des techniques et des astuces présentées dans ce livre
+    seront valables sur les deux. En effet, pour illustrer ce point, de nombreuses captures d'écran
+    dans ce livre font référence à Hudson plutôt qu'à Jenkins.</para>
   </sect1>
   <sect1 id="intro-sect-your-organization">
-    <title>Introducing Continuous Integration into Your Organization</title>
-    <para>Continuous Integration<indexterm class="startofrange" id="ch01-phases" significance="normal"><primary>CI (Continuous Integration)</primary></indexterm> is not an all-or-nothing affair. In fact, introducing CI
-    into an organization takes you on a path that progresses through several
-    distinct phases. Each of these phases involves incremental improvements to
-    the technical infrastructure as well as, perhaps more importantly,
-    improvements in the practices and culture of the development team itself.
-    In the following paragraphs, I have tried to paint an approximate picture
-    of each phase.</para>
+    <title>Mettre en place l'Intégration Continue au sein de votre organisation</title>
+    <para>L'Intégration Coninue <indexterm class="startofrange" id="ch01-phases" significance="normal"><primary>IC (Intégration Continue)</primary></indexterm> n'est pas une histoire de tout ou rien. En fait,
+    mettre en place l'IC au sein d'une organisation suit un chemin qui vous fera passer
+    par différentes phases. A chacune de ces phases se rattachent des améliorations
+    de l'infrastructure technique, mais aussi, et c'est peut-être le plus important,
+    des améliorations des pratiques et de la culture de l'équipe de développement elle-même.
+    Dans les paragraphes qui vont suivre j'ai essayé d'esquisser chacune de ces phases.</para>
     <sect2>
-      <title>Phase 1—No Build Server</title>
-      <para>Initially, the team has no central <indexterm id="I_indexterm1_d1e805" significance="normal"><primary>build server</primary></indexterm>build server of any kind. Software is built manually on a
-      developer’s machine, though it may use an Ant script or similar to do
-      so. Source code may be stored in a central source code repository, but
-      developers do not necessarily commit their changes on a regular basis.
-      Some time before a release is scheduled, a developer manually integrates
-      the changes, a process which is generally associated with pain and
-      suffering.</para>
+      <title>Phase 1 — Pas de serveur de build</title>
+      <para>Au tout début, l'équipe n'a pas de serveur central <indexterm id="I_indexterm1_d1e805" significance="normal"><primary>serveur de build</primary></indexterm>de build quelqu'il soit. 
+      Le logiciel est construit manuellement sur la machine du développeur, même si cela peut être réalisé par un script Ant ou equivalent.
+      Le code source peut être enregistré dans un gestionnaire de configuration centralisé, mais les développeurs n'ont pas 
+      l'habitude de commiter leurs modifications régulièrement.
+      Peu de temp avant la prochine livraison prévue, un développeur intègre manuellement les modifications, une opération 
+      qui produit beaucoup de peine et de soufffrance.</para>
     </sect2>
     <sect2>
-      <title>Phase 2—Nightly Builds</title>
-      <para>In this phase, the team has a build server, and <indexterm id="I_indexterm1_d1e814" significance="normal"><primary>automated nightly builds</primary></indexterm><indexterm id="I_indexterm1_d1e817" significance="normal"><primary>nightly builds</primary><see>automated nightly builds</see></indexterm>automated builds are scheduled on a regular (typically
-      nightly) basis. This build simply compiles the code, as there are no
-      reliable or repeatable unit tests. Indeed, automated tests, if they are
-      written, are not a mandatory part of the build process, and may well not
-      run correctly at all. However developers now commit their changes
-      regularly, at least at the end of every day. If a developer commits code
-      changes that conflict with another developer’s work, the build server
-      alerts the team via email the following morning. Nevertheless, the team
-      still tends to use the build server for information purposes only—they
-      feel little obligation to fix a broken build immediately, and builds may
-      stay broken on the build server for some time.</para>
+      <title>Phase 2 — Builds quotidiens</title>
+      <para>Dans cette phase, l'équipe possède un serveur de build et <indexterm id="I_indexterm1_d1e814" significance="normal"><primary>builds quotidiens automatisés</primary></indexterm><indexterm id="I_indexterm1_d1e817" significance="normal"><primary>builds quotidiens</primary><see>builds quotidiens automatisés</see></indexterm>builds automatisés 
+      sont exécutés réguulièrement (générallement la nuit). Ce build compile tout simplement le code
+      car il n'existe pas de tests unitaires pertinents et répétables. En effet, les tests automatisés,
+      même s'ils sont écrits, ne font pas partie du processus de build, et peuvent ne pas s'exécuter correctement du tout.
+      Cependant, maintenant les développeurs commitent leurs modifications régulièrement au moins à la fin de la journée.
+      Si un développeur commite des modifications de code qui entrent en conflit avec le travail d'un autre développeur, le serveur de build
+      avertit l'équipe par mail le lendemain matin. Toutefois, l'équipe ne se sert du
+      serveur de build qu'à titre informatif — ils ne se sentent pas obligés de réparer un build en échec immédiatement, et le build peut 
+      rester en échec pendant plusieurs jours sur le serveur de build.</para>
     </sect2>
     <sect2>
-      <title>Phase 3—Nightly Builds and Basic Automated Tests</title>
-      <para>The team<indexterm id="I_indexterm1_d1e828" significance="normal"><primary>tests</primary><secondary>automating</secondary></indexterm> is now starting to take Continuous Integration and
-      automated testing more seriously. The build server is configured to kick
-      off a build whenever new code is committed to the version control
-      system, and team members are able to easily see what changes in the
-      source code triggered a particular build, and what issues these changes
-      address. In addition, the build script compiles the application and runs
-      a set of automated unit and/or integration tests. In addition to email,
-      the build server also alerts team members of integration issues using
-      more proactive channels such as Instant Messaging. Broken builds are now
-      generally fixed quickly.</para>
+      <title>Phase 3 — Builds quotidiens et tests automatisés basiques</title>
+      <para>L'équipe<indexterm id="I_indexterm1_d1e828" significance="normal"><primary>tests</primary><secondary>automatiser</secondary></indexterm> commence à prendre l'Intégration Continue et les tests
+      au sérieux. Le serveur de build est configuré pour lancer un build dès qu'un nouveau code est commité
+      dans l'outil de gestion de configuration et les membres de l'équipe peuvent facilement
+      voir quelles sont les modifications du code qui correspondent à chaque build et de quel problème elles traitent. 
+      A cela s'ajoute le fait que le script de build compile l'application et lance une série de tests unitaires ou d'intégration automatisés.
+      En plus des emails, le serveur de build avertit aussi les membres de l'équipe des problèmes d'intégration en uitilisant des canaux plus
+      proactifs tel que la messagerie instantanée. Les builds en echec sont maintenant réparés rapidement.</para>
     </sect2>
     <sect2>
-      <title>Phase 4—Enter the Metrics</title>
-      <para>Automated <indexterm id="I_indexterm1_d1e839" significance="normal"><primary>code quality metrics</primary></indexterm><indexterm id="I_indexterm1_d1e842" significance="normal"><primary>code coverage metrics</primary></indexterm><indexterm id="I_indexterm1_d1e845" significance="normal"><primary>metrics</primary><see>reporting</see></indexterm><indexterm id="I_indexterm1_d1e850" significance="normal"><primary>reporting</primary><secondary>code coverage metrics</secondary></indexterm><indexterm id="I_indexterm1_d1e855" significance="normal"><primary>reporting</primary><secondary>code quality metrics</secondary></indexterm>code quality and code coverage metrics are now run to help
-      evaluate the quality of the code base and (to some extent, at least) the
-      relevance and effectiveness of the tests. The code quality build also
-      automatically generates API documentation for the application. All this
-      helps teams keep the quality of the code base high, alerting team
-      members if good testing practices are slipping. The team has also set up
-      a “build radiator,” a dashboard view of the project status that is
-      displayed on a prominent screen visible to all team members.</para>
+      <title>Phase 4 — Arrivée des métriques</title>
+      <para>Des métriques <indexterm id="I_indexterm1_d1e839" significance="normal"><primary>métriques de qualité de code</primary></indexterm><indexterm id="I_indexterm1_d1e842" significance="normal"><primary>métriques de couverture de code</primary></indexterm><indexterm id="I_indexterm1_d1e845" significance="normal"><primary>métriques</primary><see>rapports</see></indexterm><indexterm id="I_indexterm1_d1e850" significance="normal"><primary>rapports</primary><secondary>métriques de couverture de code</secondary></indexterm><indexterm id="I_indexterm1_d1e855" significance="normal"><primary>rapports</primary><secondary>métriques de qualité de code</secondary></indexterm>de qualité et de couverture de code automatisées sont maintenant mesurées pour aider
+      à évaluer la qualité du code et (jusqu'à un certain point) la pertinence et l'efficacité des tests.
+      Le build mesurant la qualité de code  produit aussi automatiquement la documentation de l'API de l'application.
+      Tout ceci permet à l'équipe de maintenir un code de très bonne qualité, alertant les membres de l'équipe
+      en cas de dérive des bonnes pratiques de tests. L'équipe a aussi monté un “build radiator”, un tableau de bord
+      qui présente l'état du projet sur un écran visible de l'ensemble des membres de l'équipe.</para>
     </sect2>
     <sect2>
       <title>Phase 5—Getting More Serious About Testing</title>
