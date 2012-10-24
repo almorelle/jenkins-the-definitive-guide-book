@@ -694,21 +694,21 @@
   </sect1>
 
   <sect1 id="sect-configuration-build-tools">
-    <title>Configurer vos outils de construction</title>
+    <title>Configurer vos outils de build</title>
 
-    <para>Les outils de construction<indexterm class="startofrange"
+    <para>Les outils de build<indexterm class="startofrange"
         id="ch04-tool1" significance="normal">
         <primary>configuration</primary>
 
-        <secondary>outils de construction</secondary>
+        <secondary>outils de build</secondary>
       </indexterm><indexterm class="startofrange" id="ch04-tool2"
         significance="normal">
-        <primary>outils de construction, configurer</primary>
-      </indexterm> sont l'essence même de tout serveur de construction, et
+        <primary>outils de build, configurer</primary>
+      </indexterm> sont l'essence même de tout serveur de build, et
     Jenkins n'est pas une exception. En standard, Jenkins supporte trois
-    outils de construction principaux : Ant, Maven, et le basique shell-script
+    outils de build principaux : Ant, Maven, et le basique shell-script
     (ou script Batch sous Windows). En utilisant les plugins Jenkins, vous
-    pouvez aussi ajouter le support d'autres outils de construction et
+    pouvez aussi ajouter le support d'autres outils de build et
     d'autres langages, comme Gant, Grails, MSBuild, et beaucoup
     d'autres.</para>
 
@@ -729,8 +729,8 @@
       Java qui utilise des notions telles qu'une structure normalisée
       d'arborescence et des cycles de vie normalisés, <emphasis>"Convention
       over Configuration"</emphasis>, et une gestion déclarative des
-      dépendances pour simplifier beaucoup le scripting de bas-niveau qu'on
-      trouve souvent dans un script de construction Ant typique. Avec Maven,
+      dépendances pour simplifier le scripting de bas-niveau que l'on
+      trouve souvent dans un script de build Ant typique. Avec Maven,
       votre projet utilise un cycle de vie normalisé et bien défini — compile,
       test, package, deploy, etc. Chaque phase de cycle est associée avec un
       plugin Maven. Les différents plugins Maven utilisent la structure
@@ -753,7 +753,7 @@
       de Maven (comme nous le faisons avec Maven 3 dans l'exemple), ou fournir
       un chemin vers une installation locale de Maven (voir <xref
       linkend="fig-configure-maven" os="" />). Vous pouvez configurer autant
-      de versions de Maven pour vos projets de construction que vous le
+      de versions de Maven pour vos projets de build que vous le
       voulez, et utiliser différentes versions de Maven pour différents
       projets.</para>
 
@@ -774,12 +774,12 @@
       <para>Si vous cochez la case à cocher Installer automatiquement, Jenkins
       téléchargera et installera la versions demandée de Maven pour vous. Vous
       pouvez soit demander à Jenkins de télécharger Maven directement depuis
-      le site Apache, soit depuis une URL (a priori locale) de votre choix.
-      C'est un excellent choix si vous utilisez des constructions distribuées,
+      le site Apache, soit depuis une URL (à priori locale) de votre choix.
+      C'est un excellent choix si vous utilisez des builds distribuées,
       et puisque Maven est multi-plateformes, cela fonctionnera sur n'importe
       quelle machine. Vous n'avez pas besoin d'installer explicitement Maven
-      sur chaque machine de construction — la première fois qu'une machine de
-      construction aura besoin d'utiliser Maven, elle en téléchargera une
+      sur chaque machine de build — la première fois qu'une machine de
+      build aura besoin d'utiliser Maven, elle en téléchargera une
       copie et l'installera dans le répertoire <filename
       moreinfo="none">tools</filename> du répertoire racine de Jenkins.</para>
 
@@ -832,24 +832,24 @@
         </indexterm><indexterm class="startofrange" id="ch06-ant3"
           significance="normal">
           <primary>Ant</primary>
-        </indexterm>Ant est un langage de script de construction pour Java
+        </indexterm>Ant est un langage de script de build pour Java
       largement utilisé et très connu. C'est un langage de scripting
       flexible, extensible, relativement bas-niveau utilisé dans un grand
-      nombre de projets opensource. Un script de construction Ant (typiquement
+      nombre de projets opensource. Un script de build Ant (typiquement
       nommé <filename moreinfo="none">build.xml</filename>) est constitué d'un
       certain nombre de <emphasis>targets</emphasis>. Chaque target effectue
-      une tâche particulière dans le processus de construction, comme compiler
+      une tâche particulière dans le processus de build, comme compiler
       votre code ou exécuter vos tests unitaires. Il fonctionne en exécutant
       des <emphasis>tasks</emphasis>, qui portent une partie spécifique de la
-      tâche de construction, comme invoquer <command
+      tâche de build, comme invoquer <command
       moreinfo="none">javac</command> pour compiler votre code, ou créer un
-      nouveau répertoire. Les Targets ont aussi des
+      nouveau répertoire. Les targets ont aussi des
       <emphasis>dependencies</emphasis>, indiquant l'ordre dans lequel vos
-      tâches de construction doivent être exécutées. Par exemple, vous devez
+      tâches de build doivent être exécutées. Par exemple, vous devez
       compiler votre code avant de lancer vos tests unitaires.</para>
 
       <para>Jenkins fournit en standard un support excellent pour Ant — vous
-      pouvez invoquer les tâches Ant depuis votre tâche de construction, en
+      pouvez invoquer les tâches Ant depuis votre tâche de build, en
       fournissant les propriétés permettant de personnaliser le processus
       comme cela est nécessaire. Nous regardons comment faire cela en détail
       plus loin dans le livre.</para>
@@ -858,7 +858,7 @@
       Jenkins le trouvera. Toutefois, si vous voulez savoir précisément quelle
       version de Ant vous êtes en train d'utiliser, ou si vous avez besoin de
       pouvoir utiliser différentes versions de Ant sur différentes tâches de
-      construction, vous pouvez configurer autant d'installations de Ant que
+      build, vous pouvez configurer autant d'installations de Ant que
       vous le souhaitez (voir <xref linkend="fig-configure-ant" />).
       Fournissez simplement un nom et un répertoire d'installation pour chaque
       version de Ant dans la section Ant de l'écran Configurer le système.
@@ -877,11 +877,11 @@
       téléchargera et installera Ant dans le répertoire <filename
       moreinfo="none">tools</filename> du répertoire racine de Jenkins,
       exactement comme il le fait pour Maven. Il téléchargera une installation
-      de Ant la première fois qu'une tâche de construction aura besoin
+      de Ant la première fois qu'une tâche de build aura besoin
       d'utiliser Ant, soit depuis le site web Apache, soit depuis une URL
       locale. Encore une fois, ceci est un moyen formidable de normaliser vos
-      serveurs de construction et de faciliter l'ajout de nouveaux serveurs de
-      construction distribués à une infrastructure existante.<indexterm
+      serveurs de build et de faciliter l'ajout de nouveaux serveurs de
+      builds distribués à une infrastructure existante.<indexterm
           class="endofrange" id="I_indexterm4_d1e4733" significance="normal"
           startref="ch06-ant3">
           <primary></primary>
@@ -917,9 +917,9 @@
           <primary>scripts</primary>
 
           <secondary>scripts shell</secondary>
-        </indexterm> exécutez votre serveur de construction sous Unix ou
+        </indexterm> exécutez votre serveur de build sous Unix ou
       Linux, Jenkins vous permettra d'insérer des scripts shells dans vos
-      tâches de construction. C'est pratique pour effectuer des tâches
+      tâches de build. C'est pratique pour effectuer des tâches
       bas-niveau, liées à l'OS que vous ne voulez pas faire avec Ant ou Maven.
       Dans la section Shell, vous définissez le Shell par défaut qui sera
       utilisé pour exécuter ces scripts Shell. Par défaut, c'est <filename
@@ -936,7 +936,7 @@
           <secondary>scripts batch</secondary>
         </indexterm>Windows, la section Shell ne s'applique pas — vous
       utilisez le scripting batch Windows à la place. Donc, sur un serveur de
-      construction Windows, vous devriez laisser <indexterm class="endofrange"
+      build Windows, vous devriez laisser <indexterm class="endofrange"
           id="I_indexterm4_d1e4782" significance="normal"
           startref="ch04-tool1">
           <primary></primary>
