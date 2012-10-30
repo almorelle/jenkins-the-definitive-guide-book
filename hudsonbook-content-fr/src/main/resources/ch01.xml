@@ -257,63 +257,54 @@
     </sect2>
     <sect2>
       <title>Phase 4 — Arrivée des métriques</title>
-      <para>Des métriques <indexterm id="I_indexterm1_d1e839" significance="normal"><primary>métriques de qualité de code</primary></indexterm><indexterm id="I_indexterm1_d1e842" significance="normal"><primary>métriques de couverture de code</primary></indexterm><indexterm id="I_indexterm1_d1e845" significance="normal"><primary>métriques</primary><see>rapports</see></indexterm><indexterm id="I_indexterm1_d1e850" significance="normal"><primary>rapports</primary><secondary>métriques de couverture de code</secondary></indexterm><indexterm id="I_indexterm1_d1e855" significance="normal"><primary>rapports</primary><secondary>métriques de qualité de code</secondary></indexterm>de qualité et de couverture de code automatisées sont maintenant mesurées pour aider
-      à évaluer la qualité du code et (jusqu'à un certain point) la pertinence et l'efficacité des tests.
+      <para>Des métriques <indexterm id="I_indexterm1_d1e839" significance="normal"><primary>métriques de qualité de code</primary></indexterm><indexterm id="I_indexterm1_d1e842" significance="normal"><primary>métriques de couverture de code</primary></indexterm><indexterm id="I_indexterm1_d1e845" significance="normal"><primary>métriques</primary><see>rapports</see></indexterm><indexterm id="I_indexterm1_d1e850" significance="normal"><primary>rapports</primary><secondary>métriques de couverture de code</secondary></indexterm><indexterm id="I_indexterm1_d1e855" significance="normal"><primary>rapports</primary><secondary>métriques de qualité de code</secondary></indexterm>de qualité et de couverture de code automatisées sont maintenant mesurées pour aider à évaluer la qualité du code et (jusqu'à un certain point) la pertinence et l'efficacité des tests.
       Le build mesurant la qualité de code  produit aussi automatiquement la documentation de l'API de l'application.
       Tout ceci permet à l'équipe de maintenir un code de très bonne qualité, alertant les membres de l'équipe
       en cas de dérive des bonnes pratiques de tests. L'équipe a aussi monté un “build radiator”, un tableau de bord
       qui présente l'état du projet sur un écran visible de l'ensemble des membres de l'équipe.</para>
     </sect2>
     <sect2>
-      <title>Phase 5—Getting More Serious About Testing</title>
-      <para>The <indexterm id="I_indexterm1_d1e866" significance="normal"><primary>Test-Driven development</primary></indexterm><indexterm id="I_indexterm1_d1e869" significance="normal"><primary>tests</primary><secondary>Test-Driven development</secondary></indexterm>benefits of Continuous Integration are closely related to
-      solid testing practices. Now, practices like Test-Driven Development are
-      more widely practiced, resulting in a growing confidence in the results
-      of the automated builds. The application is no longer simply compiled
-      and tested, but if the tests pass, it is automatically deployed to an
-      application server for more comprehensive end-to-end tests and
-      performance tests.</para>
+      <title>Phase 5 — Prendre les tests au sérieux</title>
+      <para>Les <indexterm id="I_indexterm1_d1e866" significance="normal"><primary>développement piloté par les tests</primary></indexterm><indexterm id="I_indexterm1_d1e869" significance="normal"><primary>tests</primary><secondary>développement piloté par les tests</secondary></indexterm>bénéfices de l'Intégration Continue sont étroitement liés 
+      à de solides pratiques de test. De nos jours, des techniques comme le développement piloté par les tests sont très utilisées ce qui améliore la
+      confiance que l'on peut avoir dans le résultat d'un build automatisé. L'application n'est plus simplement compilée et testée,
+      mais si les tests passent, elle est automatiquement déployée sur un serveur d'application pour des tests plus complets de bout en
+      bout et des tests de performance.</para>
     </sect2>
     <sect2>
-      <title>Phase 6—Automated Acceptance Tests and More Automated <phrase role="keep-together">Deployment</phrase></title>
-      <para>Acceptance-Test Driven Development<indexterm id="I_indexterm1_d1e882" significance="normal"><primary>acceptance tests, automated</primary></indexterm><indexterm id="I_indexterm1_d1e885" significance="normal"><primary>Acceptance-Test Driven Development</primary></indexterm><indexterm id="I_indexterm1_d1e888" significance="normal"><primary>tests</primary><secondary>acceptance tests</secondary></indexterm><indexterm id="I_indexterm1_d1e893" significance="normal"><primary>tests</primary><secondary>automating</secondary></indexterm><indexterm id="I_indexterm1_d1e898" significance="normal"><primary>automated tests</primary><see>tests</see></indexterm> is practiced, guiding development efforts and providing
-      high-level reporting on the state of the project. These automated tests
-      use Behavior-Driven Development and Acceptance-Test Driven Development
-      tools to act as communication and documentation tools and documentation
-      as much as testing tools, publishing reports on test results in business
-      terms that non-developers can understand. Since these high-level tests
-      are automated at an early stage in the development process, they also
-      provide a clear idea of what features have been implemented, and which
-      remain to be done. The application is automatically deployed into test
-      environments for testing by the QA team either as changes are committed,
-      or on a nightly basis; a version can be deployed (or “promoted”) to UAT
-      and possibly production environments using a manually-triggered build
-      when testers consider it ready. The team is also capable of using the
-      build server to back out a release, rolling back to a previous release,
-      if something goes horribly wrong.</para>
+      <title>Phase 6 — Tests d'acceptance automatisés et un <phrase role="keep-together">déploiement</phrase> plus automatisé</title>
+      <para>Le Développment piloté par les tests d'acceptance<indexterm id="I_indexterm1_d1e882" significance="normal"><primary>trests d'acceptance tests, automatisés</primary></indexterm><indexterm id="I_indexterm1_d1e885" significance="normal"><primary>développment piloté par les tests d'acceptance</primary></indexterm><indexterm id="I_indexterm1_d1e888" significance="normal"><primary>tests</primary><secondary>tests d'acceptance</secondary></indexterm><indexterm id="I_indexterm1_d1e893" significance="normal"><primary>tests</primary><secondary>automatisation</secondary></indexterm><indexterm id="I_indexterm1_d1e898" significance="normal"><primary>tests automatisés</primary><see>tests</see></indexterm> est utilisé, guidant 
+      les efforts de développement et fournissant des rapports de haut niveau sur l'état du projet.
+      Ces tests automatisés profitent des outils issus du monde du Développement piloté par le comportement (BDD)
+      et du Développement piloté par les tests d'acceptance non seulment comme outils de tests mais aussi
+      comme outils de communication et de documentation, en produisant des rapports de tests utilisant
+      les termes métier qu'un non-développeur peut comprendre. Puisque ces tests de haut-niveau 
+      sont automatisés dès le début du processus de développement, ils permettent de savoir
+      très simplement quelles sont les fonctionnalités qui sont réalisées et celles qu'il reste à faire.
+      L'application est automatiquement déployée sur un environnement de test pour l'équipe qualité (QA) 
+      soit à chaque modification soit tous les soirs; une version peut être déployée (ou “promue”) vers UAT (todo manu traduction)
+      et il est possible de la déployer dans des environnements de production au moyen d'd'un build lancé manuellement
+      quand les testeurs la considère prête. L'équipe peut aussi utiliser le serveur de build pour revenir en arrière d'une version au cas où 
+      une catastrophe arrivait.</para>
     </sect2>
     <sect2>
-      <title>Phase 7—Continuous Deployment</title>
-      <para>Confidence<indexterm id="I_indexterm1_d1e909" significance="normal"><primary>continuous deployment</primary></indexterm> in the automated unit, integration and acceptance tests
-      is now such that teams can apply the automated deployment techniques
-      developed in the previous phase to push out new changes directly into
-      production.</para>
+      <title>Phase 7— Déploiement Continu</title>
+      <para>La confiance<indexterm id="I_indexterm1_d1e909" significance="normal"><primary>déploiement continu</primary></indexterm> dans les tests unitaires, d'intégration et d'acceptance 
+      automatisés est telle que les équipes peuvent utiliser les techniques de déploiement continu développées dans les phases précédentes pour pousser les modifications
+      directement en production.</para>
       <?dbfo-need height=”1in”?>
-      <para>The progression between levels here is of course somewhat
-      approximate, and may not always match real-world situations. For
-      example, you may well introduce automated web tests before integrating
-      code quality and code coverage reporting. However, it should give a
-      general idea of how implementing a Continuous Integration strategy in a
-      real world organization generally<indexterm id="I_indexterm1_d1e916" class="endofrange" startref="ch01-phases" significance="normal"><primary/></indexterm> works.</para>
+      <para>La progression entre les niveaux décrite ici est approximative et peut ne pas correspondre exactement à des
+        situations dans le monde réel. Par exemple, vous pouvez tout à fait introduire des tests de l'interface web avant de
+        mettre en places les métriques de qualité de code et les rapports sur la couverture de code.
+        Cependant, cela devrait vous donner une idée globale de la stratégie d'Intégration Continue à mettre en oeuvre dans une organisation du monde<indexterm id="I_indexterm1_d1e916" class="endofrange" startref="ch01-phases" significance="normal"><primary/></indexterm> réel.</para>
     </sect2>
   </sect1>
   <sect1 id="I_sect11_d1e919">
-    <title>Where to Now?</title>
-    <para>Throughout the remainder of this book, as we study the various
-    features Jenkins has to offer, as well as the practices required to make
-    the most of these features, we will see how we can progress through each
-    of these levels with Jenkins. And remember, most of the examples used in
-    the book are available online (see <ulink url="http://www.wakaleo.com/books/jenkins-the-definitive-guide"/>
-    for more details), so you can get your hands dirty too!</para>
+    <title>Et maintenant ?</title>
+    <para>Tout au long du reste du livre, pendant que nous étudirons les différentes fonctionnalités de Jenkins 
+        ainsi que les pratiques associées pour en profiter au maximum, nous verrons comment progresser 
+        suivant ces différents niveaux avec Jenkins.Et souvenez-vous, la plupart es exemples de ce livre sont 
+        disponibles en ligne (cf. <ulink url="http://www.wakaleo.com/books/jenkins-the-definitive-guide"/>
+        pour plus d'informations), donc vous pouvez mettre les mains dans le cambouis vous aussi !</para>
   </sect1>
 </chapter>
