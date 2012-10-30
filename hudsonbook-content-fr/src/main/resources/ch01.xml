@@ -34,7 +34,7 @@
     <para>L'Intégration Continue, dans sa forme la plus simple, se compose d'un outil
     qui surveille les modifications de code dans votre gestionnaire de configuration.
     Dès qu'un changement est détecté, cet outil va automatiquement compiler et tester
-    votre application. Si quelquechose se passe mal, l'outil va immédiatement avertir
+    votre application. Si la moindre erreur arrive alors l'outil va immédiatement avertir
     les développeurs afin qu'ils puissent immédiatement corriger le problème.</para>
     <para>Mais l'Intégration Continue est bien plus que cela. L'Intégration Continue
     peut aussi suivre la santé de votre code en surveillant la qualité du code et
@@ -57,7 +57,7 @@
     processus. Et, en automatisant le processus de déploiement, l'Intégration Continue vous permet de
     mettre votre logiciel dans les mains des testeurs et des utilisateurs finaux plus rapidement,
     avec plus de fiabilité et avec moins d'efforts.</para>
-    <para>Ce concept de déploiement automatiséest important. En effet, si vous poussez ce
+    <para>Ce concept de déploiement automatisé est important. En effet, si vous poussez ce
     concept de déploiement automatisé à sa conclusion logique, vous pourriez mettre en
     production tout build qui passerait sans encombre les tests automatisés nécessaires.
     Cette pratique de déployer en production tous les builds ayant réussi est appelée 
@@ -72,7 +72,7 @@
     build qui a réussi à passer les tests automatisés pertinents et les contrôles qualité 
     peut <emphasis>virtuellement</emphasis> être déployé en production au moyen d'un <phrase role="keep-together">processus</phrase> 
     lancé par un simple clic, et ainsi se retrouver dans les mains de l'utilisateur final en quelques minutes.
-    Cependant, ce processus n'est pas automatique: c'est au métier, plutôt qu'à l'Informatique de 
+    Cependant, ce processus n'est pas automatique : c'est au métier, plutôt qu'à l'Informatique de 
     décider quel est le moment opportun pour livrer les dernières modifications.</para>
     <?dbfo-need height=”1in”?>
     <para>Ainsi les techniques d'Intégration Continue, et plus particulièrement 
