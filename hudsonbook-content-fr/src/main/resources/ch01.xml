@@ -4,12 +4,12 @@
   <title>Introduction à Jenkins</title>
   <sect1 id="I_sect11_d1e536">
     <title>Introduction</title>
-    <para>L'Intégration Continue, aussi connue sous le terme <indexterm class="startofrange" id="ch01-ci" significance="normal"><primary>IC (Intégration Continue)</primary></indexterm><indexterm id="I_indexterm1_d1e544" significance="normal"><primary>Intégrtion Continue</primary><see>IC</see></indexterm>IC, est l'un des piliers du développement logiciel moderne. En fait
+    <para>L'Intégration Continue, aussi connue sous le terme <indexterm class="startofrange" id="ch01-ci" significance="normal"><primary>IC (Intégration Continue)</primary></indexterm><indexterm id="I_indexterm1_d1e544" significance="normal"><primary>Intégrtion Continue</primary><see>IC</see></indexterm>IC, est l'un des piliers du développement logiciel moderne. En fait,
     elle est un véritable tournant — quand l'Intégration Continue est mise en place dans 
     une organisation, elle change radicalement la manière dont les équipes 
     pensent le processus de développement. Elle est capable de permettre et
     d'induire toute une série d'améliorations et de transformations, depuis 
-    le régulier build automatisé à la livraison continue en production. Une
+    le build régulier automatisé jsqu'à la livraison continue en production. Une
     bonne infrastructure d'IC peut fluidifier le processus de développement jusqu'au
     déploiement, aide à détecter et corriger les bogues plus rapidement, fournit
     un écran de contrôle très utile aux développeurs mais aussi aux non-développeurs, et
@@ -20,17 +20,17 @@
   <sect1 id="intro-sect-intro">
     <title>Les fondamentaux de l'Intégration Continue</title>
     <para>A l'époque des projets en V et des diagrammes de Gantt, avant l'introduction des 
-    pratiques de l'IC, une équipe de développement dépensait sans compter son temps et son énergie 
-    durant la phase amenant à la livraison et qui portait le nom de Phase d'Intégration. 
-    Pendant cette phase, toutes les modifications apportées au code par les développeurs ou de 
+    pratiques de l'IC, une équipe de développement dépensait son temps et son énergie 
+    sans compter durant la phase amenant à la livraison, appelée Phase d'Intégration. 
+    Durant cette phase, toutes les modifications apportées au code par les développeurs ou de 
     petites équipes étaient rassemblées puis aggrégées et  fusionnées en un produit fonctionnel. 
     Ce travail était dur, intégrant ainsi des mois de modifications qui entraient en conflit. 
     Il était très difficile d'anticiper les problèmes qui allaient
-    surgir, et encore plus de les corriger car cela impliquait de retravailler du code qui 
+    surgir, et encore plus de les corriger car cela impliquait de reprendre du code qui 
     avait été écrit des semaines, voire des mois auparavant. Ce douloureux processus, plein de
     risques et de dangers, amenait souvent des retards significatifs de livraison, des
-    coûts supplémentaires, et au final des clients mécontents. L'Intégration Continue est née
-    comme réponse à ces problèmes.</para>
+    coûts supplémentaires et, au final, des clients mécontents. L'Intégration Continue est née
+    comme une réponse à ces problèmes.</para>
     <para>L'Intégration Continue, dans sa forme la plus simple, se compose d'un outil
     qui surveille les modifications de code dans votre gestionnaire de configuration.
     Dès qu'un changement est détecté, cet outil va automatiquement compiler et tester
