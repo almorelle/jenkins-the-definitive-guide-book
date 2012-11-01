@@ -1134,7 +1134,7 @@
 
         <secondary>proxy</secondary>
       </indexterm>Dans la plupart des environnements d'entreprise, votre
-    serveur Jenkins sera situé derrière un pare-feu, et n'aura pas accès
+    serveur Jenkins sera situé derrière un pare-feu, et n'aura pas un accès
     direct à Internet. Jenkins a besoin d'un accès Internet pour télécharger
     les plugins et les mises à jour, et aussi pour installer les outils tels
     que le JDK, Ant et Maven depuis des sites distants. Si vous avez besoin de
@@ -1174,7 +1174,7 @@
     Jenkins, rappelez-vous que tous les autres outils de ce serveur auront
     besoin de connaître aussi l'existence de ce proxy. En particulier, cela
     inclut des outils comme Subversion (si vous accédez à un dépôt externe)
-	et Maven (si vous n'utilisez pas un <emphasis>Repository
+	et Maven (si vous n'utilisez pas un <emphasis>Enterprise Repository
     <indexterm class="endofrange" id="I_indexterm4_d1e4948"
         significance="normal" startref="ch04-proxy1">
         <primary></primary>
@@ -1190,7 +1190,7 @@
     <para>Vous n'avez pas besoin d'énormément de configuration pour démarrer
     avec Jenkins. La configuration requise est plutôt évidente, et est
     centralisée dans l'écran Configurer le système. Une fois que c'est fait,
-    vous êtes prêt à créer votre première tâche de construction Jenkins
+    vous êtes prêt à créer votre première tâche de build Jenkins
     !</para>
   </sect1>
 </chapter>
