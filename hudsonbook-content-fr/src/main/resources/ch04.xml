@@ -963,12 +963,12 @@
         significance="normal">
         <primary>systèmes de gestion de version</primary>
 
-        <secondary>supporté par Jenkins</secondary>
+        <secondary>supportés par Jenkins</secondary>
       </indexterm><indexterm id="I_indexterm4_d1e4806" significance="normal">
         <primary>systèmes de gestion de version</primary>
 
         <seealso>CVS; Git; Subversion</seealso>
-      </indexterm>Jenkins arrive de base préinstallé avec des plugins pour
+      </indexterm>Jenkins arrive de base pré-installé avec des plugins pour
     CVS et Subversion. Les autres systèmes de gestion de version sont
     supportés par des plugins que vous pouvez télécharger depuis l'écran Gérer
     les plugins.</para>
@@ -989,7 +989,7 @@
       avec des dépôts Subversion. Si vous avez besoin de vous authentifier
       pour vous connecter à un dépôt, Jenkins vous le demandera quand vous
       entrerez l'URL Subversion dans la configuration de la tâche de
-      construction.</para>
+      build.</para>
     </sect2>
 
     <sect2>
@@ -1003,7 +1003,7 @@
           <primary>configuration</primary>
 
           <secondary>CVS</secondary>
-        </indexterm>nécessite peu voir aucune configuration. Par défaut,
+        </indexterm>nécessite peu voire aucune configuration. Par défaut,
       Jenkins cherchera des outils comme CVS dans le chemin système, bien que
       vous puissiez fournir le chemin explicitement s'il ne s'y trouve pas.
       CVS garde le login et le mot de passe dans un fichier appelé <filename
