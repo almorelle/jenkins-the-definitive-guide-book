@@ -1030,7 +1030,7 @@
         significance="normal">
         <primary>configuration</primary>
 
-        <secondary>serveur de messagerie server</secondary>
+        <secondary>serveur de messagerie</secondary>
       </indexterm><indexterm class="startofrange" id="ch04-email2"
         significance="normal">
         <primary>serveur de messagerie électronique, configurer</primary>
@@ -1040,9 +1040,9 @@
       </indexterm>La dernière des options de configuration basique que vous
     devez mettre en place est la configuration du serveur de messagerie
     électronique. L'email est la technique de notification la plus
-    fondamentale de Jenkins — quand une construction échoue, il envoie un
-    email au développeur qui a committé les changements, et optionnellement
-    aussi aux autres membres de l'équipe. Jenkins a donc besoin de connaître
+    fondamentale de Jenkins — quand un build échoue, il envoie un
+    email au développeur qui a archivé les changements, et optionnellement
+    aux autres membres de l'équipe. Jenkins a donc besoin de connaître
     votre serveur de messagerie électronique (voir <xref
     linkend="fig-configure-email" />).</para>
 
@@ -1062,7 +1062,7 @@
 
     <para>L'email de l'administrateur système est l'adresse depuis laquelle
     les messages de notification sont envoyés. Vous pouvez aussi utiliser ce
-    champ pour tester la configuration email —si vous cliquez sur le bouton
+    champ pour tester la configuration email — si vous cliquez sur le bouton
     Tester la configuration, Jenkins enverra un email de test à cette
     adresse.</para>
 
@@ -1078,7 +1078,7 @@
     <para>Vous devrez aussi fournir une URL de base correcte pour votre
     serveur Jenkins (une qui n'utilise pas localhost). Jenkins utilise cette
     URL dans les notifications email pour que les utilisateurs puissent aller
-    directement de l'email à l'écran d'échec de construction sur
+    directement de l'email à l'écran d'échec du build sur
     Jenkins.</para>
 
     <para>Jenkins fournit aussi une configuration email plus sophistiquée, en
@@ -1089,7 +1089,7 @@
     <para><indexterm id="I_indexterm4_d1e4888" significance="normal">
         <primary>Gmail, configurer</primary>
       </indexterm>Par exemple, plusieurs organisations utilisent Google Apps
-    pour leurs services d'email. Vous pouvez configurer Jenkins pour travailler
+    pour leurs services de messagerie. Vous pouvez configurer Jenkins pour travailler
     avec le service Gmail comme montré dans <xref
     linkend="fig-configure-gmail" os="" />. Tout ce que vous avez besoin de
     faire dans ce cas est d'utiliser le serveur SMTP Gmail, et de fournir
