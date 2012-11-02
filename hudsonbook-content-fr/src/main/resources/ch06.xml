@@ -10,7 +10,7 @@
         <secondary>automatisés</secondary>
       </indexterm><indexterm id="I_indexterm6_d1e8512" significance="normal">
         <primary>tâches de build</primary>
-        <secondary>tests in</secondary>
+        <secondary>tests dans</secondary>
         <see>tests</see>
       </indexterm>Si vous n'utilisez pas les tests automatisés avec votre
     environnement d'intégration continue, vous passez à côté d'un aspect
@@ -41,11 +41,11 @@
         id="I_indexterm6_d1e8537" significance="normal">
         <primary>BDD (Behavior-Driven Development)</primary>
       </indexterm>Behavior-Driven Development (BDD). Dans cette approche,
-    utilisée courament dans de nombreux projets agiles, le but de vos tests
+    utilisée couramment dans de nombreux projets agiles, le but de vos tests
     unitaires est à la fois de clarifier votre compréhension du comportement du
     code et d'écrire un test automatisé prouvant que le code implémente le
     comportement. En se concentrant sur le test du comportement attendu de votre
-    code, plutôt que sur son implémentation, rend les tests plus compréhensibles
+    code, plutôt que sur son implémentation, cela rend les tests plus compréhensibles
     et plus pertinents, et par conséquent aide Jenkins à fournir une information
     plus <phrase role="keep-together">pertinente</phrase>.</para>
     <para>Bien <indexterm id="I_indexterm6_d1e8546" significance="normal">
@@ -58,16 +58,16 @@
     est certainement mieux que pas de tests du tout.</para>
     <?dbfo-need height=”1in”?>
     <para>Jenkins n'est pas limité aux tests unitaires, cependant. Il y a
-    beaucoup d'autres types de tests automatisés que vous devriez envisager,
+    plusieurs autres types de tests automatisés que vous devriez envisager,
     selon la nature de votre application, parmi les tests d'intégration, les
     tests web, les tests fonctionnels, les tests de performance, les tests de
     charge et autres. Tous ceux-ci ont leur place dans un environnement de build
     automatisé.</para>
     <para>Jenkins <indexterm id="I_indexterm6_d1e8560" significance="normal">
-        <primary>tests d'acceptance, automatisé</primary>
+        <primary>tests d'acceptation, automatisé</primary>
       </indexterm><indexterm id="I_indexterm6_d1e8563" significance="normal">
         <primary>tests</primary>
-        <secondary>tests d'acceptance</secondary>
+        <secondary>tests d'acceptation</secondary>
       </indexterm>peut aussi être utilisé, en conjonction avec des techniques
     telles que Behavior-Driven Development et Acceptance Test Driven
     Development, comme un outil de communication destiné à la fois aux
@@ -77,7 +77,7 @@
     Product Owners, et les utilisateurs puissent les comprendre. Avec de tels
     outils, Jenkins peut fournir des informations sur l'avancement d'un projet
     en termes métiers, et ainsi faciliter la communication entre développeurs
-    and non développeurs à l'intérieur d'une équipe.</para>
+    et les non-développeurs à l'intérieur d'une équipe.</para>
     <para>Pour des applications existantes avec peu ou pas de tests automatisés
     existants, cela peut être difficile et consommateur en temps de mettre en
     place des tests unitaires complets dans le code. De plus, les tests peuvent
@@ -85,12 +85,12 @@
     l'implémentation existante plutôt que vérifier le fonctionnel attendu. Une
     approche intéressante dans ces situations est d'écrire <indexterm
         id="I_indexterm6_d1e8571" significance="normal">
-        <primary>tests fonctionnels (regression)</primary>
+        <primary>tests fonctionnels (régression)</primary>
       </indexterm><indexterm id="I_indexterm6_d1e8574" significance="normal">
         <primary>tests</primary>
-        <secondary>tests fonctionnels (regression)</secondary>
+        <secondary>tests fonctionnels (régression)</secondary>
       </indexterm><indexterm id="I_indexterm6_d1e8579" significance="normal">
-        <primary>tests de regression</primary>
+        <primary>tests de régression</primary>
         <see>tests fonctionnels (régression)</see>
       </indexterm>des tests fonctionnels automatisés (“régression”) qui simulent
     les manières les plus courantes d'utilisation de l'application. Par exemple,
@@ -104,7 +104,7 @@
     efficacement pour tester les applications web à un haut niveau. Alors que
     cette approche n'est pas aussi complète que la combinaison de tests
     unitaires, d'intégration et d'acceptation de bonne qualité, c'est quand même
-    une façon efficace et économique d'intégrer des tests de regression
+    une façon efficace et économique d'intégrer des tests de régression
     automatisés dans une application existante.</para>
     <para>Dans ce chapitre, nous allons voir comment Jenkins vous aide à
     conserver les traces des résultats des tests automatisés, et comment vous
