@@ -152,7 +152,7 @@
         id="I_indexterm6_d1e8642" significance="normal">
         <primary>PHPUnit</primary>
       </indexterm>PHPUnit. Et cette liste n'est pas exhaustive !</para>
-    <para>Ces outils peuvent aussi être utilisés pour <indexterm
+    <para>Ces outils peuvent aussi être utilisés pour les <indexterm
         id="I_indexterm6_d1e8648" significance="normal">
         <primary>tests</primary>
         <secondary>tests d'intégration</secondary>
