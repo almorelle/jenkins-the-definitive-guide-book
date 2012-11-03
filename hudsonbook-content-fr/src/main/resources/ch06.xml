@@ -373,7 +373,7 @@
     d'échecs de test dans cette tâche de build (“5 échecs” dans l'illustration),
     <phrase role="keep-together">et aussi</phrase> la différence dans le nombre
     d'échecs de test depuis le dernier build (“+5” dans <phrase
-    role="keep-together">l'illustration—</phrase>cinq nouveaux échecs de test).
+    role="keep-together">l'illustration — </phrase>cinq nouveaux échecs de test).
     Vous pouvez aussi voir comment les tests ont réussi dans le <phrase
     role="keep-together">temps — </phrase>les échecs de test des builds
     précédents apparaîtront en rouge dans le graphique Tendance des résultats
@@ -410,7 +410,7 @@
     </figure>
     <para>Pour <indexterm id="I_indexterm6_d1e8911" significance="normal">
         <primary>tâches de build free-style</primary>
-        <secondary>échoué</secondary>
+        <secondary>échouées</secondary>
       </indexterm>les tâches de build free-style, Jenkins vous donnera
     directement un aperçu de vos résultats de test, mais organisé par packages
     de haut niveau plutôt que par modules.</para>
@@ -470,7 +470,7 @@
     clé. Par exemple, exécuter un millier de tests unitaires en cinq minutes est
     bon — prendre une heure ne l'est pas. Donc c'est une bonne idée de vérifier
     régulièrement combien de temps vos tests unitaires prennent pour s'exécuter,
-    et si nécessaire invstiguer pourquoi ils prennent autant de temps.</para>
+    et si nécessaire investiguer pourquoi ils prennent autant de temps.</para>
     <para>Heureusement, Jenkins peut facilement vous dire la durée que prennent
     vos tests pour s'exécuter dans le temps. Sur la page d'accueil de la tâche
     de build, cliquez sur le lien “tendance” dans la boite Historique des builds
@@ -496,8 +496,8 @@
     <para>Quand vous êtes sur la page Résultats des tests (voir <xref
     linkend="fig-testing-test-result-details"/>), vous pouvez aussi affiner et
     voir le temps que prennent les tests dans un module, package ou classe
-    donné. Cliquez sur la durée du test dans la page Résultats des tests (“A
-    duré 31 ms” in <xref linkend="fig-testing-test-result-details"/>) pour voir
+    donnée. Cliquez sur la durée du test dans la page Résultats des tests (“A
+    duré 31 ms” dans <xref linkend="fig-testing-test-result-details"/>) pour voir
     l'historique du test pour un package, une classe, ou un test individuel
     (voir <xref linkend="fig-testing-test-result-history"/>). Cela rend facile
     l'isolation d'un test qui prend plus de temps qu'il ne le devrait, ou même
