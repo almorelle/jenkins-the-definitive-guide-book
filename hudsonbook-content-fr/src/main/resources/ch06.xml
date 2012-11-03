@@ -204,7 +204,7 @@
       </indexterm>votre build génère des résultats de test, vous devez
     configurer votre tâche de build Jenkins afin de les afficher. Comme
     mentionné précédemment, Jenkins sait traiter n'importe quel rapport de tests
-    compatible xUnit, quel que soit le langage avec lequel ils ont été
+    compatible xUnit, quelque soit le langage avec lequel ils ont été
     écrits.</para>
     <para>Pour <indexterm id="I_indexterm6_d1e8704" significance="normal">
         <primary>tâches de build Maven</primary>
@@ -213,7 +213,7 @@
         <primary>tests</primary>
         <secondary sortas="Maven">dans des tâches de build Maven</secondary>
       </indexterm>les tâches de build Maven, aucune configuration spécifique
-    n'est requise — assurez-vous seulement que vous lancez bien un "goal" qui va
+    n'est requise — assurez-vous seulement que vous lancez bien un <emphasis>goal</emphasis> qui va
     exécuter vos tests, tel que <literal moreinfo="none">mvn test</literal>
     (pour vos tests unitaires) ou <literal moreinfo="none">mvn verify</literal>
     (pour les test unitaires et d'intégration). Un exemple de configuration de
@@ -238,16 +238,16 @@
         <primary>tests</primary>
         <secondary sortas="free-style">dans des tâches de build
         free-style</secondary>
-      </indexterm>les tâches de build free-style, vous devez effectuer une petit
+      </indexterm>les tâches de build free-style, vous devez effectuer un petit
     travail de configuration. En plus de vous assurer que votre build exécute
-    les tests, vous devez indiquer à Jenkins de publier les rapport de test
+    les tests, vous devez indiquer à Jenkins de publier les rapports de test
     JUnit. Vous <indexterm id="I_indexterm6_d1e8744" significance="normal">
         <primary>tâches de build free-style</primary>
         <secondary>Actions à la suite du build</secondary>
       </indexterm>le configurez dans la section “Actions à la suite du build”
     (voir <xref linkend="fig-testing-freestyle-junit-config"/>). Ici, vous
     fournissez un chemin vers les rapports XML JUnit ou TestNG. Leur chemin
-    exact dépend du projet — pour un projet Maven, un chemin tel <filename
+    exact dépend du projet — pour un projet Maven, un chemin tel que <filename
     moreinfo="none">**/target/surefire-reports/*.xml</filename> les trouvera
     pour la plupart des projets. Pour un projet Ant, cela dépendra de la façon
     dont vous avez configuré la tache Ant JUnit, comme discuté
