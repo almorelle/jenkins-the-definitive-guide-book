@@ -608,7 +608,7 @@ public void whenAUserLogsOnWithACorrectUsernameAndPasswordTheHomePageIsDisplayed
     <para>Une autre <indexterm class="startofrange" id="ch06-coverage"
         significance="normal">
         <primary>métriques de couverture de code</primary>
-      </indexterm>métrique liée aux tests très utile est la couverture de code.
+      </indexterm>métrique très utile liée aux tests est la couverture de code.
     La couverture de code donne une indication sur les parties de votre
     application qui ont été exécutées pendant les tests. Alors que ce n'est pas
     en soit une indication suffisante sur la qualité du test (il est facile
@@ -651,11 +651,11 @@ public void whenAUserLogsOnWithACorrectUsernameAndPasswordTheHomePageIsDisplayed
           significance="normal">
           <primary>Cobertura</primary>
         </indexterm> est un outil de couverture de code open source pour Java et
-      Groovy qui est facile d'utilisation et s'intègre parfaitement à la fois
+      Groovy qui est simple d'utilisation et s'intègre parfaitement à la fois
       dans Maven et Jenkins.</para>
-      <para>Comme tous les plugins Jenkins de métriques de qualité de code
-      ,<footnote>
-          <para>avec l'exception notable de Sonar, que nous allons examiner plus
+      <para>Comme tous les plugins Jenkins de métriques de qualité de code,
+        <footnote>
+          <para>Avec l'exception notable de Sonar, que nous allons examiner plus
           tard dans le livre.</para>
         </footnote> le plugin Cobertura pour Jenkins ne va pas lancer les tests
       de couverture de code pour vous. C'est à vous de générer les informations
@@ -845,7 +845,7 @@ public void whenAUserLogsOnWithACorrectUsernameAndPasswordTheHomePageIsDisplayed
         c'est le moyen le plus facile pour garantir que le build utilisera la
         même version de Cobertura quelle que soit la façon dont il est
         exécuté.</para>
-        <para>En supposant que vous avez téléchargé la dernière installation
+        <para>En supposant que vous avez téléchargé la dernière installation de
         Cobertura et que vous l'avez placée à l'intérieur de votre projet dans
         un répertoire nommé <filename moreinfo="none">tools</filename>, vous
         pourriez faire quelque chose comme ceci :</para>
@@ -935,7 +935,7 @@ public void whenAUserLogsOnWithACorrectUsernameAndPasswordTheHomePageIsDisplayed
 &lt;/target&gt;</programlisting>
         <calloutlist>
           <callout arearefs="co-ch04-cobertura-junit">
-            <para>Exéute les tests JUnit avec les classes instrumentées.</para>
+            <para>Exécute les tests JUnit avec les classes instrumentées.</para>
           </callout>
           <callout arearefs="co-ch04-cobertura-classpath">
             <para>Les classes instrumentées utilisent les classes de Cobertura,
@@ -992,7 +992,7 @@ public void whenAUserLogsOnWithACorrectUsernameAndPasswordTheHomePageIsDisplayed
         Si Cobertura n'a pas été installé, vous trouverez le plugin Cobertura
         dans l'onglet Disponibles, dans la section Build Reports (voir <xref
         linkend="fig-hudson-cobertura-plugin"/>). Pour l'installer, cochez
-        simplement la case et appuyez sur ENTER (ou faites défiler jusqu'au bas
+        simplement la case et appuyez sur Entrée (ou faites défiler jusqu'au bas
         de l'écran et cliquez sur le bouton “Installer”). Jenkins va télécharger
         et installer le plugin pour vous. Une fois que le téléchargement est
         fini, vous devez redémarrer votre serveur Jenkins.</para>
@@ -1023,7 +1023,7 @@ public void whenAUserLogsOnWithACorrectUsernameAndPasswordTheHomePageIsDisplayed
         mettre en place via un build qui s'exécute sur une base quotidienne. En
         effet, le retour sur les métriques de couverture de code et autres n'est
         généralement pas aussi critique que le retour sur les résultats de test,
-        et cela va libérer des exécuteurs de build par des tâches de build qui
+        et cela va libérer des exécuteurs de build pour des tâches de build qui
         peuvent bénéficier de retour rapide.</para>
         <para>Comme nous le mentionnions précédemment, Jenkins ne fait pas
         d'analyse de couverture par lui-même — vous devez configurer votre build
@@ -1120,7 +1120,7 @@ public void whenAUserLogsOnWithACorrectUsernameAndPasswordTheHomePageIsDisplayed
           </mediaobject>
         </figure>
         <para>Le premier (celui avec une icône ensoleillée) est la valeur
-        minimale que le build doit atteindre pour avoir une icône ensolleillée.
+        minimale que le build doit atteindre pour avoir une icône ensoleillée.
         La seconde indique la valeur en dessous de laquelle le build aura une
         icône orageuse. Jenkins va extrapoler les valeurs intermédiaires entre
         ces deux-ci pour d'autres icônes météo plus nuancées.</para>
@@ -1236,7 +1236,7 @@ public void whenAUserLogsOnWithACorrectUsernameAndPasswordTheHomePageIsDisplayed
       d'<ulink url="http://www.atlassian.com/software/clover">Atlassian</ulink>.
       Clover fonctionne parfaitement pour des projets Ant, Maven, ou même
       Grails. La configuration et l'utilisation de Clover est bien documentée
-      sur le site web d'Atlassian , donc nous ne regarderons pas ces aspects en
+      sur le site web d'Atlassian, donc nous ne regarderons pas ces aspects en
       détail. Cependant, en guise d'exemple, voici une configuration Maven
       typique de Clover pour une utilisation avec Jenkins :</para>
       <programlisting format="linespecific" id="I_programlisting6_d1e9520">      &lt;build&gt;
