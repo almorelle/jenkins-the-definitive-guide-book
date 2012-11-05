@@ -1919,7 +1919,7 @@ public void whenAUserLogsOnWithACorrectUsernameAndPasswordTheHomePageIsDisplayed
     exécutés à chaque changement. Ils sont plus susceptibles d'être programmés
     comme un build quotidien. Le problème est alors que beaucoup de choses
     peuvent intervenir en vingt-quatre heures, et, si le build quotidien échoue,
-    il sera difficile de déterminer lequel des nombreux changements committés
+    il sera difficile de déterminer lequel des nombreux changements archivés
     sur le contrôle de version pendant la journée était responsable. C'est un
     problème sérieux, et pénalise la capacité de votre serveur d'intégration
     continue de fournir un retour rapide qui le rend utile.</para>
@@ -1936,7 +1936,7 @@ public void whenAUserLogsOnWithACorrectUsernameAndPasswordTheHomePageIsDisplayed
       </indexterm>fonctionnels <emphasis>ne</emphasis> rentrent pas dans cette
     catégorie. Vous devez faire tout ce que vous pouvez pour rendre ces tests
     aussi rapides que possible. Moins de dix minutes est probablement acceptable
-    pour une suite complète d'intégration/fonctionnelle. Deux heures ne l'est
+    pour une suite complète d'intégration/fonctionnel. Deux heures ne l'est
     pas.</para>
     <para>Donc, si vous vous trouvez vous-même à devoir accélérer vos tests,
     voici quelques stratégies qui seront utiles, par ordre approximatif de
@@ -1947,7 +1947,7 @@ public void whenAUserLogsOnWithACorrectUsernameAndPasswordTheHomePageIsDisplayed
           significance="normal">
           <primary>serveur de build</primary>
           <secondary>mise à jour</secondary>
-        </indexterm> la façon la plus facile pour accélérer vos builds est de de
+        </indexterm> la façon la plus facile pour accélérer vos builds est de
       rajouter du matériel. Cela pourrait être aussi simple que de mettre à jour
       votre serveur de build. Comparé au temps et effort passés à identifier et
       corriger les bugs liés à l'intégration, le coût d'achat d'un nouveau
@@ -2006,7 +2006,7 @@ public void whenAUserLogsOnWithACorrectUsernameAndPasswordTheHomePageIsDisplayed
     <sect2>
       <title>Exécutez vos tests en parallèle</title>
       <para>Si vos <indexterm id="I_indexterm6_d1e10004" significance="normal">
-          <primary>tests fonctionnels (regression)</primary>
+          <primary>tests fonctionnels (régression)</primary>
           <secondary>exécution en parallèle</secondary>
         </indexterm>tests fonctionnels prennent deux heures pour s'exécuter, il
       est peu probable qu'ils aient tous besoin de s'exécuter à la suite. Il est
@@ -2032,7 +2032,7 @@ public void whenAUserLogsOnWithACorrectUsernameAndPasswordTheHomePageIsDisplayed
       des variables d'instance partagées vont dans ce cas causer des
       problèmes.</para>
       <para>En général, vous devez être prudent sur ​​les interactions entre
-      votre tests. Si vos tests web démarrent un serveur Web intégré, comme
+      vos tests. Si vos tests web démarrent un serveur Web intégré, comme
       Jetty, par exemple, vous devez vous assurer que le port utilisé est
       différent pour chaque ensemble de tests simultanés.</para>
       <para>Néanmoins, si vous pouvez le faire fonctionner pour votre
