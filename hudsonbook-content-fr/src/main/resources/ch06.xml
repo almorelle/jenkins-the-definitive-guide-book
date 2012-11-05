@@ -1347,10 +1347,10 @@ public void whenAUserLogsOnWithACorrectUsernameAndPasswordTheHomePageIsDisplayed
     où en est le projet.</para>
     <para>Les tests d'acceptation ne doivent pas être mélangés avec des tests
     orientés développeurs, parce qu'à la fois leur finalité et leur audience
-    sont très différents. Les tests d'acceptation doivent être des exemples
+    sont très différentes. Les tests d'acceptation doivent être des exemples
     montrant comment le système fonctionne, avec un accent sur la démonstration
     plutôt que sur une preuve exhaustive. Les tests exhaustifs doivent être
-    faits au niveau test unitaire.</para>
+    faits au niveau des tests unitaires.</para>
     <para>Les tests d'acceptation peuvent être automatisés en utilisant des
     outils conventionnels tels que JUnit, mais il y a une tendance croissante à
     utiliser <indexterm id="I_indexterm6_d1e9602" significance="normal">
@@ -1367,7 +1367,7 @@ public void whenAUserLogsOnWithACorrectUsernameAndPasswordTheHomePageIsDisplayed
       </indexterm>des rapports compatibles JUnit qui peuvent être traités
     directement par Jenkins.</para>
     <para>Les frameworks Behavior-Driven Development ont aussi la notion de
-    “tests en attente,” tests qui sont automatisés, mais qui n'ont pas encore
+    “tests en attente”, tests qui sont automatisés, mais qui n'ont pas encore
     été implémentés par l'équipe de développement. Cette distinction joue un
     rôle important dans la communication avec les autres acteurs non
     développeurs : si vous pouvez automatiser ces tests tôt dans le processus,
@@ -1382,17 +1382,17 @@ public void whenAUserLogsOnWithACorrectUsernameAndPasswordTheHomePageIsDisplayed
     séparément des autres tests automatisés plus conventionnels. S'ils utilisent
     le même framework de test que vos tests classiques (e.g., JUnit),
     assurez-vous qu'ils sont exécutés dans une tâche de build séparée, de telle
-    façon que les non développeurs peuvent les visualiser et se concentrer sur
-    les tests orientés métier sans être distrait par ceux de plus bas niveau ou
+    façon que les non-développeurs peuvent les visualiser et se concentrer sur
+    les tests orientés métier sans être distraient par ceux de plus bas niveau ou
     techniques. Il peut être aussi utile d'adopter des conventions de nommage
-    orientées métier et fonctionnel pour vos tests et classes de test, afin de
-    les rendre plus accessible aux non développeurs (voir <xref
+    orientées métier et fonctionnelles pour vos tests et classes de test, afin de
+    les rendre plus accessible aux non-développeurs (voir <xref
     linkend="fig-hudson-junit-acceptance-tests"/>). La façon dont vous nommez
     vos tests et classes de test peut faire une réelle différence quant à la
     lecture des rapports de test et la compréhension des fonctionnalités et
     comportements métier qui sont testés.</para>
     <figure float="0" id="fig-hudson-junit-acceptance-tests">
-      <title>Utilisation de conventions de nommage orienté métier pour des tests
+      <title>Utilisation de conventions de nommage orientées métier pour des tests
       JUnit</title>
       <mediaobject id="I_mediaobject6_d1e9630">
         <imageobject role="print">
@@ -1415,7 +1415,7 @@ public void whenAUserLogsOnWithACorrectUsernameAndPasswordTheHomePageIsDisplayed
         <secondary>HTML Publisher</secondary>
       </indexterm> plugin HTML Publisher (voir <xref
     linkend="fig-hudson-html-publisher-plugin"/>). Bien que ce soit à vous de
-    vous assurer que votre build <phrase role="keep-together">produisse</phrase>
+    vous assurer que votre build <phrase role="keep-together">produise</phrase>
     les bons rapports, Jenkins peut les afficher sur la page de votre tâche de
     build, les rendant facilement accessible à tous les membres de
     l'équipe.</para>
