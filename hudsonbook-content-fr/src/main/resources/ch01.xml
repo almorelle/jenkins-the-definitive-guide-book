@@ -282,10 +282,10 @@
       sont automatisés dès le début du processus de développement, ils permettent de savoir
       très simplement quelles sont les fonctionnalités qui sont réalisées et celles qu'il reste à faire.
       L'application est automatiquement déployée sur un environnement de test pour l'équipe qualité (QA) 
-      soit à chaque modification soit tous les soirs; une version peut être déployée (ou “promue”) vers UAT (todo manu traduction)
-      et il est possible de la déployer dans des environnements de production au moyen d'd'un build lancé manuellement
-      quand les testeurs la considère prête. L'équipe peut aussi utiliser le serveur de build pour revenir en arrière d'une version au cas où 
-      une catastrophe arrivait.</para>
+      soit à chaque modification soit tous les soirs; une version peut être déployée (ou “promue”) pour des tests de conformité utilisateurs 
+      et il est possible de la déployer dans des environnements de production au moyen d'un build lancé manuellement
+      quand les testeurs la considère prête. L'équipe peut aussi utiliser le serveur de build pour revenir en arrière d'une version en cas 
+      de catastrophe.</para>
     </sect2>
     <sect2>
       <title>Phase 7— Déploiement Continu</title>
