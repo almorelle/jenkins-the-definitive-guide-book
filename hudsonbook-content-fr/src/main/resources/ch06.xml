@@ -1558,7 +1558,7 @@ public void whenAUserLogsOnWithACorrectUsernameAndPasswordTheHomePageIsDisplayed
     <para>Ce qui nous intéresse ici est le processus d'automatisation de ces
     tests de performance. Il y a plusieurs façons pour intégrer des tests JMeter
     dans votre processus de build Jenkins. Bien qu'à l'écriture de ces lignes,
-    il n'y ait pas de plugin JMeter pour Maven officiel disponible dans les
+    il n'y ait pas de plugin officiel JMeter pour Maven disponible dans les
     dépôts Maven, il y a un plugin Ant. Donc, la méthode la plus simple est
     d'écrire un script Ant pour exécuter vos tests de performance, et ensuite
     soit d'appeler ce script Ant directement, soit (si vous utilisez un projet
@@ -1583,7 +1583,7 @@ public void whenAUserLogsOnWithACorrectUsernameAndPasswordTheHomePageIsDisplayed
       &lt;/jmeter&gt;
     &lt;/target&gt;
 &lt;/project&gt;</programlisting>
-    <para>Cela suppose que l'installation JMeter est disponible dans le
+    <para>Cela suppose que l'installation de JMeter est disponible dans le
     répertoire <filename moreinfo="none">tools</filename> de votre projet.
     Placer des outils tels que JMeter au sein de votre structure de projet est
     une bonne habitude, car il rend vos scripts de build plus portables et plus
@@ -1602,7 +1602,7 @@ public void whenAUserLogsOnWithACorrectUsernameAndPasswordTheHomePageIsDisplayed
     </figure>
     <para>Notons que nous utilisons aussi le tag <literal
     moreinfo="none">&lt;jvmarg&gt;</literal> optionnel pour fournir à JMeter une
-    quantité de mémoire suffisante—les tests de performance sont une activité
+    quantité de mémoire suffisante — les tests de performance sont une activité
     consommatrice de mémoire.</para>
     <para>Le script affiché ici exécutera les tests de performance JMeter sur
     une application lancée. Donc vous devez vous assurer que l'application que
@@ -1668,7 +1668,7 @@ public void whenAUserLogsOnWithACorrectUsernameAndPasswordTheHomePageIsDisplayed
     <para>Enfin, vous devez exécuter vos tests de performance JMeter pendant
     cette phase. Vous pouvez le faire en utilisant le
     <emphasis>maven-antrun-plugin</emphasis> pour lancer le script Ant que nous
-    avons écrit précédemment pendant la phase integration test :</para>
+    avons écrit précédemment pendant la phase integration-test :</para>
     <programlisting format="linespecific" id="I_programlisting6_d1e9783">&lt;project...&gt;
   ...
   &lt;profiles&gt;
@@ -1707,16 +1707,16 @@ public void whenAUserLogsOnWithACorrectUsernameAndPasswordTheHomePageIsDisplayed
     moreinfo="none">verify</command>:</para>
     <screen format="linespecific">$ mvn verify -Pperformance</screen>
     <para>Une fois que vous avez configuré votre script de build pour gérer
-    JMeter, vous pouvez mettre en place un build de test de performance dans
+    JMeter, vous pouvez mettre en place un build de tests de performance dans
     Jenkins. Pour cela, nous allons utiliser le plugin <phrase
     role="keep-together">Jenkins Performance Test</phrase>, qui interprète les
-    logs JMeter logs et peut générer des statistiques et des jolis graphes en
+    logs JMeter et peut générer des statistiques et des jolis graphes en
     utilisant ces données. Donc, allez sur l'écran du gestionnaire des plugins
     sur votre serveur Jenkins et installez ce plugin (voir <xref
     linkend="fig-hudson-installing-performance-plugin"/>). Quand vous aurez
-    installé ce plugin, vous devez redémarrer Jenkins.</para>
+    installé ce plugin, vous devrez redémarrer Jenkins.</para>
     <figure float="none" id="fig-hudson-installing-performance-plugin">
-      <title>Préparer un script de test de performance dans JMeter</title>
+      <title>Préparer un script de tests de performance dans JMeter</title>
       <mediaobject id="I_mediaobject6_d1e9805">
         <imageobject role="print">
           <imagedata fileref="figs/print/jtdg_0625.pdf" format="PDF"/>
@@ -1744,7 +1744,7 @@ public void whenAUserLogsOnWithACorrectUsernameAndPasswordTheHomePageIsDisplayed
         </imageobject>
       </mediaobject>
     </figure>
-    <para>Il reste alors simplement à configurer votre tâche de build pour
+    <para>Il ne reste alors qu'à simplement configurer votre tâche de build pour
     qu'elle exécute vos tests de performance. Dans <xref
     linkend="fig-hudson-performance-build-config"/>, nous exécutons le build
     Maven que nous avons configuré précédemment. Notez que nous utilisons le
@@ -1775,7 +1775,7 @@ public void whenAUserLogsOnWithACorrectUsernameAndPasswordTheHomePageIsDisplayed
     JMeter, donc vous pouvez mettre des caractères génériques dans le chemin
     pour vous assurer que tous vos rapports JMeter seront affichés.</para>
     <para>Si vous prenez vos mesures de performance au sérieux, alors le build
-    doit échouer si les niveaux de service attendus ne sont pas atteint. Dans un
+    doit échouer si les niveaux de service attendus ne sont pas atteints. Dans un
     environnement d'intégration continue, toute mesure qui n'échoue pas si un
     critère de qualité minimum n'est pas atteint a tendance à être
     ignorée.</para>
@@ -1835,7 +1835,7 @@ public void whenAUserLogsOnWithACorrectUsernameAndPasswordTheHomePageIsDisplayed
       </indexterm>build.</para>
     <para>Avec quelques variations mineures, un script de test JMeter travaille
     essentiellement en simulant un nombre donné d'utilisateurs simultanés.
-    Généralement, cependant, vous voudez voir comment votre application gère des
+    Généralement, cependant, vous voudrez voir comment votre application gère des
     nombres différents d'utilisateurs. Le plugin Jenkins Performance le prend en
     compte assez bien, et peut traiter des graphes de plusieurs rapports JMeter.
     Assurez-vous juste que vous utilisez une expression générique quand vous
