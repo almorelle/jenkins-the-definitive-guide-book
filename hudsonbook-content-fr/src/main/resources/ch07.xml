@@ -42,7 +42,7 @@
 
         <secondary>activer</secondary>
       </indexterm> une sécurité basique dans Jenkins est assez simple. Allez
-    dans la page de configuration principale et sélectionnez la case à cocher
+    sur la page de configuration principale et sélectionnez la case à cocher
     Activer la sécurité (voir <xref
     linkend="fig-hudson-enabling-security" />). Ceci affiche plusieurs options
     que nous allons expliquer en détails dans ce chapitre. La première
@@ -50,7 +50,7 @@
         <primary>securité</primary>
 
         <secondary>domaine de sécurité</secondary>
-      </indexterm>section, domaine de sécurité, définit où Jenkins regardera
+      </indexterm>section, Domaine de sécurité, définit où Jenkins regardera
     pendant l'authentification, et inclut des options telles que l'utilisation
     d'utilisateurs stockés dans un serveur LDAP, en utilisant le compte
     utilisateur Unix sous-jacent (en supposant, bien sûr, que Jenkins est
@@ -83,7 +83,7 @@
       </mediaobject>
     </figure>
 
-    <para>Dans la fin de ce chapitre, nous regarderons comment configurer la
+    <para>À la fin de ce chapitre, nous regarderons comment configurer la
     sécurité Jenkins pour un certain nombre de scénarii courants.</para>
   </sect1>
 
