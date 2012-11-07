@@ -112,9 +112,9 @@
     permet aux utilisateurs authentifiés de faire tout ce qu'ils veulent,
     alors que les utilisateurs non authentifiés auront seulement une vue en
     lecture seule de leurs tâches de build. C'est super pour les petites
-    équipes - les développeurs peuvent gérer les tâches de construction, alors
+    équipes - les développeurs peuvent gérer les tâches de build, alors
     que les autres utilisateurs (testeur, analyste métier, responsable de
-    projet etc.) peuvent accéder aux tâches de build pour voir l'état du
+    projet, etc.) peuvent accéder aux tâches de build pour voir l'état du
     projet. En effet, certaines tâches pourraient même être configurées
     uniquement dans ce but, affichant les résultats de tests d'acceptation
     automatisés ou des métriques de qualité de code, par exemple.</para>
@@ -155,7 +155,7 @@
     connecter". Cette option affichera un lien Se connecter en haut de l'écran
     permettant aux utilisateurs de créer leurs propres comptes (voir <xref
     linkend="fig-hudson-user-signup" />). C'est une bonne idée pour les
-    développeurs d'utiliser ici leur nom de gestionnaire de sources : dans ce
+    développeurs d'utiliser ici leur nom d'utilisateur de gestionnaire de sources : dans ce
     cas, Jenkins sera capable de retrouver quels utilisateurs ont contribué
     aux changements qui ont déclenché un build particulier.</para>
 
@@ -175,7 +175,7 @@
 
     <para>Cette approche est évidemment un peu trop simple pour beaucoup de
     situations — il est utile pour les petites équipes de travailler en forte
-    proximité, où le but est de savoir le changement de qui a déclenché (ou
+    proximité, où le but est de connaitre le changement de qui a déclenché (ou
     cassé) un build particulier, plutôt que de gérer l'accès de façon plus
     restrictive. Dans les sections suivantes, nous discuterons de deux aspects
     orthogonaux de la sécurité Jenkins : identifier vos utilisateurs (domaines
