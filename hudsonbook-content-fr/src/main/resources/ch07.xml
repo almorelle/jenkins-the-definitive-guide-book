@@ -242,15 +242,15 @@
       utilisateurs sont autorisés à faire.</para>
 
       <para>Jenkins ajoute automatiquement tout utilisateur de gestionnaire de
-      sources à cette base de données dès qu'un changement est committé dans
+      sources à cette base de données dès qu'un changement est effectué dans
       le code source surveillé par Jenkins. Ces noms d'utilisateurs sont
       utilisés principalement pour enregistrer le responsable de chaque tâche
       de build. Vous pouvez voir la liste des utilisateurs actuellement connus
       en cliquant sur l'entrée de menu Personnes (voir <xref
       linkend="fig-hudson-user-list" />). Ici, vous pouvez visualiser les
       utilisateurs que Jenkins connaît actuellement, et aussi voir le dernier
-      projet dans lequel ils ont committé. Notez que cette liste contient la
-      liste de tous les utilisateurs à avoir jamais committé dans les projets
+      projet dans lequel ils ont archivé. Notez que cette liste contient la
+      liste de tous les utilisateurs à avoir jamais archivé dans les projets
       que Jenkins surveille — ils pourraient ne pas être (et en général ne
       sont pas) tous des utilisateurs actifs de Jenkins capables de se connecter
       sur le serveur Jenkins.</para>
@@ -329,7 +329,7 @@
           <secondary>email</secondary>
         </indexterm><indexterm id="I_indexterm7_d1e10261"
           significance="normal">
-          <primary>notifications email</primary>
+          <primary>notifications par email</primary>
         </indexterm>utile de noter que, si vos adresses email sont
       synchronisées avec vos noms d'utilisateurs de contrôle de version (par
       exemple, si vous travaillez chez acme.com, et que l'utilisateur “joe”
@@ -358,7 +358,7 @@
 
       <para>Une autre façon de gérer les utilisateurs courants actifs (ceux
       qui peuvent vraiment se connecter à Jenkins) s'effectue via le lien
-      Gérer les utilisateurs dans la page de configuration principale de
+      Gérer les utilisateurs sur la page de configuration principale de
       Jenkins (voir <xref linkend="fig-hudson-manage-users" />).</para>
 
       <figure float="none" id="fig-hudson-manage-users">
@@ -382,7 +382,7 @@
       manuellement (si cette option a été activée) et les utilisateurs SCM que
       vous avez activés en leur configurant un mot de passe. Vous pouvez aussi
       éditer des informations utilisateur (par exemple, modifier leur adresse
-      email or réinitialiser leur mot de passe), ou même les supprimer de la
+      email ou réinitialiser leur mot de passe), ou même les supprimer de la
       liste des utilisateurs actifs. Procéder ainsi ne les enlèvera pas de la
       liste globale des utilisateurs (leurs noms apparaîtront toujours dans
       l'historique de build, par exemple), mais ils ne seront plus capables de
@@ -559,7 +559,7 @@
       matrice d'autorisations générale ou par projet. Notez que, à l'inverse
       d'une intégration LDAP conventionnelle (voir <xref
       linkend="sec-security-ldap" />), il n'est pas nécessaire de préfixer les
-      groupes avec <literal moreinfo="none">ROLE_</literal>— vous pouvez
+      groupes avec <literal moreinfo="none">ROLE_</literal> — vous pouvez
       utiliser l'annuaire des groupes Active Directory <indexterm
           id="I_indexterm7_d1e10426" significance="normal">
           <primary>groups</primary>
@@ -569,7 +569,7 @@
 
       <para>Pour configurer le plugin, vous devez fournir le nom de domaine
       complet de votre serveur Active Directory. Si vous avez plus d'un
-      domaine, vous pouvez fournir une liste séparée par des virgule. Si vous
+      domaine, vous pouvez fournir une liste séparée par des virgules. Si vous
       fournissez le nom de la forêt (say “acme.com” au lieu de
       “europe.acme.com”), alors la recherche sera faite à partir du catalogue
       global. Notez que si vous faites cela sans spécifier le <emphasis>bind
@@ -642,7 +642,7 @@
 
           <secondary>domaines de sécurité</secondary>
 
-          <tertiary>Utilisateurs et groupes Unix</tertiary>
+          <tertiary>utilisateurs et groupes Unix</tertiary>
         </indexterm><indexterm id="I_indexterm7_d1e10490"
           significance="normal">
           <primary>groupes</primary>
@@ -667,7 +667,7 @@
 
       <para>Une autre <indexterm id="I_indexterm7_d1e10503"
           significance="normal">
-          <primary>Conteneur de servlet</primary>
+          <primary>conteneur de Servlet</primary>
 
           <secondary>en tant que domaine de sécurité</secondary>
         </indexterm><indexterm id="I_indexterm7_d1e10508"
@@ -676,22 +676,22 @@
 
           <secondary>domaines de sécurité</secondary>
 
-          <tertiary>Conteneur de servlet</tertiary>
+          <tertiary>conteneur de Servlet</tertiary>
         </indexterm>façon d'identifier les utilisateurs Jenkins est de laisser
-      le conteneur de servlet le faire pour vous. Cette approche est utile si
-      vous exécutez Jenkins dans un conteneur de servlet comme <indexterm
+      le conteneur de Servlet le faire pour vous. Cette approche est utile si
+      vous exécutez Jenkins dans un conteneur de Servlet comme <indexterm
           id="I_indexterm7_d1e10516" significance="normal">
-          <primary>Conteneur de servlet Tomcat</primary>
+          <primary>conteneur de Servlet Tomcat</primary>
         </indexterm>Tomcat ou <indexterm id="I_indexterm7_d1e10520"
           significance="normal">
-          <primary>Conteneur de servlet GlassFish</primary>
+          <primary>conteneur de Servlet GlassFish</primary>
         </indexterm>GlassFish, et que vous avez déjà un moyen établi pour
-      intégrer le conteneur de servlet avec votre annuaire utilisateur.
+      intégrer le conteneur de Servlet avec votre annuaire utilisateur.
       Tomcat, par exemple, vous permet d'authentifier les utilisateurs par
       rapport à une base de données relationnelle (en utilisant du JDBC direct
       ou une DataSource), JNDI, JAAS, ou fichier de configuration XML. Vous
       pouvez aussi utiliser les rôles définis dans l'annuaire utilisateur du
-      conteneur de servlet afin de les utiliser pour les stratégies
+      conteneur de Servlet afin de les utiliser pour les stratégies
       d'autorisation par matrice ou basée sur le projet.</para>
 
       <para>Dans Jenkins, c'est facile à configurer — sélectionnez simplement
@@ -802,8 +802,8 @@
           <primary>groupes</primary>
 
           <secondary>Atlassian Crowd</secondary>
-        </indexterm>groupes de Crowd pour toutes les stratégie d'autorisation
-      que nous avons présentée précédemment dans ce chapitre. Par exemple,
+        </indexterm>groupes de Crowd pour toutes les stratégies d'autorisation
+      que nous avons présenté précédemment dans ce chapitre. Par exemple,
       dans <xref linkend="fig-hudson-security-crowd-groups-matrix" />, nous
       utilisons des groupes utilisateurs définis dans Crowd pour configurer
       une sécurité basée sur la matrice dans l'écran principal de <indexterm
@@ -816,7 +816,7 @@
         </indexterm>configuration.</para>
 
       <figure float="0" id="fig-hudson-security-crowd-groups-matrix">
-        <title>Utiliser les groupes Atlassian Crowd groups dans
+        <title>Utiliser les groupes Atlassian Crowd dans
         Jenkins</title>
 
         <mediaobject id="I_mediaobject7_d1e10606">
@@ -886,10 +886,10 @@
           significance="normal">
           <primary>plugins</primary>
 
-          <secondary>Script de domaines de sécurité</secondary>
+          <secondary>Script Security Realm</secondary>
         </indexterm><indexterm class="startofrange" id="ch07-cust3"
           significance="normal">
-          <primary>Plugin de script de domaines de sécurité</primary>
+          <primary>plugin Script Security Realm</primary>
         </indexterm><indexterm class="startofrange" id="ch07-cust4"
           significance="normal">
           <primary>scripts</primary>
@@ -897,7 +897,7 @@
           <secondary>scripts d'authentification personnalisés</secondary>
         </indexterm>aucun plugin n'est disponible, vous pouvez aussi écrire
       votre propre script d'authentification. Pour faire cela, vous devez
-      installer le plugin de domaine de sécurité. Une fois que vous avez
+      installer le plugin Script Security Realm. Une fois que vous avez
       installé le script et redémarré Jenkins, vous pouvez écrire deux scripts
       dans votre langage de scripting favori. Un script authentifie
       l'utilisateur, tandis que l'autre détermine les groupes d'un utilisateur
