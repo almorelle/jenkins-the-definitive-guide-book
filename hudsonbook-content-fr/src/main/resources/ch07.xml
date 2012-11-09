@@ -998,7 +998,7 @@ def findGroupsFor(def username) {
   </sect1>
 
   <sect1 id="sect-authorization">
-    <title>Autorisation — Qui Peut Faire Quoi</title>
+    <title>Autorisation — Qui peut faire quoi</title>
 
     <para>Une fois que vous avez défini comment identifier vos utilisateurs,
     vous devez décider ce qu'ils sont autorisés à faire. Jenkins supporte
@@ -1036,7 +1036,7 @@ def findGroupsFor(def username) {
       sophistiquée est généralement requise.</para>
 
       <para>La sécurité basée sur matrice est une approche plus élaborée, où
-      différents utilisateurs se voient attribués différents droits, en
+      différents utilisateurs se voient attribuer différents droits, en
       utilisant une approche basée sur les rôles.</para>
 
       <sect3>
@@ -1058,7 +1058,7 @@ def findGroupsFor(def username) {
           </indexterm> première étape dans la configuration de la sécurité
         basée sur une matrice dans Jenkins est de créer un administrateur.
         <emphasis>C'est une étape essentielle, et elle doit être effectuée
-        avant toutes les autres. </emphasis>Votre administrateur peut être un
+        avant toutes les autres.</emphasis> Votre administrateur peut être un
         utilisateur existant, ou un créé spécialement dans ce but. Si vous
         voulez créer un utilisateur administrateur dédié, créez le simplement
         en vous enregistrant de la façon habituelle (voir <xref
@@ -1181,13 +1181,13 @@ def findGroupsFor(def username) {
                   <listitem>
                     <para>Cette permission fournit un accès en lecture seule à
                     pratiquement toutes les pages de Jenkins. Si vous voulez
-                    que les utilisateurs anonymes puissent voir les jobs
+                    que les utilisateurs anonymes puissent voir les tâches
                     librement, mais qu'ils ne puissent pas les modifier ou les
-                    démarrer, donnez leur le droit Lire à l'utilisateur
+                    démarrer, donnez le droit Lire à l'utilisateur
                     spécial “anonyme”. Sinon, enlevez simplement cette
                     permission à l'utilisateur Anonyme. Et si vous voulez que
-                    tous les utilisateurs authentifiés puissent voir les jobs
-                    de construction, ajoutez alors un un utilisateur spécial
+                    tous les utilisateurs authentifiés puissent voir les tâches
+                    de build, ajoutez alors un utilisateur spécial
                     “authenticated”, et donnez lui la permission
                     Global/Lire.</para>
                   </listitem>
@@ -1277,7 +1277,7 @@ def findGroupsFor(def username) {
 
                   <listitem>
                     <para>Voir et télécharger le contenu de l'espace de
-                    travail pour une tâche de construction. Rappelez-vous,
+                    travail pour une tâche de build. Rappelez-vous,
                     l'espace de travail contient le code source et les
                     artefacts, donc si vous voulez protéger ces derniers d'un
                     accès général, vous devriez enlever cette
@@ -1526,7 +1526,7 @@ def findGroupsFor(def username) {
       exemples pratiques. Dans <xref
       linkend="fig-hudson-project-based-security" />, par exemple, aucune
       permission n'a été donnée à l'utilisateur anonyme. Donc, par défaut,
-      toutes les tâches de build resterong invisibles jusqu'à ce que
+      toutes les tâches de build resteront invisibles jusqu'à ce que
       l'utilisateur se connecte. Toutefois, nous utilisons une sécurité basée
       sur le projet, nous pouvons donc redéfinir cela projet par projet. Dans
       <xref linkend="fig-hudson-security-project-anon" />, par exemple, nous
@@ -1645,13 +1645,13 @@ def findGroupsFor(def username) {
           <secondary>Role Strategy</secondary>
         </indexterm><indexterm id="I_indexterm7_d1e11170"
           significance="normal">
-          <primary>Role Strategy plugin</primary>
+          <primary>plugin Role Strategy</primary>
         </indexterm> Role Strategy, qui permet de définir des rôles globaux ou
       de niveau projet, et les affecter aux utilisateurs.</para>
 
       <para>Vous installez le plugin de façon habituelle, via le gestionnaire
       de plugin. Une fois installé, vous pouvez activer cette stratégie
-      d'autorisation dans la page de configuration principale (voir <xref
+      d'autorisation sur la page de configuration principale (voir <xref
       linkend="fig-hudson-security-role-based" />).</para>
 
       <figure float="none" id="fig-hudson-security-role-based">
@@ -1700,7 +1700,7 @@ def findGroupsFor(def username) {
       linkend="fig-hudson-security-global-roles" />). La mise en oeuvre de ces
       rôles est intuitive et similaire à la configuration des permissions
       utilisateur dans les autres modèles de securité que nous avons
-      vus.</para>
+      vu.</para>
 
       <figure float="0" id="fig-hudson-security-global-roles">
         <title>Gérer les rôles globaux</title>
@@ -1719,15 +1719,15 @@ def findGroupsFor(def username) {
       <para>Les rôles de projet sont légèrement plus compliqués. Un rôle de
       projet regroupe un ensemble de permissions applicables à un ou plusieurs
       projets (a priori reliés). Vous définissez les projets concernés en
-      utilisant une expression rationnelle, cela aide à avoir un ensemble
+      utilisant une expression régulière, cela aide à avoir un ensemble
       clair et cohérernt de conventions de nommage dans vos noms de projets
       (voir <xref linkend="fig-hudson-security-project-roles" />). Par
       exemple, vous pouvez vouloir créer des rôles distinguant les
       développeurs avec des droits complets sur leurs propres projets
-      d'utilisateurs qui peuvent simplement déclencher un build et voir le
+      d'utilisateur qui peuvent simplement déclencher un build et voir le
       résultat. Ou vous pouvez créer des rôles où les développeurs peuvent
       configurer certaines tâches de build de déploiement automatisé, mais que
-      seules les équipes de production soient autorisés à exécuter ces
+      seules les équipes de production soient autorisées à exécuter ces
       tâches.</para>
 
       <figure float="0" id="fig-hudson-security-project-roles">
@@ -1764,7 +1764,7 @@ def findGroupsFor(def username) {
 
       <para>La stratégie basée sur les rôles est relativement nouvelle dans
       Jenkins, mais c'est une excellente façon de simplifier les tâches de
-      gestion des permissions dans des organisations grosses, multi-équipes et
+      gestion des permissions dans de grosses organisations, multi-équipes et
       <indexterm class="endofrange" id="I_indexterm7_d1e11241"
           significance="normal" startref="ch07-role1">
           <primary></primary>
