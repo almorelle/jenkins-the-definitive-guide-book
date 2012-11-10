@@ -78,7 +78,7 @@
             enverra un courrier pour
             <indexterm id="I_indexterm8_d1e11461" significance="normal">
                 <primary>tâches de build</primary>
-                <secondary>échoués</secondary>
+                <secondary>échouées</secondary>
                 <tertiary>notifications pour</tertiary>
             </indexterm>
             <indexterm id="I_indexterm8_d1e11468" significance="normal">
@@ -95,7 +95,7 @@
             instables, afin d'indiquer que le problème a été résolu.
         </para>
         <figure float="0" id="fig-hudson-email-configuration">
-            <title>Configurer les notifications email</title>
+            <title>Configurer les notifications par email</title>
             <mediaobject id="I_mediaobject8_d1e11484">
                 <imageobject role="print">
                     <imagedata fileref="figs/print/jtdg_0801.pdf" format="PDF"/>
@@ -107,14 +107,14 @@
         </figure>
         <para>Normalement, un build ne devrait pas prendre trop d'essais pour fonctionner à
             nouveau — les développeurs doivent diagnostiquer et reproduire le problème localement, le corriger,
-            et alors seulement commiter leur correction dans le gestionnaire de versions. Des erreurs répétées
+            et alors seulement archiver leur correction dans le gestionnaire de versions. Des erreurs répétées
             de build indiquent généralement une erreur de configuration chronique ou de mauvaises
             pratiques de développement (par exemple, des développeurs qui soumettent leurs modifications sans
             vérifier au préalable leur fonctionnement en local).
         </para>
         <para>Vous pouvez également choisir d'envoyer un email distinct à tous les développeurs qui ont
-            des changements committés dans le build échoué. C'est généralement une bonne idée, car
-            les développeurs qui ont committés des changements depuis le dernier build sont naturellement
+            des changements archivés dans le build échoué. C'est généralement une bonne idée, car
+            les développeurs qui ont archivés des changements depuis le dernier build sont naturellement
             les personnes qui devraient être les plus intéressées par les résultats du build. Jenkins
             va récupérer l'adresse email de l'utilisateur à partir du domaine de sécurité couramment
             configuré (voir<xref linkend="sect-security-realms"/>), ou en dérivant l'adresse email à partir
@@ -132,29 +132,29 @@
             ce qui est généralement (mais pas toujours) le cas. Cependant, si les builds sont
             peu fréquents (par exemple les builds nocturnes, ou si un build est en attente pendant
             plusieurs heures avant d'être abandonné), de nombreux changements peuvent être
-            committés. Il est alors difficile de savoir quel est le développeur responsable
+            archivés. Il est alors difficile de savoir quel est le développeur responsable
             de l'échec du build.
         </para>
         <para>Tous les builds ne sont pas semblables par rapport aux notifications par email.
             Les développeurs qui ont soumis des changements sont particulièrement intéressés par les résultats
             des builds des tests unitaires et des tests d'intégration (surtout ceux déclenchés par
             leurs propres modifications). Les testeurs seront eux plus intéressés par
-            jeter un œil sur le statut des tests d'acceptance automatisés. La
-            configuration des notifications email sera donc différente pour chaque étape de build. En fait, il
-            est utile de définir des stratégies de notification email. Par exemple,
+            jeter un œil sur le statut des tests d'acceptation automatisés. La
+            configuration des notifications par email sera donc différente pour chaque étape de build. En fait, il
+            est utile de définir des stratégies de notification par email. Par exemple,
         </para>
         <itemizedlist>
             <listitem>
                 <para>pour les builds rapides (les tests unitaires/d'intégration s'exécutent en moins de 5
                     minutes) : les notifications sont envoyées aux chefs d'équipes et aux développeurs
-                    qui ont committé des changements,
+                    qui ont archivé des changements,
                 </para>
             </listitem>
             <listitem>
-                <para>pour les builds lents (les builds de tests d'acceptance s'exécutent après les builds
+                <para>pour les builds lents (les builds de tests d'acceptation s'exécutent après les builds
                     rapides) : les notifications sont envoyées aux chefs d'équipes, aux testeurs, ainsi qu'aux
                     développeurs
-                    qui ont committé des changements.
+                    qui ont archivé des changements.
                 </para>
             </listitem>
             <listitem>
@@ -166,7 +166,7 @@
             </listitem>
         </itemizedlist>
         <para>En fait, vous devriez adopter au cas par cas la stratégie de notification
-            appropriée pour chaque tâche de build, plutôt que d'appliquer d'une politique
+            appropriée pour chaque tâche de build, plutôt que d'appliquer une politique
             globale pour toutes les tâches de build.
         </para>
     </sect1>
