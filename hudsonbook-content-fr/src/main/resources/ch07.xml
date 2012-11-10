@@ -1788,7 +1788,7 @@ def findGroupsFor(def username) {
         significance="normal">
         <primary>utilisateurs</primary>
 
-        <secondary>auditer les actions de</secondary>
+        <secondary>auditer les actions des</secondary>
       </indexterm>plus de configurer les comptes utilisateurs et leurs droits
     d'accès, il peut être utile de garder des actions de chaque utilisateur :
     en d'autres termes, qui a fait quoi à votre configuration serveur. Ce type
@@ -1810,7 +1810,7 @@ def findGroupsFor(def username) {
         <primary>plugin Audit Trail</primary>
       </indexterm> Audit Trail garde une trace des principales actions
     utilisateur dans un ensemble de fichiers de logs tournants. Pour mettre
-    cela en place, allez dans la page Gérer les plugins et sélectionnez le
+    cela en place, allez sur la page Gérer les plugins et sélectionnez le
     plugin Audit Trail dans la liste des plugins disponibles. Ensuite, comme
     d'habitude, cliquez sur Installer et redémarrez Jenkins une fois que le
     plugin a été téléchargé.</para>
@@ -1892,7 +1892,7 @@ Dec 27, 2010 9:28:15 AM /configSubmit by johnsmart</programlisting>
 
     <para>Le <indexterm class="startofrange" id="ch07-jobconfig"
         significance="normal">
-        <primary>JobConfigHistory plugin</primary>
+        <primary>plugin JobConfigHistory</primary>
       </indexterm><indexterm class="startofrange" id="ch07-jobconfig2"
         significance="normal">
         <primary>plugins</primary>
@@ -1929,7 +1929,7 @@ Dec 27, 2010 9:28:15 AM /configSubmit by johnsmart</programlisting>
     (comme <filename moreinfo="none">/var/hudson/history</filename>), ou un
     répertoire relatif, calculé à partir de la racine du répertoire de Jenkins
     (voir <xref linkend="sec-hudson-home-directory" />). Si vous ne faites pas
-    cela, l'historique de configuration des tâches sera stockés dans les
+    cela, l'historique de configuration des tâches sera stocké dans les
     tâches elles-mêmes, et tout sera perdu si vous supprimez une tâche.</para>
 
     <para>Il y a un certain nombre d'autres options utiles dans la section
@@ -1942,7 +1942,7 @@ Dec 27, 2010 9:28:15 AM /configSubmit by johnsmart</programlisting>
     enregistrée, même si vous avez seulement appuyé sur le bouton Sauver sans
     faire aucun changement. Jenkins peut aussi provoquer cela en interne - par
     exemple, le paramétrage de la configuration système est entièrement
-    sauvée à chaque fois que la page principale de configuration est sauvée,
+    sauvé à chaque fois que la page principale de configuration est sauvée,
     même si aucune modification n'a été faite.</para>
 
     <para>Une fois que vous avez mis ce plugin en place, vous pouvez accéder à
@@ -1951,7 +1951,7 @@ Dec 27, 2010 9:28:15 AM /configSubmit by johnsmart</programlisting>
     configuration de chaque projet. Dans les deux cas, vous pouvez voir ces
     changements en cliquant sur l'icône Job Config History sur la droite de
     l'écran. Cliquer sur cette icône affichera une vue de tout votre
-    historique de configuration, incluant les changements de tâches and les
+    historique de configuration, incluant les changements de tâches et les
     changements de niveau système (voir <xref
     linkend="fig-hudson-jobconfig-global-history" />).</para>
 
@@ -2002,7 +2002,7 @@ Dec 27, 2010 9:28:15 AM /configSubmit by johnsmart</programlisting>
     pourrait être dangereux dans certaines circonstances, particulièrement
     pour les fichiers de configuration système). Cependant, il donne un aperçu
     très clair des changements ayant été effectués, à la fois sur vos tâches
-    de construction et sur votre configuration<indexterm class="endofrange"
+    de build et sur votre configuration<indexterm class="endofrange"
         id="I_indexterm7_d1e11384" significance="normal"
         startref="ch07-jobconfig">
         <primary></primary>
