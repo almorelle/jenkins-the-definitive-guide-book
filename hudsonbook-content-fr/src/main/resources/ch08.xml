@@ -17,7 +17,7 @@
             baisse dans la couverture de code ou de métriques de qualité de code.
             Dans tous les cas, un serveur d'intégration continue
             doit permettre aux bonnes personnes de connaître les nouveaux problèmes, et il doit pouvoir le
-            faire rapidement. C'est ce que nous appelons notification.
+            faire rapidement. C'est ce que nous appelons : Notification.
         </para>
         <para>Il y a deux principales catégories de stratégies de notification, que
             j'appelle
