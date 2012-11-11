@@ -1229,8 +1229,8 @@
             </ulink>
             affiche une icône de santé au bas de la fenêtre Eclipse.
             Si vous cliquez sur cette icône, vous pouvez voir une vue détaillée des projets
-            Jenkins (voir<xref linkend="fig-hudson-notification-eclipse"/>). Dans
-            les préférences Eclipse, vous indiquez l'URL de votre serveur Jenkins
+            Jenkins (voir <xref linkend="fig-hudson-notification-eclipse"/>). Dans
+            les préférences d'Eclipse, vous indiquez l'URL de votre serveur Jenkins
             avec tous les détails d'authentification requis. La configuration est assez simple,
             cependant, vous ne pouvez vous connecter à une instance unique Jenkins pour un
             espace de travail Eclipse donné.
@@ -1263,16 +1263,16 @@
             <code>hudson</code>
             ou
             <code>jenkins</code>
-            sous<code>system</code>, le serveur correspondant
+            sous <code>system</code>, le serveur correspondant
             sera enregistré automatiquement.)
             Cette intégration a des caractéristiques différentes au-delà des notifications de build dans la barre
             d'état,
-            telles que l'intégration dans la fenêtre<guilabel>Tests Results</guilabel>, l'affichage des journaux
+            telles que l'intégration dans la fenêtre <guilabel>Tests Results</guilabel>, l'affichage des journaux
             de build et des journaux de changement, la navigation dans l'espace de travail, et un assistant de
             configuration de tâche de build.
         </para>
         <figure id="fig-hudson-netbeans">
-            <title>Connection Jenkins dans NetBeans</title>
+            <title>Connexion de Jenkins dans NetBeans</title>
             <mediaobject>
                 <imageobject role="web">
                     <imagedata fileref="figs/web/hudson-netbeans.png" format="PNG"/>
@@ -1287,12 +1287,12 @@
                 <primary>plugins</primary>
                 <secondary>plugin Tray Application</secondary>
             </indexterm>
-            plugin Jenkins Tray Application (voir<xref linkend="fig-hudson-tray-launch"/>)
+            plugin Jenkins Tray Application (voir <xref linkend="fig-hudson-tray-launch"/>)
             vous permet de démarrer une petite application cliente Java
             à l'aide de Java Web Start à partir de votre tableau de bord de Jenkins.
         </para>
         <figure float="0" id="fig-hudson-tray-launch">
-            <title>Lancement de l'application Jenkins Tray</title>
+            <title>Lancement de Jenkins Tray Application</title>
             <mediaobject id="I_mediaobject8_d1e12351">
                 <imageobject role="print">
                     <imagedata fileref="figs/print/jtdg_0819.pdf" format="PDF"/>
@@ -1307,7 +1307,7 @@
             vous informant des nouveaux échecs de build (voir<xref linkend="fig-hudson-tray"/>).
         </para>
         <figure float="0" id="fig-hudson-tray">
-            <title>Exécution de l'application Jenkins Tray</title>
+            <title>Exécution de Jenkins Tray Application</title>
             <mediaobject id="I_mediaobject8_d1e12363">
                 <imageobject role="print">
                     <imagedata fileref="figs/print/jtdg_0820.pdf" format="PDF"/>
@@ -1318,14 +1318,14 @@
             </mediaobject>
         </figure>
         <para>C'est certainement une application utile mais elle souffre de quelques
-            limitations. Au moment de la rédaction, l'application Jenkins Tray ne supporte pas
+            limitations. Au moment de la rédaction, Jenkins Tray Application ne supporte pas
             l'accès aux serveurs sécurisés Jenkins. En outre, le développeur doit
-            se souvenir de la redémarrer chaque matin. Cela peut sembler un problème mineur,
+            se souvenir de le redémarrer chaque matin. Cela peut sembler un problème mineur,
             mais en général, quand il s'agit de stratégies de notification, moins vous en
             demandez à vos développeurs meilleure est la solution.
         </para>
-        <para>Une des meilleures options pour les notifications bureau Jenkins est d'utiliser un
-            service comme Notifo (voir<xref linkend="sect-notifo"/>) qui fournit
+        <para>Une des meilleures options pour les notifications Jenkins de bureau est d'utiliser un
+            service comme Notifo (voir <xref linkend="sect-notifo"/>) qui fournit
             des clients pour bureaux et mobiles. Nous allons voir comment cela fonctionne en détail dans
             <indexterm id="I_indexterm8_d1e12374" class="endofrange" startref="ch08-tray1" significance="normal">
                 <primary/>
