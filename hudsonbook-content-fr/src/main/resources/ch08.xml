@@ -1494,7 +1494,7 @@
         </para>
     </sect1>
     <sect1 id="sect-notification-sms">
-        <title>Notifications SMS</title>
+        <title>Notifications via SMS</title>
         <para>Ces
             <indexterm class="startofrange" id="ch08-sms1" significance="normal">
                 <primary>notifications</primary>
@@ -1504,7 +1504,7 @@
                 <primary>messages SMS, notifications via</primary>
             </indexterm>
             temps-ci, le SMS est un autre canal de communication universel qui
-            a l'avantage supplémentaire d'atteindre les personnes même quand elles ne sont pas
+            a l'avantage supplémentaire d'atteindre les personnes même quand elles ne sont pas au
             bureau. Pour un ingénieur de build, ce peut être un excellent moyen de surveiller des builds
             critiques, même si les développeurs ou chefs d'équipe sont loin de leur
             bureau.
@@ -1524,7 +1524,7 @@
             l'intégration relativement simple : il vous suffit d'ajouter les adresses emails spéciales à
             la liste de notification normale. Sinon, en utilisant la configuration email
             avancée, vous pouvez configurer une règle distincte contenant uniquement les adresses
-            email SMS (voir<xref linkend="fig-hudson-sms-notification-config"/>). Procéder ainsi rend
+            email SMS (voir <xref linkend="fig-hudson-sms-notification-config"/>). Procéder ainsi rend
             plus facile d'affiner le contenu du message pour adhérer au format des messages
             SMS.
         </para>
@@ -1540,7 +1540,7 @@
             </mediaobject>
         </figure>
         <para>Une fois que vous avez fait cela, vos utilisateurs recevront une notification rapide
-            des résultats de build sous forme de messages SMS (voir<xref linkend="fig-hudson-sms-notification"/>). Le
+            des résultats de build sous forme de messages SMS (voir <xref linkend="fig-hudson-sms-notification"/>). Le
             principal inconvénient de cette
             approche est sans doute que ce n'est pas gratuit, et nécessite l'utilisation d'un
             service commercial tiers. Cela dit, c'est vraiment la seule
