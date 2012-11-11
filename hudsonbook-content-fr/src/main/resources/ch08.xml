@@ -172,11 +172,11 @@
     </sect1>
     <sect1 id="sect-notification-advanced-email">
         <title>Notification par email avancée</title>
-        <para>Par défaut, les notifications par email Jenkins sont un outil plutôt brut.
+        <para>Par défaut, la notification par email Jenkins est un outil plutôt brut.
             Les messages de notification sont toujours envoyés au même groupe de
             personnes. Vous ne pouvez pas envoyer des messages à différentes personnes en fonction de ce
             qui a mal tourné. De la même façon, vous ne pouvez pas mettre en œuvre des politiques d'escalade.
-            Par exemple, il pourrait être utile d'être en mesure de notifier les développeurs qui ont committé
+            Par exemple, il pourrait être utile d'être en mesure de notifier les développeurs qui ont archivé
             les modifications la première fois qu'un build échoue, et envoyer un message différent au
             chef d'équipe ou à l'équipe entière si le build échoue une seconde fois
         </para>
@@ -196,10 +196,10 @@
             message électronique. Vous pouvez aussi définir une stratégie de notification plus précise avec des
             messages différents pour des listes de destinataires différents suivant les évènements. Notez qu'une
             fois que vous avez installé et configuré ce plugin pour votre tâche de build, vous pouvez désactiver la
-            configuration normale de notification email.
+            configuration normale de notification par email.
         </para>
         <figure float="none" id="fig-hudson-email-ext-configuration">
-            <title>Configurer les notifications email avancées</title>
+            <title>Configurer les notifications par email avancées</title>
             <mediaobject id="I_mediaobject8_d1e11539">
                 <imageobject role="print">
                     <imagedata fileref="figs/print/jtdg_0802.pdf" format="PDF"/>
@@ -318,7 +318,7 @@
             Les déclencheurs
             <indexterm id="I_indexterm8_d1e11638" significance="normal">
                 <primary>tâches de build</primary>
-                <secondary>échoué</secondary>
+                <secondary>échouées</secondary>
                 <tertiary>notifications pour</tertiary>
             </indexterm>
             <indexterm id="I_indexterm8_d1e11645" significance="normal">
@@ -330,7 +330,7 @@
                 <primary>builds instables</primary>
                 <secondary>notifications pour</secondary>
             </indexterm>
-            déterminent quand les notifications email
+            déterminent quand les notifications par email
             doivent être envoyées.
             Les déclencheurs supportés sont les suivants :
         </para>
@@ -381,7 +381,7 @@
             </varlistentry>
         </variablelist>
         <figure float="0" id="fig-email-notification-triggers">
-            <title>Configurer les déclencheurs de notification email</title>
+            <title>Configurer les déclencheurs de notification par email</title>
             <mediaobject id="I_mediaobject8_d1e11704">
                 <imageobject role="print">
                     <imagedata fileref="figs/print/jtdg_0803.pdf" format="PDF"/>
@@ -393,13 +393,13 @@
         </figure>
         <para>Vous pouvez configurer autant (ou aussi peu) de déclencheurs que vous le souhaitez. La
             liste des destinataires et le modèle de message peuvent être personnalisés pour chaque
-            déclencheur, par exemple en utilisant les déclencheur Still Failing et
+            déclencheur, par exemple en utilisant les déclencheurs Still Failing et
             Still Unstable, vous pouvez mettre en place une stratégie de notification qui n'avertit que
-            le développeur qui a committé des changements la première fois qu'une tâche de build échoue,
+            le développeur qui a archivé des changements la première fois qu'une tâche de build échoue,
             mais continue par informer le chef d'équipe si elle échoue une seconde fois. Vous pouvez
-            choisir d'envoyer le message uniquement à des développeurs qui ont committé lors
+            choisir d'envoyer le message uniquement à des développeurs qui ont archivé lors
             du build («Send to committers"), ou d'inclure également tous ceux qui ont
-            committé depuis le dernier build avec succès. Cela assure que
+            archivé depuis le dernier build avec succès. Cela assure que
             tous ceux qui peuvent être impliqués dans l'échec du build seront
             notifiés de façon<phrase role="keep-together">appropriée</phrase>.
         </para>
@@ -446,7 +446,7 @@
                 <primary/>
             </indexterm>
             <indexterm id="I_indexterm8_d1e11741" class="endofrange" startref="ch08-email2" significance="normal">
-                <primary>notifications email</primary>
+                <primary>notifications par email</primary>
             </indexterm>
             plus rapidement.
         </para>
