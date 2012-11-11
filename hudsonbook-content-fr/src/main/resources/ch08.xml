@@ -1043,7 +1043,7 @@
         </sect2>
     </sect1>
     <sect1 id="sect-notification-irc">
-        <title>Notification IRC</title>
+        <title>Notification par IRC</title>
         <para>
             <emphasis>Rédigé par Juven Xu</emphasis>
         </para>
@@ -1058,7 +1058,7 @@
             utilisateurs
             plus expérimentés fournir des réponses rapidement.
         </para>
-        <para>Comme avec la messagerie instantanée avec Jabber, vous pouvez configurer
+        <para>Comme avec la messagerie instantanée Jabber, vous pouvez configurer
             Jenkins pour “pousser” des notifications via IRC. Quelques clients IRC tels que
             <ulink url="http://xchat.org/">xchat</ulink>
             supportent une configuration d'alerte
@@ -1078,7 +1078,7 @@
             </ulink>
             et le<ulink url="http://wiki.jenkins-ci.org/display/JENKINS/Instant+Messaging+Plugin">plugin
                 Instant Messaging</ulink>. Allez simplement dans le gestionnaire de plugins par défaut, cochez
-            les cases correspondantes et redémarrez ensuite Jenkins (voir<xref
+            les cases correspondantes et redémarrez ensuite Jenkins (voir <xref
                     linkend="hudson-notification-irc-plugins-install"/>).
         </para>
         <figure float="none" id="hudson-notification-irc-plugins-install">
@@ -1092,17 +1092,17 @@
                 </imageobject>
             </mediaobject>
         </figure>
-        <para>Une fois cela fait, vous devez activer le plugin IRC plugin, et le configurer
+        <para>Une fois cela fait, vous devez activer le plugin IRC, et le configurer
             pour intégrer votre propre environnement. Fondamentalement, cela consiste à fournir le
             nom d'hôte et le port du serveur IRC que vous utilisez, un canal IRC
             dédié, et un surnom pour le plugin IRC. Une bonne pratique consiste à mettre en place
-            un canal dédié pour les notifications CI. Ainsi, si les gens bavardent sur d'autres
+            un canal dédié pour les notifications provenant de l'IC. Ainsi, si les gens bavardent sur d'autres
             canaux, ils ne seront pas perturbés. Vous pouvez également configurer des détails
-            supplémentaires dans la section Avancé. Tous ces éléments sont disponibles dans la
+            supplémentaires dans la section Avancé. Tous ces éléments sont disponibles sur la
             page Configurer le système (voir<xref linkend="hudson-notification-irc-advanced"/>).
         </para>
         <figure float="0" id="hudson-notification-irc-advanced">
-            <title>Configuration avancée des notifications IRC</title>
+            <title>Configuration avancée des notifications par IRC</title>
             <mediaobject id="I_mediaobject8_d1e12233">
                 <imageobject role="print">
                     <imagedata fileref="figs/print/jtdg_0815.pdf" format="PDF"/>
@@ -1116,7 +1116,7 @@
         <para>En plus du nom d'hôte, du port, du canal, et du surnom que nous avons
             mentionnés précédemment, vous pouvez également configurer le mot de passe du serveur IRC ou celui du
             NickServ si votre environnement les nécessite. Les commandes doivent être préfixées essentiellement de
-            la même façon que pour Jabber (voir<xref linkend="sect-notification-instant-messaging"/>)
+            la même façon que pour Jabber (voir <xref linkend="sect-notification-instant-messaging"/>)
             si vous souhaitez interagir avec le serveur via des messages IRC.
             Enfin, vous voudrez peut-être configurer le plugin IRC pour utiliser la commande
             <literal role="keep-together" moreinfo="none">/notice</literal>
@@ -1128,15 +1128,15 @@
             excepté que le message sera encadré de
             tirets, ce qui évitera une réponse de la plupart des robots.
         </para>
-        <para>Une fois que la configuration globale est prête, vous pouvez activer la notification
+        <para>Une fois que la configuration globale est prête, vous pouvez activer la notification par
             IRC pour chaque tâche de build et mettre en place une stratégie de notification. Ouvrez
             la page de configuration de tâche de build, allez à la section Actions à la suite du build et
-            cliquez sur l'option IRC notification. Si vous souhaitez configurer une stratégie de
-            notification plutôt que d'utiliser celle par défaut, cliquez sur le bouton "Avancé ..."
+            cliquez sur l'option IRC Notification. Si vous souhaitez configurer une stratégie de
+            notification plutôt que d'utiliser celle par défaut, cliquez sur le bouton "Avancé..."
             (voir<xref linkend="hudson-notification-irc-job"/>).
         </para>
         <figure float="0" id="hudson-notification-irc-job">
-            <title>Configuration avancée de notifications IRC pour une tâche de build</title>
+            <title>Configuration avancée de notifications par IRC pour une tâche de build</title>
             <mediaobject id="I_mediaobject8_d1e12261">
                 <imageobject role="print">
                     <imagedata fileref="figs/print/jtdg_0816.pdf" format="PDF"/>
@@ -1146,8 +1146,8 @@
                 </imageobject>
             </mediaobject>
         </figure>
-        <para>Les stratégies de notification (quand et à qui envoyer des messages de notification
-            sont décrites dans<xref linkend="sect-notification-instant-messaging"/>. Le plugin Jabber
+        <para>Les stratégies de notification (quand et à qui envoyer des messages de notification)
+            sont décrites dans <xref linkend="sect-notification-instant-messaging"/>. Le plugin Jabber
             ainsi que le plugin IRC dépendent du plugin Instant Messaging. Ils partagent donc un
             certain nombre de caractéristiques fondamentales communes. Certaines options sont
             toutefois spécifiques à l'extension IRC.
@@ -1161,11 +1161,11 @@
             ce que vous avez configuré, ce plugin va rejoindre les canaux IRC appropriés
             et envoyer des messages de notification pour les tâches de build.
         </para>
-        <para>Par exemple, dans<xref linkend="hudson-notification-irc-xchat"/>,
+        <para>Par exemple, dans <xref linkend="hudson-notification-irc-xchat"/>,
             le plugin IRC rejoint le canal #ci-book sur freenode. Tout d'abord, l'utilisateur juven
-            a committé quelques changements avec le message "feature x added" et le plugin IRC
-            notifie tous les connectés au canal que le build a été un succès. Juven
-            committe ensuite un autre changement pour la fonctionnalité y, mais cette fois le build a échoué.
+            a archivé quelques changements avec le message "feature x added" et le plugin IRC
+            notifie tous les connectés au canal que le build a été un succès. Ensuite,
+            juven archive un autre changement pour la fonctionnalité y, mais cette fois le build a échoué.
             John a remarqué et corrigé l'erreur de build. Le plugin IRC déclare maintenant
             "Yippie, build fixed!" Notez que certaines lignes de cet écran sont
             soulignées, c'est parce que je me suis connecté en tant qu'utilisateur "juven" et j'ai configuré
@@ -1179,7 +1179,7 @@
             mon surnom.
         </para>
         <figure float="none" id="hudson-notification-irc-xchat">
-            <title>Messages de notification IRC en action</title>
+            <title>Messages de notification par IRC en action</title>
             <mediaobject id="I_mediaobject8_d1e12285">
                 <imageobject role="print">
                     <imagedata fileref="figs/print/jtdg_0817.pdf" format="PDF"/>
