@@ -1731,7 +1731,7 @@
             y a de la place pour l'improvisation si vous êtes prêt à improviser
             un peu avec l'électronique. Cela inclut des appareils tels que les orbes d'ambiance,
             les lampes de lave, les feux de circulation, ou d'autres appareils USB plus exotiques.
-            Le radar de build (voir<xref linkend="sect-build-radiator"/>) tombe aussi
+            Le radar de build (voir <xref linkend="sect-build-radiator"/>) tombe aussi
             dans cette catégorie si on le projette sur un écran assez grand.
         </para>
         <para>Un
@@ -1740,7 +1740,7 @@
                 <secondary sortas="Nabaztag">utilisant Nabaztag</secondary>
             </indexterm>
             appareil qui s'intègre très bien avec avec Jenkins est le
-            Nabaztag. Le Nabaztag (voir<xref linkend="fig-hudson-nabaztag"/>) est un
+            Nabaztag. Le Nabaztag (voir <xref linkend="fig-hudson-nabaztag"/>) est un
             lapin robot WiFi très populaire qui peut faire clignoter des lumières colorées, jouer
             de la musique, ou même de parler. Un des avantages du Nabaztag, c'est qu'étant donné qu'il
             fonctionne en Wifi, il n'est pas contraint à être situé à proximité du serveur de build
@@ -1769,12 +1769,12 @@
             </indexterm>
             encore mieux, il existe un plugin Jenkins pour le
             Nabaztag. Une fois que vous avez installé le plugin Nabaztag et redémarré
-            Jenkins, il est facile à configurer. Dans la page de configuration principale de Jenkins, rendez-vous
+            Jenkins, il est facile à configurer. Sur la page de configuration principale de Jenkins, rendez-vous
             à la section Paramètres globaux de Nabaztag et entrez le numéro de série et
-            jeton secret pour votre lapin électronique (voir<xref linkend="fig-hudson-nabaztag-config"/>).
+            jeton secret pour votre lapin électronique (voir <xref linkend="fig-hudson-nabaztag-config"/>).
             Vous pouvez également fournir des
             réglages par défaut sur ​​la façon dont votre lapin de build devrait réagir aux changements dans
-            l'état de build (doit il signaler sur les départs ou succès de build, par
+            l'état de build (doit-il signaler sur les départs ou succès de build, par
             exemple), quelle voix utiliser, et quel message dire quand un
             build échoue, réussit, est fixé, ou échoue à nouveau. Puis, pour activer
             les notifications Nabaztag pour une tâche de build particulière, vous devez cocher
@@ -1797,7 +1797,7 @@
         </figure>
         <para>À l'exception notable du radar de build, nombre de ces
             dispositifs ont des limitations semblables aux plugins Jenkins Speaks et Jenkins Sounds
-            (voir<xref linkend="sect-notification-noise"/>)-ils sont mieux
+            (voir <xref linkend="sect-notification-noise"/>) - ils sont mieux
             adaptés pour les petites équipes, co-localisées, qui travaillant sur un nombre limité de
             projets. Néanmoins, quand ils fonctionnent, ils peuvent être un complément utile à
             votre stratégie de notification générale.
@@ -1806,19 +1806,19 @@
     <sect1 id="sect-notification-conclusion">
         <title>Conclusion</title>
         <para>La notification est une partie essentielle de votre stratégie globale d'intégration continue. Après tout,
-            un build a échoué a peu d'utilité s'il n'y a personne à l'écoute. Ce n'est pas non plus
+            un build échoué a peu d'utilité s'il n'y a personne à l'écoute. Ce n'est pas non plus
             un problème universel. Vous devez penser à votre
             organisation et adapter votre stratégie pour répondre à la culture locale de l'entreprise
             et de l'ensemble des outils utilisés.
         </para>
         <para>En effet, il est important de définir et de mettre en œuvre une stratégie de notification
-            bien pensée qui convient à votre environnement. Le mail, par exemple, est
+            bien pensée qui convient à votre environnement. L'email, par exemple, est
             omniprésent et sera donc l'épine dorsale de nombreuses stratégies de
             notification. Si vous travaillez dans une grande équipe ou avec un responsable technique occupé,
             vous devrez peut-être envisager de mettre en place une stratégie progressive basée sur
-            les options de messagerie avancées (voir<xref linkend="sect-notification-advanced-email"/>). Vous devrez
+            les options de messagerie avancées (voir <xref linkend="sect-notification-advanced-email"/>). Vous devrez
             compléter
-            cette dernière avec une des stratégies plus actives, telles que la messagerie instantanée ou
+            cette dernière avec une des stratégies les plus actives, telles que la messagerie instantanée ou
             la notification de bureau. Si votre équipe utilise déjà un canal de discussion IRC pour
             communiquer, essayez de l'intégrer dans votre stratégie de notification
             aussi. Enfin, la notification par SMS est une grande stratégie pour les tâches de build vraiment critiques.
