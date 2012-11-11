@@ -1569,7 +1569,7 @@
         </figure>
     </sect1>
     <sect1 id="sect-notification-noise">
-        <title>Du bruit</title>
+        <title>Faire du bruit</title>
         <para>Si votre
             <indexterm id="I_indexterm8_d1e12535" significance="normal">
                 <primary>notifications</primary>
@@ -1586,7 +1586,7 @@
             bâtiment.
         </para>
         <para>Il y a deux façons d'intégrer des retours audio dans votre processus de build
-            Jenkins: le plugin Jenkins Sounds et le plugin Jenkins Speaks.
+            Jenkins : le plugin Jenkins Sounds et le plugin Jenkins Speaks.
             Les deux peuvent être installés via la page du gestionnaire de plugins de la manière habituelle
             .
         </para>
@@ -1596,12 +1596,12 @@
                 <secondary>Sounds</secondary>
             </indexterm>
             <indexterm id="I_indexterm8_d1e12553" significance="normal">
-                <primary>Sounds plugin</primary>
+                <primary>plugin Sounds</primary>
             </indexterm>
             plugin Jenkins Sounds est le plus flexible des deux. Il
             vous permet de construire une stratégie de communication détaillée basée sur le dernier
             résultat de build et aussi (facultatif) sur le résultat du précédent build
-            (voir<xref linkend="fig-hudson-sounds"/>). Par exemple, vous pouvez configurer
+            (voir <xref linkend="fig-hudson-sounds"/>). Par exemple, vous pouvez configurer
             Jenkins pour jouer un son la première fois qu'un build échoue, un son différent
             si le build échoue une seconde fois, et encore un autre son lorsque le build est
             corrigé.
@@ -1640,7 +1640,7 @@
             la notation
             <filename moreinfo="none">file://</filename>
             s'il est disponible
-            en local (voir<xref linkend="fig-hudson-sounds-config"/>). Une fois que
+            en local (voir <xref linkend="fig-hudson-sounds-config"/>). Une fois que
             vous avez sauvé la configuration, vous pouvez tester les sons de votre archive
             via le bouton Test Sound dans la section Avancé.
         </para>
@@ -1667,7 +1667,7 @@
                 <secondary>parlées</secondary>
             </indexterm>
             <indexterm id="I_indexterm8_d1e12598" significance="normal">
-                <primary>Speaks plugin</primary>
+                <primary>plugin Speaks</primary>
             </indexterm>
             <indexterm id="I_indexterm8_d1e12601" significance="normal">
                 <primary>plugins</primary>
@@ -1676,7 +1676,7 @@
             autre option est le plugin Jenkins
             Speaks. Avec ce plugin, vous
             pouvez demander à Jenkins de diffuser une annonce personnalisée (avec une voix très robotique)
-            lorsque votre build échoue (voir<xref linkend="fig-hudson-speaks"/>).
+            lorsque votre build échoue (voir <xref linkend="fig-hudson-speaks"/>).
             Vous pouvez configurer le message exact à l'aide de Jelly. Jelly est un langage de script
             basé sur XML largement utilisé dans les niveaux inférieurs de Jenkins.
         </para>
@@ -1691,7 +1691,7 @@
                 </imageobject>
             </mediaobject>
         </figure>
-        <para>L'avantage de cette approche réside dans sa précision: puisque vous pouvez
+        <para>L'avantage de cette approche réside dans sa précision : puisque vous pouvez
             utiliser des variables Jenkins dans le script Jelly, vous pouvez demander à Jenkins de dire
             ce que vous voulez sur l'état de la construction. Voici un simple exemple :
         </para>
@@ -1703,7 +1703,7 @@
             &lt;j:otherwise&gt;&lt;!-- Ne rien dire --&gt;&lt;/j:otherwise&gt;
             &lt;/j:choose&gt;</programlisting>
         <para>Si vous laissez ce champ vide, le plugin va utiliser un modèle
-            par défaut que vous pouvez configurer dans la page de configuration du système. En fait,
+            par défaut que vous pouvez configurer sur la page de configuration du système. En fait,
             c'est généralement une bonne idée de faire cela, et seulement d'utiliser script spécifique
             à un projet si c'est nécessaire.
         </para>
