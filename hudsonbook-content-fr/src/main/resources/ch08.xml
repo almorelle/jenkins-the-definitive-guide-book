@@ -1449,7 +1449,7 @@
         </para>
     </sect1>
     <sect1 id="sect-notification-mobile">
-        <title>Notifications mobiles</title>
+        <title>Notifications vers mobiles</title>
         <para>Si votre
             <indexterm id="I_indexterm8_d1e12453" significance="normal">
                 <primary>notifications</primary>
@@ -1463,7 +1463,7 @@
             serveur Jenkins est visible sur Internet (même si vous avez
             mis en place une authentification sur votre serveur Jenkins), vous pouvez aussi surveiller vos
             builds via votre appareil mobile iPhone ou Android. L'application gratuite Hudson Helper
-            (voir<xref linkend="fig-hudson-notification-iphone"/>)
+            (voir <xref linkend="fig-hudson-notification-iphone"/>)
             par exemple, vous permet de lister vos tâches de builds actuelles (soit l'ensemble des tâches de
             builds sur le serveur, ou seulement les tâches de build d'une certaine vue). Vous pouvez
             également afficher les détails d'une tâche de build particulière, y compris son statut
