@@ -617,7 +617,7 @@
         </para>
         <para>Il y a plusieurs solutions de radars de build pour Jenkins. Une des plus
             simples est d'utiliser le plugin Jenkins Radiator View. Ce plugin ajoute un nouveau
-            type de tâche que vous pouvez créer: le (voir<xref linkend="fig-hudson-notification-radiator-job"/>).
+            type de tâche que vous pouvez créer: le (voir <xref linkend="fig-hudson-notification-radiator-job"/>).
         </para>
         <figure float="none" id="fig-hudson-notification-radiator-job">
             <title>Créer une vue radar</title>
@@ -644,11 +644,11 @@
             éditer la configuration de la vue en ouvrant
             <emphasis>http://my.hudson.server/view/build-radiator/configure</emphasis>.
         </para>
-        <para>La vue radar (voir<xref linkend="fig-hudson-notification-radiator"/>) affiche une
+        <para>La vue radar (voir <xref linkend="fig-hudson-notification-radiator"/>) affiche une
             grande boite rouge ou jaune pour chaque build échoué ou instable. Ces boites contiennent
             le nom de la tâche de build en lettres capitales ainsi que d'autres détails.
             Vous pouvez configurer la vue radar pour afficher les builds en succès et les builds en
-            échec(ils seront affichés dans de petites boites vertes). Cependant, un bon radar
+            échec (ils seront affichés dans de petites boites vertes). Cependant, un bon radar
             ne devrait afficher que les builds échoués, à moins que tous les builds soient
             <indexterm id="I_indexterm8_d1e11895" class="endofrange" startref="ch08-rad1" significance="normal">
                 <primary/>
