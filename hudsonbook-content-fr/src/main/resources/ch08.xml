@@ -520,7 +520,7 @@
             des flux RSS pratiques pour les résultats de build, tant pour les résultats globaux sur l'ensemble
             de vos builds (ou juste les builds d'une vue particulière), que pour les résultats d'un build spécifique.
             Les icônes de flux RSS sont disponibles au bas des tableaux de bord des builds
-            (voir<xref linkend="fig-hudson-notification-rss-view"/>) et au bas du panneau de l'historique
+            (voir <xref linkend="fig-hudson-notification-rss-view"/>) et au bas du panneau de l'historique
             des builds pour les tâches de build individuel. Ils vous donnent soit accès
             à l'ensemble des résultats des builds, soit accès simplement aux builds échoués.
         </para>
@@ -540,10 +540,10 @@
             <filename moreinfo="none">/rssAll</filename>
             pour obtenir le flux RSS de tous les résultats de build d'une page, ou
             <filename moreinfo="none">/rssFailed</filename>
-            pour n'obtenir que les résultats des build échoués. Enfin,
+            pour n'obtenir que les résultats des builds échoués. Enfin,
             <filename moreinfo="none">/rssLatest</filename>
             vous fournira un flux RSS contenant uniquement les derniers résultats de build. Mais la façon la plus simple
-            de récupérer l'URL est de cliquer simplement sur l'icône RSS dans la page Jenkins correspondante.
+            de récupérer l'URL est de cliquer simplement sur l'icône RSS sur la page Jenkins correspondante.
         </para>
         <para>Il y a pléthore de lecteurs RSS, à la fois commerciaux et open source, disponibles pour pratiquement
             toutes les plates-formes et périphériques. Ce peut être un excellent moyen pour garder un œil sur les
