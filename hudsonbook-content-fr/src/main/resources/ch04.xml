@@ -399,27 +399,27 @@
 
         <secondary>retarder les tâches de build</secondary>
       </indexterm>utile pour les outils de gestion de sources comme CVS qui
-    archivent les fichiers un par un, au lieu de les grouper ensemble en une
+    committent les fichiers un par un, au lieu de les grouper ensemble en une
     seule transaction atomique. Normalement, Jenkins déclenchera un
     build dès qu'il détectera un changement dans le dépôt de sources.
     Toutefois, cela ne convient pas à tous les environnements. Si vous
     utilisez un outil comme CVS, vous ne devriez pas lancer un build
     dès que le premier changement arrive, parce que le dépôt sera dans un état
-    inconsistant tant que tous les changements n'auront pas été archivés.
+    inconsistant tant que tous les changements n'auront pas été committés.
     Vous pouvez utiliser le champ Période d'attente pour éviter des problèmes
     de ce genre. Si vous mettez une valeur à cet endroit, Jenkins attendra
     qu'aucun changement n'ait été détecté pendant le nombre spécifié de
     secondes avant de déclencher le build. Ceci permet de s'assurer que
-    tous les changements ont été archivés et que le dépôt est dans un état
+    tous les changements ont été committés et que le dépôt est dans un état
     stable avant de démarrer le build.</para>
 
     <para>Pour les systèmes de gestion de version modernes, comme Subversion,
-    Git ou Mercurial, les archivages sont atomiques. Cela signifie que des
+    Git ou Mercurial, les commits sont atomiques. Cela signifie que des
     changements dans plusieurs fichiers sont soumis au dépôt comme unité
     simple, et le code source sur le dépôt est garanti d'être à tout moment
     dans un état stable. Toutefois, certaines équipes utilisent encore une
-    approche où un changement logique est livré en plusieurs opérations 
-    d'archivage. Dans ce cas, vous pouvez utiliser la Période d'attente pour vous
+    approche où un changement logique est livré en plusieurs commits. 
+    Dans ce cas, vous pouvez utiliser la Période d'attente pour vous
     assurer que le build utilise toujours une version stable de code
     source.</para>
 
@@ -1041,7 +1041,7 @@
     devez mettre en place est la configuration du serveur de messagerie
     électronique. L'email est la technique de notification la plus
     fondamentale de Jenkins — quand un build échoue, il envoie un
-    email au développeur qui a archivé les changements, et optionnellement
+    email au développeur qui a committé les changements, et optionnellement
     aux autres membres de l'équipe. Jenkins a donc besoin de connaître
     votre serveur de messagerie électronique (voir <xref
     linkend="fig-configure-email" />).</para>
