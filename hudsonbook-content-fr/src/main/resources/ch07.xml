@@ -249,8 +249,8 @@
       en cliquant sur l'entrée de menu Personnes (voir <xref
       linkend="fig-hudson-user-list" />). Ici, vous pouvez visualiser les
       utilisateurs que Jenkins connaît actuellement, et aussi voir le dernier
-      projet dans lequel ils ont archivé. Notez que cette liste contient la
-      liste de tous les utilisateurs à avoir jamais archivé dans les projets
+      projet dans lequel ils ont committé. Notez que cette liste contient la
+      liste de tous les utilisateurs à avoir jamais committé dans les projets
       que Jenkins surveille — ils pourraient ne pas être (et en général ne
       sont pas) tous des utilisateurs actifs de Jenkins capables de se connecter
       sur le serveur Jenkins.</para>
@@ -570,7 +570,7 @@
       <para>Pour configurer le plugin, vous devez fournir le nom de domaine
       complet de votre serveur Active Directory. Si vous avez plus d'un
       domaine, vous pouvez fournir une liste séparée par des virgules. Si vous
-      fournissez le nom de la forêt (say “acme.com” au lieu de
+      fournissez le nom de la forêt (par exemple “acme.com” au lieu de
       “europe.acme.com”), alors la recherche sera faite à partir du catalogue
       global. Notez que si vous faites cela sans spécifier le <emphasis>bind
       DN</emphasis> (voir ci-dessous), l'utilisateur devra se connecter en
@@ -803,7 +803,7 @@
 
           <secondary>Atlassian Crowd</secondary>
         </indexterm>groupes de Crowd pour toutes les stratégies d'autorisation
-      que nous avons présenté précédemment dans ce chapitre. Par exemple,
+      que nous avons présentées précédemment dans ce chapitre. Par exemple,
       dans <xref linkend="fig-hudson-security-crowd-groups-matrix" />, nous
       utilisons des groupes utilisateurs définis dans Crowd pour configurer
       une sécurité basée sur la matrice dans l'écran principal de <indexterm
@@ -1700,7 +1700,7 @@ def findGroupsFor(def username) {
       linkend="fig-hudson-security-global-roles" />). La mise en oeuvre de ces
       rôles est intuitive et similaire à la configuration des permissions
       utilisateur dans les autres modèles de securité que nous avons
-      vu.</para>
+      vus.</para>
 
       <figure float="0" id="fig-hudson-security-global-roles">
         <title>Gérer les rôles globaux</title>
