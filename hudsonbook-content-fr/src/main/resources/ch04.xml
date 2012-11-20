@@ -288,7 +288,7 @@
           sur lequel il fonctionne, c'est mieux de ne pas le faire lorsqu'un
           build est en cours. Pour fermer Jenkins proprement, vous
           pouvez utiliser le lien Préparer à la fermeture, qui empêche le
-          démarrage de toute nouveau build. Finalement, lorsque tous
+          démarrage de tout nouveau build. Finalement, lorsque tous
           les builds en cours seront terminés, vous pourrez éteindre
           Jenkins proprement.</para>
         </listitem>
@@ -490,7 +490,7 @@
       </mediaobject>
     </figure>
 
-    <para>Il y a deux principales façons d'utiliser ces variables.
+    <para>Il y a deux façons principales d'utiliser ces variables.
     Premièrement, vous pouvez les utiliser directement dans votre script de
     build, en utilisant la notation <literal
     moreinfo="none">${key}</literal> ou <literal
@@ -774,8 +774,8 @@
       <para>Si vous cochez la case à cocher Installer automatiquement, Jenkins
       téléchargera et installera la versions demandée de Maven pour vous. Vous
       pouvez soit demander à Jenkins de télécharger Maven directement depuis
-      le site Apache, soit depuis une URL (à priori locale) de votre choix.
-      C'est un excellent choix si vous utilisez des builds distribuées,
+      le site Apache, soit depuis une URL (a priori locale) de votre choix.
+      C'est un excellent choix si vous utilisez des builds distribués,
       et puisque Maven est multi-plateformes, cela fonctionnera sur n'importe
       quelle machine. Vous n'avez pas besoin d'installer explicitement Maven
       sur chaque machine de build — la première fois qu'une machine de
