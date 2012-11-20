@@ -204,7 +204,7 @@
       </indexterm>votre build génère des résultats de test, vous devez
     configurer votre tâche de build Jenkins afin de les afficher. Comme
     mentionné précédemment, Jenkins sait traiter n'importe quel rapport de tests
-    compatible xUnit, quelque soit le langage avec lequel ils ont été
+    compatible xUnit, quel que soit le langage avec lequel ils ont été
     écrits.</para>
     <para>Pour <indexterm id="I_indexterm6_d1e8704" significance="normal">
         <primary>tâches de build Maven</primary>
@@ -655,7 +655,7 @@ public void whenAUserLogsOnWithACorrectUsernameAndPasswordTheHomePageIsDisplayed
       dans Maven et Jenkins.</para>
       <para>Comme tous les plugins Jenkins de métriques de qualité de code,
         <footnote>
-          <para>Avec l'exception notable de Sonar, que nous allons examiner plus
+          <para>À l'exception notable de Sonar, que nous allons examiner plus
           tard dans le livre.</para>
         </footnote> le plugin Cobertura pour Jenkins ne va pas lancer les tests
       de couverture de code pour vous. C'est à vous de générer les informations
@@ -1383,7 +1383,7 @@ public void whenAUserLogsOnWithACorrectUsernameAndPasswordTheHomePageIsDisplayed
     le même framework de test que vos tests classiques (e.g., JUnit),
     assurez-vous qu'ils sont exécutés dans une tâche de build séparée, de telle
     façon que les non-développeurs peuvent les visualiser et se concentrer sur
-    les tests orientés métier sans être distraient par ceux de plus bas niveau ou
+    les tests orientés métier sans être distraits par ceux de plus bas niveau ou
     techniques. Il peut être aussi utile d'adopter des conventions de nommage
     orientées métier et fonctionnelles pour vos tests et classes de test, afin de
     les rendre plus accessible aux non-développeurs (voir <xref
@@ -1744,7 +1744,7 @@ public void whenAUserLogsOnWithACorrectUsernameAndPasswordTheHomePageIsDisplayed
         </imageobject>
       </mediaobject>
     </figure>
-    <para>Il ne reste alors qu'à simplement configurer votre tâche de build pour
+    <para>Il ne reste alors plus qu'à configurer votre tâche de build pour
     qu'elle exécute vos tests de performance. Dans <xref
     linkend="fig-hudson-performance-build-config"/>, nous exécutons le build
     Maven que nous avons configuré précédemment. Notez que nous utilisons le
@@ -1919,7 +1919,7 @@ public void whenAUserLogsOnWithACorrectUsernameAndPasswordTheHomePageIsDisplayed
     exécutés à chaque changement. Ils sont plus susceptibles d'être programmés
     comme un build quotidien. Le problème est alors que beaucoup de choses
     peuvent intervenir en vingt-quatre heures, et, si le build quotidien échoue,
-    il sera difficile de déterminer lequel des nombreux changements archivés
+    il sera difficile de déterminer lequel des nombreux changements committés
     sur le contrôle de version pendant la journée était responsable. C'est un
     problème sérieux, et pénalise la capacité de votre serveur d'intégration
     continue de fournir un retour rapide qui le rend utile.</para>
