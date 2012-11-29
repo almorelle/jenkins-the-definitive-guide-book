@@ -261,17 +261,17 @@
           section, nous verrons comment configurer quelques uns des SCM les
           plus courants.</para>
     <sect2>
-      <title>Working with Subversion</title>
-      <para>Subversion<indexterm class="startofrange" id="ch05-sub1" significance="normal"><primary>freestyle build jobs</primary><secondary>Subversion used with</secondary></indexterm><indexterm class="startofrange" id="ch05-sub2" significance="normal"><primary>Subversion</primary><secondary sortas="free-style">with freestyle build jobs</secondary></indexterm> is one of the most widely used version control systems,
-      and Jenkins comes bundled with full Subversion support (see <xref linkend="fig-hudson-new-job-svn"/>). To use source code from a
-      Subversion repository, you simply provide the corresponding Subversion
-      URL—it will work fine with any of the three Subversion protocols of
-      (http, svn, or file). Jenkins will check that the URL is valid as soon
-      as you enter it. If the repository requires authentication, Jenkins will
-      prompt you for the corresponding credentials automatically, and store
-      them for any other build jobs that access this repository.</para>
+      <title>Travailler avec Subversion</title>
+      <para>Subversion<indexterm class="startofrange" id="ch05-sub1" significance="normal"><primary>tâches de build free-style</primary><secondary>Subversion utilisé avec</secondary></indexterm><indexterm class="startofrange" id="ch05-sub2" significance="normal"><primary>Subversion</primary><secondary sortas="free-style">avec les tâches de build free-style</secondary></indexterm> est l'un des systèmes de gestion de version parmi les plus utilisés,
+      et Jenkins embarque un support complet de Subversion (voir <xref linkend="fig-hudson-new-job-svn"/>). Pour utiliser du code source provenant
+      d'un dépôt Subversion, vous devez simplement fournir l'URL correspondante - cela
+      fonctionnera parfaitement avec n'importe lequel des trois protocoles utilisés
+      par Subversion (http, svn ou file). Jenkins vérifiera que l'URL est valide aussitôt
+      que vous l'aurez remplie. Si le dépôt nécessite une authentification, Jenkins vous
+      questionnera alors sur vos identifiants automatiquement et les enregistrera pour 
+      tout autre tâche de build qui aura besoin d'accéder à ce même dépôt.</para>
       <figure float="0" id="fig-hudson-new-job-svn">
-        <title>Jenkins provides built-in support for Subversion</title>
+        <title>Jenkins embarque par défaut le support pour Subversion</title>
         <mediaobject id="I_mediaobject5_d1e5281">
           <imageobject role="print">
             <imagedata fileref="figs/print/jtdg_0506.pdf" format="PDF"/>
@@ -281,55 +281,69 @@
           </imageobject>
         </mediaobject>
       </figure>
-      <para>By default, Jenkins will check out the repository contents into a
-      subdirectory of your workspace, whose name will match the last element
-      in the Subversion URL. So if your Subversion URL is <ulink url="svn://localhost/gameoflife/trunk"/>, Jenkins will check out
-      the repository contents to a directory called <filename moreinfo="none">trunk</filename> in the build job workspace. If you
-      would prefer another directory name, just enter the directory name you
-      want in the <command moreinfo="none">Local module directory</command>
-      field. Place a period (“.”) here if you want Jenkins to check the source
-      code directly into the workspace.</para>
-      <para>Occasionally you may need to get source code from more than one
-      Subversion URL. In this case, just use the “Add more locations...”
-      button to add as many additional <phrase role="keep-together">repository</phrase> sources as you need.</para>
-      <para>A well-designed build process should not modify the source code,
-      or leave any extra files that might confuse your version control system
-      or the build process. Both generated artifacts and temporary files (such
-      as log files, reports, test data or file-based databases) should go in a
-      directory set aside for this purpose (such as the <filename moreinfo="none">target</filename> directory in Maven builds), and/or be
-      configured to be ignored by your version control repository. They should
-      also be deleted as part of the build process, once the build has
-      finished with them. This is also an important part of ensuring a clean
-      and reproducible build <phrase role="keep-together">process—</phrase>for
-      a given version of your source code, your build should behave in exactly
-      the same way, no matter where or when it is run. Locally changed source
-      code files, and the presence of temporary files, both have the potential
-      of compromising this.</para>
-      <para>You can fine-tune the way Jenkins obtains the latest source code
-      from your Subversion repository by selecting an appropriate value in the
-      Check-out Strategy drop-down list. If your project is well-behaved,
-      however, you may be able to speed things up substantially by selecting
-      “Use ‘svn update’ as much as possible”. This is the fastest option, but
-      may leave artifacts and files from previous builds in your workspace. To
-      be on the safe side, you may want to use the second option (“Use ‘svn
-      update’ as much as possible, with ‘svn revert’ before update”), which
-      will systematically run <literal moreinfo="none">svn revert</literal> before running
-      <literal moreinfo="none">svn update</literal>. This will ensure that no local files have
-      been modified, though it will not remove any new files that have been
-      created during the build process. Alternatively, you can ask Jenkins to
-      delete any unversioned or ignored files before performing an
-      <literal moreinfo="none">svn update</literal>, or play it safe by checking out a full
-      clean copy for each build.</para>
-      <para>Another<indexterm id="I_indexterm5_d1e5322" significance="normal"><primary>source code browsers</primary><secondary sortas="Subversion">with Subversion</secondary></indexterm><indexterm id="I_indexterm5_d1e5327" significance="normal"><primary>freestyle build jobs</primary><secondary>Subversion used with</secondary><tertiary>source code browsers for</tertiary></indexterm><indexterm id="I_indexterm5_d1e5334" significance="normal"><primary>Subversion</primary><secondary>source code browsers for</secondary></indexterm> very useful feature is Jenkins’s integration with source
-      code browsers. A good source code browser is an important part of your
-      Continuous Integration setup. It lets you see at a glance what changes
-      triggered a given build, which is very useful when it comes to
-      troubleshooting broken builds (see <xref linkend="fig-hudson-new-job-diff"/>). Jenkins integrates with most of
-      the major source code browsers, including open source tools such as
-      WebSVN and Sventon, and commercial ones like Atlassian’s FishEye.</para>
+      <para>Par défaut, Jenkins récupérera le contenu du dépôt dans un
+      sous-répertoire de votre espace de travail, dont le nom sera celui
+      du dernier élément de l'URL Subversion. Donc si votre URL Subversion
+      est <ulink url="svn://localhost/gameoflife/trunk"/>, Jenkins récupérera
+      le contenu du dépôt dans une répertoire nommé <filename moreinfo="none">trunk</filename> 
+      dans l'espace de travail de votre tâche de build. So vous préférez nommer 
+      votre répertoire différemment, remplissez le nom que vous souhaitez 
+      dans le champ <command moreinfo="none">Local module directory</command>. 
+      Mettez un point (“.”) dans le champ si vous souhaitez mettre le code 
+      source directement à la racine de l'espace de travail.</para>
+      <para>Occasionnellement, vous aurez besoin de récupérer du code 
+      source de plusieurs URLs Subversion. Dans ce cas, utilisez le bouton 
+      “Add more locations...” pour ajouter autant de <phrase role="keep-together">dépôts</phrase>
+      sources que vous en avez besoin.</para>
+      <para>Une bonne procédure de build ne devrait pas modifier le code
+      source ou laisser de fichiers supplémentaires qui pourrait porter à
+      confusion votre système de gestion de version ou la procédure de build. 
+      Les artefacts générés et fichiers temporaires (comme les fichiers de journaux,
+      rapports, données de test ou bases de données fichier) devraient être 
+      créés dans un répertoire séparé et créé spécifiquement pour ce besoin (tout comme
+      le répertoire <filename moreinfo="none">target</filename> dans les builds Apache 
+      Maven), et/ou être configurés pour être ignorés par le dépôt de votre système 
+      de gestion de version.
+      Ces fichiers devrait également être supprimés par la procédure de build, 
+      une fois que le build n'en a plus besoin. Cela prend également une grande 
+      importance dans l'assurance de construire une procédure de build propre 
+      et <phrase role="keep-together">reproductible—</phrase>pour une 
+      version donnée de votre code source, le build devrait se comporter 
+      exactement de la même manière, peu importe où et quand il est 
+      exécuté. Les changements locaux, et la présence de fichiers temporaires, 
+      peuvent potentiellement compromettre cela.</para>
+      <para>Vous pouvez finement configurer la manière dont Jenkins récupère 
+      la dernière version de votre code source en sélectionnant la valeur 
+      attendue dans la liste déroulante Check-out Strategy. Si votre projet 
+      est correctement configuré, vous pouvez cependant accélérer grandement 
+      les choses en choisissant “Use ‘svn update’ as much as possible”. Il 
+      s'agit de l'option la plus rapide mais elle laisse les artefacts et 
+      fichiers des builds précédents dans votre espace de travail. Pour 
+      vous positionner du côté de la sécurité, vous pouvez choisir la 
+      seconde option (“Use ‘svn update’ as much as possible, with ‘svn revert’ 
+      before update”), qui exécutera systématiquement <literal moreinfo="none">svn revert</literal> 
+      avant de lancer <literal moreinfo="none">svn update</literal>. Cela vous 
+      assurera qu'aucun fichier n'aura été modifié localement. Cependant, 
+      cela ne supprimera pas les fichiers nouvellement créés pendant la 
+      procédure de build. Sinon, vous pouvez demander à Jenkins de 
+      supprimer tous les fichiers à ignorer ou non versionnés avant de 
+      faire un <literal moreinfo="none">svn update</literal> ou encore 
+      jouer la carte de la sécurité et récupérer une copie propre et 
+      complète à chaque build.</para>
+      <para>Une autre<indexterm id="I_indexterm5_d1e5322" significance="normal"><primary>navigateurs de code source</primary><secondary sortas="Subversion">avec Subversion</secondary></indexterm><indexterm id="I_indexterm5_d1e5327" significance="normal"><primary>tâches de build free-style</primary><secondary>Subversion utilisé avec</secondary><tertiary>navigateurs de code source pour</tertiary></indexterm><indexterm id="I_indexterm5_d1e5334" significance="normal"><primary>Subversion</primary><secondary>navigateurs de code source pour</secondary></indexterm> fonctionnalité de Jenkins particulièrement utile 
+      est sont intégration avec les navigateurs de code source. Un bon 
+      navigateur de code source est un élément important de votre 
+      configuration d'Intégration Continue. Cela vous permet de voir 
+      d'un coup d'œil les changements qui sont à l'origine du 
+      lancement de votre build, ce qui est très utile quand vous 
+      avez besoin de localiser un problème lors d'un build échoué 
+      (voir <xref linkend="fig-hudson-new-job-diff"/>). Jenkins intègre la plupart des 
+      principaux navigateurs de source code, y compris des outils 
+      open source comme WebSVN ou Sventon, ainsi que ceux commerciaux 
+      tels qu'Atlassian FishEye.</para>
       <figure float="0" id="fig-hudson-new-job-diff">
-        <title>Source code browser showing what code changes caused a
-        build</title>
+        <title>Navigateur de code source montrant les changements dans le 
+        code qui ont causé le build.</title>
         <mediaobject id="I_mediaobject5_d1e5345">
           <imageobject role="print">
             <imagedata fileref="figs/print/jtdg_0507.pdf" format="PDF"/>
@@ -339,50 +353,57 @@
           </imageobject>
         </mediaobject>
       </figure>
-      <para>Jenkins<indexterm id="I_indexterm5_d1e5352" significance="normal"><primary>freestyle build jobs</primary><secondary>Subversion used with</secondary><tertiary>excluding regions from triggering</tertiary></indexterm><indexterm id="I_indexterm5_d1e5359" significance="normal"><primary>Subversion</primary><secondary>excluding regions from triggering builds</secondary></indexterm> also lets you refine the changes that will trigger a
-      build. In the Advanced section, you can use the Excluded Regions field
-      to tell Jenkins not to trigger a build if only certain files were
-      changed. This field takes a list of regular expressions, which identify
-      files that should <emphasis>not</emphasis> trigger a build. For example,
-      suppose you don’t want Jenkins to start a new build if only images have
-      been changed. To do this, you could use a set of regular expressions
-      like the following:</para>
+      <para>Jenkins<indexterm id="I_indexterm5_d1e5352" significance="normal"><primary>tâches de build freestyle</primary><secondary>Subversion utilisé avec</secondary><tertiary>exclure des régions du déclenchement</tertiary></indexterm><indexterm id="I_indexterm5_d1e5359" significance="normal"><primary>Subversion</primary><secondary>exclure des régions du déclenchement de builds</secondary></indexterm> vous permet également d'affiner la sélection des 
+      changements qui déclencherons un build. Dans la section avancée, 
+      vous pouvez utiliser le champ Régions exclues pour dire à Jenkins 
+      de ne pas déclencher de build si certains fichiers sont modifiés. 
+      Ce champ prend en compte une liste d'expressions régulières qui 
+      identifient les fichiers qui ne doivent <emphasis>pas</emphasis> 
+      déclencher de build. Par exemple, supposez que vous ne voulez pas 
+      que Jenkins démarre un build si seulement des images ont été 
+      modifiées. Pour ce faire, vous pouvez utiliser un groupe d'expressions 
+      régulières comme celles qui suivent :</para>
       <programlisting id="I_programlisting5_d1e5368" format="linespecific">/trunk/gameoflife/gameoflife-web/src/main/webapp/.*\.jpg
 /trunk/gameoflife/gameoflife-web/src/main/webapp/.*\.gif
 /trunk/gameoflife/gameoflife-web/src/main/webapp/.*\.png</programlisting>
-      <para>Alternatively, you can specify the Included Regions, if you are
-      only interested in changes in part of the source code directory
-      structure. You can even combine the Excluded Regions and Included
-      Regions fields—in this case a modified file will only trigger a build if
-      it is in the Included Regions but not in the Excluded Regions.</para>
-      <para>You <indexterm id="I_indexterm5_d1e5375" significance="normal"><primary>freestyle build jobs</primary><secondary>Subversion used with</secondary><tertiary>excluding users from triggering</tertiary></indexterm><indexterm id="I_indexterm5_d1e5382" significance="normal"><primary>users</primary><secondary>excluding from triggering builds</secondary></indexterm><indexterm id="I_indexterm5_d1e5387" significance="normal"><primary>Subversion</primary><secondary>excluding users from triggering builds</secondary></indexterm>can also ignore changes coming from certain users
-      (Excluded Users), or with certain <indexterm id="I_indexterm5_d1e5393" significance="normal"><primary>commit messages, excluding from triggering build
-          jobs</primary></indexterm><indexterm id="I_indexterm5_d1e5396" significance="normal"><primary>freestyle build jobs</primary><secondary>Subversion used with</secondary><tertiary>excluding commit messages from triggering</tertiary></indexterm><indexterm id="I_indexterm5_d1e5403" significance="normal"><primary>Subversion</primary><secondary>excluding commit messages from triggering
-          builds</secondary></indexterm>commit messages (Excluded Commit Messages). For example,
-      if your project uses Maven, you may want to use the Maven Release Plugin
-      to promote your application from snapshot<indexterm id="I_indexterm5_d1e5409" significance="normal"><primary>SNAPSHOT versions</primary></indexterm><indexterm id="I_indexterm5_d1e5412" significance="normal"><primary>Maven</primary><secondary>SNAPSHOT versions</secondary></indexterm> versions to official releases. This plugin will
-      automatically bump up the version number of your application from a
-      snapshot version used during development (such as 1.0.1-SNAPSHOT) to a
-      release (1.0.1), bundles up and deploys a release of your application
-      with this version number, and then moves the version on to the next
-      snapshot number (e.g., 1.0.2-SNAPSHOT) for ongoing development. During
-      this <phrase role="keep-together">process</phrase> Maven takes care of
-      many SCM bookkeeping tasks, such as committing the source code with the
-      release version number and creating a tag for the released version of
-      your application, and then committing the source code with the new
-      snapshot version <phrase role="keep-together">number</phrase>.</para>
-      <para>Now suppose you have a special build job for generating a new
-      release using this <phrase role="keep-together">process</phrase>. The
-      many commits generated by the Maven Release Plugin would normally
-      trigger off build jobs in Jenkins. However, since the release build job
-      is already compiling and testing this version of your application, you
-      don’t need Jenkins to do it again in a separate build job. To ensure
-      that Jenkins does not trigger a build for this case, you can use the
-      Excluded Commit Messages field with the following value:</para>
+      <para>De manière alternative, vous pouvez spécifier uniquement 
+      les Régions Incluses, si vous n'êtes intéressé que par les 
+      changements d'une partie de votre arbre de code source. Vous 
+      pouvez même combiner les champs Régions exclues et Régions 
+      Incluses — dans ce cas, un fichier modifié ne déclenchera 
+      un build que s'il est inclus dans les Régions Incluses mais 
+      pas dans les Régions Exclues.</para>
+      <para>Vous <indexterm id="I_indexterm5_d1e5375" significance="normal"><primary>tâches de build free-style</primary><secondary>Subversion utilisé avec</secondary><tertiary>exclure des utilisateurs du déclenchement</tertiary></indexterm><indexterm id="I_indexterm5_d1e5382" significance="normal"><primary>utilisateurs</primary><secondary>exclure pour le déclenchement de build</secondary></indexterm><indexterm id="I_indexterm5_d1e5387" significance="normal"><primary>Subversion</primary><secondary>exclure des utilisateurs du déclenchement de builds</secondary></indexterm>pouvez également ignorer les changements provenant 
+      de certains utilisateurs (Utilisateurs Exclus), ou pour certains <indexterm id="I_indexterm5_d1e5393" significance="normal"><primary>messages de commit, exclure du déclenchement de tâches 
+      de build</primary></indexterm><indexterm id="I_indexterm5_d1e5396" significance="normal"><primary>tâches de build free-style</primary><secondary>Subversion utilisé avec</secondary><tertiary>exclure des messages de commit du déclenchement</tertiary></indexterm><indexterm id="I_indexterm5_d1e5403" significance="normal"><primary>Subversion</primary><secondary>exclure des messages de commit du déclenchement de 
+      builds</secondary></indexterm>messages de commit en particulier (Excluded Commit Messages).
+      Par exemple, si votre projet utilise Maven, vous pourrez être amené à 
+      utiliser le plugin Maven Release Plugin pour promouvoir votre application 
+      d'une version snapshot<indexterm id="I_indexterm5_d1e5409" significance="normal"><primary>versions SNAPSHOT</primary></indexterm><indexterm id="I_indexterm5_d1e5412" significance="normal"><primary>Apache Maven</primary><secondary>versions SNAPSHOT</secondary></indexterm> vers une version release officielle. Ce plugin 
+      poussera automatiquement le numéro de version de votre application 
+      depuis sa version snapshot utilisée pendant le développement (comme par 
+      exemple 1.0.1-SNAPSHOT) vers une version release (1.0.1), empaquettera, 
+      déploiera votre application avec ce numéro de version et le mettra 
+      à jour avec le prochain numéro de version snapshot (par exemple 1.0.2-SNAPSHOT) 
+      pour les développements futurs. Pendant cette <phrase role="keep-together">procédure</phrase>, Apache Maven 
+      s'occupe de multiples étapes comptables comme d'effectuer le commit 
+      du nouveau numéro de version, de créer la nouvelle étiquette pour la 
+      livraison de votre application et enfin faire l'opération de commit 
+      pour le nouveau <phrase role="keep-together">numéro</phrase> de version 
+      snapshot.</para>
+      <para>Supposez maintenant que vous avez une tâche de build spécifique 
+      pour effectuer une nouvelle livraison utilisant cette <phrase role="keep-together">procédure</phrase>. 
+      Les différentes opérations de commits générées par le plugin Maven Release 
+      Plugin devraient normalement déclencher des tâches de build dans Jenkins. 
+      Cependant, comme votre tache de build de livraison est déjà en train de 
+      compiler et tester cette version de votre application, vous n'avez pas 
+      besoin que Jenkins le fasse à nouveau dans une autre tâche de build. Pour 
+      s'assurer que Jenkins ne déclenche pas un autre build dans ce cas, vous 
+      pouvez utiliser le champ Excluded Commit Messages avec la valeur suivante :</para>
       <programlisting id="I_programlisting5_d1e5430" format="linespecific">[maven-release-plugin] prepare release.*</programlisting>
-      <para>This will ensure that Jenkins skips the changes corresponding to
-      the new release version, but not those corresponding to the next
-      <indexterm id="I_indexterm5_d1e5434" class="endofrange" startref="ch05-sub1" significance="normal"><primary/></indexterm><indexterm id="I_indexterm5_d1e5436" class="endofrange" startref="ch05-sub2" significance="normal"><primary/></indexterm>snapshot version.</para>
+      <para>Cela vous assurera que Jenkins sautera les changements correspondant
+      à des nouvelles versions de release mais pas ceux correspondant à la 
+      prochaine <indexterm id="I_indexterm5_d1e5434" class="endofrange" startref="ch05-sub1" significance="normal"><primary/></indexterm><indexterm id="I_indexterm5_d1e5436" class="endofrange" startref="ch05-sub2" significance="normal"><primary/></indexterm>version snapshot.</para>
     </sect2>
     <sect2 id="git-plugin">
       <title>Working with Git</title>
