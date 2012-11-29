@@ -406,37 +406,38 @@
       prochaine <indexterm id="I_indexterm5_d1e5434" class="endofrange" startref="ch05-sub1" significance="normal"><primary/></indexterm><indexterm id="I_indexterm5_d1e5436" class="endofrange" startref="ch05-sub2" significance="normal"><primary/></indexterm>version snapshot.</para>
     </sect2>
     <sect2 id="git-plugin">
-      <title>Working with Git</title>
+      <title>Travailler avec Git</title>
       <para>
-        <emphasis>Contributed by Matthew McCullough</emphasis>
+        <emphasis>Contribué par Matthew McCullough</emphasis>
       </para>
-      <para><ulink url="http://git-scm.com/">Git</ulink> is <indexterm class="startofrange" id="ch05-git1" significance="normal"><primary>freestyle build jobs</primary><secondary>Git used with</secondary></indexterm><indexterm class="startofrange" id="ch05-git2" significance="normal"><primary>Git</primary><secondary sortas="free-style">with freestyle build jobs</secondary></indexterm>a popular distributed version control system that is a
-      logical successor to <ulink url="http://subversion.tigris.org/">Subversion</ulink> and a mind-share
-      competitor to <ulink url="http://mercurial.selenic.com/">Mercurial</ulink>. Git support in
-      Jenkins is both mature and full-featured. There are a number of plugins
-      that can contribute to the overall story of Git in Jenkins. We will
-      begin by looking at the Git plugin, which provides core Git support in
-      Jenkins. We’ll discuss the supplemental plugins shortly.</para>
+      <para><ulink url="http://git-scm.com/">Git</ulink> est <indexterm class="startofrange" id="ch05-git1" significance="normal"><primary>tâches de build free-style</primary><secondary>Git utilisé avec</secondary></indexterm><indexterm class="startofrange" id="ch05-git2" significance="normal"><primary>Git</primary><secondary sortas="free-style">avec des tâches de build free-style</secondary></indexterm>un système de gestion de version distribué qui est le
+          successeur logique de <ulink url="http://subversion.tigris.org/">Subversion</ulink> et un concurrent
+          à <ulink url="http://mercurial.selenic.com/">Mercurial</ulink> partageant le même esprit. Le support de Git dans
+          Jenkins est mature et complet. Il y a également plusieurs plugins
+          qui peuvent contribuer au workflow général de Git dans Jenkins. Nous
+          commencerons par nous intéresser au plugin Git qui apporte le support
+          des fonctions principales de Git. Nous aborderons le sujet des plugins
+          supplémentaires brièvement.</para>
       <sect3 id="installing-the-plugin">
-        <title>Installing the plugin</title>
-        <para>The Git plugin <indexterm class="startofrange" id="ch05-gitinstall1" significance="normal"><primary>Git plugin</primary></indexterm><indexterm class="startofrange" id="ch05-gitinstall2" significance="normal"><primary>plugins</primary><secondary>Git</secondary></indexterm>is available in the Jenkins Plugin Manager and is
-        documented on its own <ulink url="http://wiki.hudson-ci.org/display/HUDSON/Git+Plugin">wiki
-        page</ulink>. The plugin assumes that Git (version 1.3.3 or later) has
-        already been installed on your build server, so you will need to make
-        sure that this is the case. You can do this by running the following
-        command on your build server:</para>
+        <title>Installation du plugin</title>
+        <para>Le plugin Git <indexterm class="startofrange" id="ch05-gitinstall1" significance="normal"><primary>plugin Git</primary></indexterm><indexterm class="startofrange" id="ch05-gitinstall2" significance="normal"><primary>plugins</primary><secondary>Git</secondary></indexterm>est disponible dans le Gestionnaire de Plugins Jenkins et
+            est documenté sur sa propre <ulink url="http://wiki.hudson-ci.org/display/HUDSON/Git+Plugin">page de
+            wiki</ulink>. Le plugin suppose que Git (version 1.3.3 ou ultérieure) a
+            été installé sur le serveur de build. Vous devrez donc vous en assurer
+            préalablement. Vous pouvez vous en assurer en exécutant la commande suivante
+            sur votre serveur de build :</para>
         <screen format="linespecific">$ <userinput moreinfo="none">git --version</userinput>
 git version 1.7.1</screen>
-        <para>Next, go back to Jenkins, check the corresponding check box in
-        the Jenkins Plugin Manager page and click the Install button.</para>
+        <para>Revenez ensuite à Jenkins et cochez la case correspondante dans le
+            gestionnaire de plugins Jenkins et cliquez sur le bouton d'installation.</para>
         <sect4 id="system-wide-configuration-of-the-plugin">
-          <title>System-wide configuration of the plugin</title>
-          <para>After installing the Git plugin, a small new set of
-          configuration options will be available on the Manage Jenkins<phrase role="unicode">→</phrase>Configure System page (see <xref linkend="I_figure1_id2245320"/>). In particular, you need to
-          provide the path to your Git executable. If Git is already installed
-          on the system path, just put “git” here.</para>
+          <title>Configuration système du plugin</title>
+          <para>Après l'installation du plugin Git, une nouvelle
+              section de configuration est disponible dans la page Administrer Jenkins<phrase role="unicode">→</phrase>Configurer le système (voir <xref linkend="I_figure1_id2245320"/>). Vous devez en particulier
+              fournir le chemin vers l'exécutable de Git. Si Git est déjà installé
+              sur votre système, entrez simplement “git” dans le champ.</para>
           <figure float="0" id="I_figure1_id2245320">
-            <title>System-wide configuration of the Git plugin</title>
+            <title>Configuration système du plugin Git</title>
             <mediaobject id="I_mediaobject5_d1e5503">
               <imageobject role="print">
                 <imagedata fileref="figs/print/jtdg_0508.pdf" format="PDF"/>
@@ -448,22 +449,23 @@ git version 1.7.1</screen>
           </figure>
         </sect4>
         <sect4 id="ssh-key-setup">
-          <title>SSH key setup</title>
-          <para>If the <indexterm id="I_indexterm5_d1e5513" significance="normal"><primary>SSH keys</primary></indexterm><indexterm id="I_indexterm5_d1e5516" significance="normal"><primary>Git</primary><secondary>SSH keys</secondary></indexterm><indexterm id="I_indexterm5_d1e5521" significance="normal"><primary>freestyle build jobs</primary><secondary>Git used with</secondary><tertiary>SSH keys</tertiary></indexterm>Git repository you are accessing uses SSH
-          passphrase-less <phrase role="keep-together">authentication—</phrase>for example, if the
-          access address is similar to <literal moreinfo="none">git@github.com:matthewmccullough/some-repo.git</literal>—you’ll
-          need to provide the private half of the key as file <literal moreinfo="none">~/.ssh/id_rsa</literal> where <literal moreinfo="none">~</literal> is the home directory of the user
-          account under which Jenkins is <phrase role="keep-together">running</phrase>.</para>
-          <para>The fingerprint of the remote server will additionally need to
-          be placed in <literal moreinfo="none">~/.ssh/known_hosts</literal>
-          to prevent Jenkins from invisibly prompting for authorization to
-          access this Git server for the first time.</para>
-          <para>Alternatively, if logging-in is enabled for the <literal moreinfo="none">jenkins</literal> user, SSH into the Jenkins machine
-          as <literal moreinfo="none">jenkins</literal> and manually attempt
-          to Git clone a remote repository. This will test your private key
-          setup and establish the <literal moreinfo="none">known_hosts</literal> file in the <literal moreinfo="none">~/.ssh</literal> directory. This is probably the
-          simplest option for users unfamiliar with the intricacies of SSH
-          <phrase role="keep-together">configuration</phrase>.<indexterm id="I_indexterm5_d1e5568" class="endofrange" startref="ch05-gitinstall1" significance="normal"><primary/></indexterm><indexterm id="I_indexterm5_d1e5570" class="endofrange" startref="ch05-gitinstall2" significance="normal"><primary/></indexterm></para>
+          <title>Configuration de la clé SSH</title>
+          <para>Si le <indexterm id="I_indexterm5_d1e5513" significance="normal"><primary>clés SSH</primary></indexterm><indexterm id="I_indexterm5_d1e5516" significance="normal"><primary>Git</primary><secondary>clés SSH</secondary></indexterm><indexterm id="I_indexterm5_d1e5521" significance="normal"><primary>tâches de build free-style</primary><secondary>Git utilisé avec</secondary><tertiary>clés SSH</tertiary></indexterm>dépôt Git auquel vous accédez utilise SSH
+              sans mot de passe comme moyen d'<phrase role="keep-together">authentification—</phrase>par exemple si
+              l'adresse d'accès ressemble à <literal moreinfo="none">git@github.com:matthewmccullough/some-repo.git</literal>—vous devrez
+              fournir la partie privée de la clé sous forme de fichier <literal moreinfo="none">~/.ssh/id_rsa</literal> où <literal moreinfo="none">~</literal> est le répertoire racine du compte
+              utilisateur <phrase role="keep-together">exécutant</phrase> Jenkins.</para>
+          <para>L'empreinte du serveur distant devra additionnellement être
+              ajoutée dans <literal moreinfo="none">~/.ssh/known_hosts</literal>
+              pour éviter que Jenkins ne vous invite à accepter l'autorisation
+              vers le serveur Git lors du premier accès alors que la console sera
+              non interactive.</para>
+          <para>Alternativement, si vous avez la possibilité de vous connecter avec l'utilisateur <literal moreinfo="none">jenkins</literal>, accédez par SSH à la machine Jenkins
+              en tant que <literal moreinfo="none">jenkins</literal> et faites une tentative manuelle
+              de cloner un dépôt Git distant. Cela testera la configuration de
+              votre clé privée et remplira le fichier <literal moreinfo="none">known_hosts</literal> dans le répertoire <literal moreinfo="none">~/.ssh</literal>. C'est probablement la
+              solution la plus simple de vous familiariser avec les subtilités
+              de la <phrase role="keep-together">configuration</phrase> SSH.<indexterm id="I_indexterm5_d1e5568" class="endofrange" startref="ch05-gitinstall1" significance="normal"><primary/></indexterm><indexterm id="I_indexterm5_d1e5570" class="endofrange" startref="ch05-gitinstall2" significance="normal"><primary/></indexterm></para>
         </sect4>
       </sect3>
       <sect3 id="using-the-plugin">
