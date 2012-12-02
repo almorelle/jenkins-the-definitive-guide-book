@@ -867,7 +867,7 @@ git checkout -b maBranche 73434e4a0af0f51c242f5ae8efc51a88383afc8a</screen>
         navigateur de dépôt, tout fichier sur lequel des changements auront été 
         détectés sera lié à la page web de visualisation du source appropriée sur <indexterm id="I_indexterm5_d1e6254" class="endofrange" startref="ch05-git1" significance="normal"><primary/></indexterm><indexterm id="I_indexterm5_d1e6256" class="endofrange" startref="ch05-git2" significance="normal"><primary/></indexterm><indexterm id="I_indexterm5_d1e6258" class="endofrange" startref="ch05-scm" significance="normal"><primary/></indexterm>GitHub (<xref linkend="I_figure1_id2246688"/>).</para>
         <figure float="none" id="I_figure1_id2246688">
-          <title>GitHub repository browser</title>
+          <title>Navigateur de dépôt GitHub</title>
           <mediaobject id="I_mediaobject5_d1e6266">
             <imageobject role="print">
               <imagedata fileref="figs/print/jtdg_0522.pdf" format="PDF"/>
