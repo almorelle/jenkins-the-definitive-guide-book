@@ -469,38 +469,39 @@ git version 1.7.1</screen>
         </sect4>
       </sect3>
       <sect3 id="using-the-plugin">
-        <title>Using the plugin</title>
-        <para>On <indexterm id="I_indexterm5_d1e5577" significance="normal"><primary>Git</primary><secondary>repository address</secondary></indexterm><indexterm id="I_indexterm5_d1e5582" significance="normal"><primary>freestyle build jobs</primary><secondary>Git used with</secondary><tertiary>repository address</tertiary></indexterm>either an existing or a new Jenkins project, a new
-        Source Code Management option for Git will be displayed. From here,
-        you can configure one or more repository addresses (see <xref linkend="I_figure1_id2245479"/>). One repository is usually enough
-        for most projects: adding a second repository can be useful in more
-        complicated cases, and lets you specify distinct named locations for
-        <literal moreinfo="none">pull</literal> and <literal moreinfo="none">push</literal> operations.</para>
+        <title>Utilisation du plugin</title>
+        <para>Que <indexterm id="I_indexterm5_d1e5577" significance="normal"><primary>Git</primary><secondary>adresse du dépôt</secondary></indexterm><indexterm id="I_indexterm5_d1e5582" significance="normal"><primary>tâches de build free-style</primary><secondary>Git utilisé avec</secondary><tertiary>adresse du dépôt</tertiary></indexterm>cela soit dans un nouveau projet Jenkins ou dans un projet existant, une nouvelle
+            option de Gestion du Code Source pour Git sera affichée. Dès lors,
+            vous pouvez configurer une ou plusieurs adresses de dépôts (voir <xref linkend="I_figure1_id2245479"/>). Un seul dépôt est utilisé dans la
+            majorité des projets. Ajouter un second dépôt peut être utile dans
+            des cas plus compliqués et vous permet de spécifier des cibles
+            distinctes pour les opérations de <literal moreinfo="none">pull</literal> et de <literal moreinfo="none">push</literal>.</para>
         <sect4 id="advanced-per-project-source-code-management-configuration">
-          <title>Advanced per-project source code management
-          configuration</title>
-          <para>In most cases, the URL of the Git repository you are using
-          should be enough. However, if you need more options, click on the
-          Advanced button (see <xref linkend="I_figure1_id2245574"/>). This
-          provides more precise control of the <literal moreinfo="none">pull</literal> behavior.</para>
-          <para>The <emphasis>Name of repository</emphasis> is a shorthand
-          title (a.k.a. <literal moreinfo="none">remote</literal> in Git
-          parlance) for a given repository, that you can refer to later on in
-          the merge action configuration.</para>
-          <para>The <emphasis>Refspec</emphasis> is a Git-specific <ulink url="http://progit.org/book/ch9-5.html">language</ulink> for
-          controlling precisely what is retrieved from remote servers and
-          under what namespace it is stored locally.</para>
+          <title>Configuration avancée par projet de la gestion du code source</title>
+          <para>Dans la plupart des cas, l'URL du dépôt Git que vous utilisez
+              devrait être suffisante. Cependant, si vous avez besoin de plus
+              d'options, cliquez sur le bouton Avancé (voir <xref linkend="I_figure1_id2245574"/>).
+              Cela apporte un un contrôle plus précis sur le comportement du
+              <literal moreinfo="none">pull</literal>.</para>
+          <para>Le <emphasis>Nom du dépôt</emphasis> est un titre raccourci
+              (ou <literal moreinfo="none">remote</literal> en langage Git)
+              pour un dépôt donné auquel vous pouvez vous reporter plus
+              tard dans la configuration de l'action de merge.</para>
+          <para>La <emphasis>Refspec</emphasis> est un <ulink url="http://progit.org/book/ch9-5.html">terme</ulink> spécifique
+              du langage Git pour contrôler précisément ce qui est récupéré
+              depuis les serveurs distants et sous quel espace de nom c'est
+              stocké localement.</para>
         </sect4>
         <sect4 id="branches-to-build">
-          <title>Branches to build</title>
-          <para>The <indexterm id="I_indexterm5_d1e5629" significance="normal"><primary>freestyle build jobs</primary><secondary>Git used with</secondary><tertiary>branches to build</tertiary></indexterm><indexterm id="I_indexterm5_d1e5636" significance="normal"><primary>Git</primary><secondary>branches to build</secondary></indexterm>branch specifier (<xref linkend="I_figure1_id2245638"/>) is the wildcard pattern or
-          specific branch name that should be built by Jenkins. If left blank,
-          all branches will be built. At the time of this writing, after the
-          first time saving a job with a blank <emphasis>branches to
-          build</emphasis> setting, it is populated with <literal moreinfo="none">**,</literal> which means “build all
-          branches.”</para>
+          <title>Branches à construire</title>
+          <para>Le champ <indexterm id="I_indexterm5_d1e5629" significance="normal"><primary>tâches de build free-style</primary><secondary>Git utilisé avec</secondary><tertiary>branches à construire</tertiary></indexterm><indexterm id="I_indexterm5_d1e5636" significance="normal"><primary>Git</primary><secondary>branches à construire</secondary></indexterm>Branch Specifier (<xref linkend="I_figure1_id2245638"/>) peut être utilisé à l'aide d'un caractère générique  
+          ou en spécifiant le nom d'une branche à construire par Jenkins. Si le 
+          champ est laissé vide, toutes les branches seront construites. Pour 
+          le moment, lorsque vous sauvegardez votre tâche pour la première fois 
+          et qu'elle est configurée avec <emphasis>ce champ</emphasis> vide, il est alors rempli 
+          avec <literal moreinfo="none">**</literal>, ce qui signifie "construire toutes les branches".</para>
           <figure float="none" id="I_figure1_id2245479">
-            <title>Entering a Git repo URL</title>
+            <title>Remplir une URL de dépôt Git</title>
             <mediaobject id="I_mediaobject5_d1e5653">
               <imageobject role="print">
                 <imagedata fileref="figs/print/jtdg_0509.pdf" format="PDF"/>
@@ -511,7 +512,7 @@ git version 1.7.1</screen>
             </mediaobject>
           </figure>
           <figure float="none" id="I_figure1_id2245574">
-            <title>Advanced configuration of a Git repo URL</title>
+            <title>Configuration avancée d'une URL de dépôt Git</title>
             <mediaobject id="I_mediaobject5_d1e5661">
               <imageobject role="print">
                 <imagedata fileref="figs/print/jtdg_0510.pdf" format="PDF"/>
@@ -522,7 +523,7 @@ git version 1.7.1</screen>
             </mediaobject>
           </figure>
           <figure float="0" id="I_figure1_id2245638">
-            <title>Advanced configuration of the Git branches to build</title>
+            <title>Configuration avancée des branches Git à construire</title>
             <mediaobject id="I_mediaobject5_d1e5669">
               <imageobject role="print">
                 <imagedata fileref="figs/print/jtdg_0511.pdf" format="PDF"/>
@@ -534,15 +535,15 @@ git version 1.7.1</screen>
           </figure>
         </sect4>
         <sect4 id="excluded-regions">
-          <title>Excluded regions</title>
-          <para>Regions (seen in <xref linkend="I_figure1_id2245692"/>)
-          <indexterm id="I_indexterm5_d1e5681" significance="normal"><primary>freestyle build jobs</primary><secondary>Git used with</secondary><tertiary>excluding regions from triggering</tertiary></indexterm><indexterm id="I_indexterm5_d1e5688" significance="normal"><primary>Git</primary><secondary>excluding regions from triggering builds</secondary></indexterm>are named specific or wildcard paths in the codebase
-          that, even when changed, should not trigger a build. Commonly these
-          are noncompiled files such as localization bundles or images, which,
-          understandably might not have an effect on unit or integration
-          tests.</para>
+          <title>Régions exclues</title>
+          <para>Les régions (vues dans<xref linkend="I_figure1_id2245692"/>)
+          <indexterm id="I_indexterm5_d1e5681" significance="normal"><primary>tâches de build free-style</primary><secondary>Git utilisé avec</secondary><tertiary>exclure certaines régions du déclenchement</tertiary></indexterm><indexterm id="I_indexterm5_d1e5688" significance="normal"><primary>Git</primary><secondary>exclure certaines régions du déclenchement de builds</secondary></indexterm>sont des chemins nommés spécifiquement ou génériques de votre 
+          code source qui, même une fois modifiés, ne doivent pas déclencher 
+          de build. Il s'agit généralement de fichiers non compilés tels que 
+          les archives de locales ou d'images qui n'ont à priori pas d'effet 
+          sur les tests unitaires ou d'intégration.</para>
           <figure float="0" id="I_figure1_id2245692">
-            <title>Branches and regions</title>
+            <title>Branches et régions</title>
             <mediaobject id="I_mediaobject5_d1e5697">
               <imageobject role="print">
                 <imagedata fileref="figs/print/jtdg_0512.pdf" format="PDF"/>
@@ -554,96 +555,100 @@ git version 1.7.1</screen>
           </figure>
         </sect4>
         <sect4 id="excluded-users">
-          <title>Excluded users</title>
-          <para>The <indexterm id="I_indexterm5_d1e5707" significance="normal"><primary>freestyle build jobs</primary><secondary>Git used with</secondary><tertiary>excluding users from triggering</tertiary></indexterm><indexterm id="I_indexterm5_d1e5714" significance="normal"><primary>users</primary><secondary>excluding from triggering builds</secondary></indexterm><indexterm id="I_indexterm5_d1e5719" significance="normal"><primary>Git</primary><secondary>excluding users from triggering builds</secondary></indexterm>Git plugin also lets you ignore certain users, even if
-          they make changes to the codebase that would typically trigger a
-          build.</para>
-          <para>This is not as spiteful as it sounds: excluded users are
-          typically automated users, not human developers, that happen to have
-          distinct accounts with commit rights in the source control system.
-          These automated users often are performing small numeric changes
-          such as bumping up version numbers in a <filename moreinfo="none">pom.xml</filename> file, rather than making actual
-          logic changes. If you want to exclude several users, just place them
-          on separate lines.</para>
+          <title>Utilisateurs Exclus</title>
+          <para>Le plugin <indexterm id="I_indexterm5_d1e5707" significance="normal"><primary>tâches de build free-style</primary><secondary>Git utilisé avec</secondary><tertiary>exclure des utilisateurs du déclenchement</tertiary></indexterm><indexterm id="I_indexterm5_d1e5714" significance="normal"><primary>utilisateurs</primary><secondary>exclure du déclenchement de builds</secondary></indexterm><indexterm id="I_indexterm5_d1e5719" significance="normal"><primary>Git</primary><secondary>exclure des utilisateurs du déclenchement de builds</secondary></indexterm>Git vous permet également d'ignorer certains utilisateurs 
+          même s'ils effectuent des changements du code source qui auraient 
+          dû normalement déclencher un build.</para>
+          <para>Cette action n'est pas aussi méchante qu'elle peut paraitre : 
+          les utilisateyrs exclus sont généralement des utilisateurs 
+          automatisés ou des développeurs non humains, qui ont des 
+          comptes distincts avec des droits de commit sur le gestionnaire 
+          de code source. Ces utilisateurs automatisés font généralement 
+          de petites opérations comme incrémenter la version d'un fichier 
+          <filename moreinfo="none">pom.xml</filename> plutôt que de véritables changements dans la logique de votre 
+          application. Si vous souhaitez exclure plusieurs utilisateurs, 
+          ajoutez les simplement sur des lignes séparées.</para>
         </sect4>
         <sect4 id="checkoutmerge-to-local-branch">
-          <title>Checkout/merge to local branch</title>
-          <para>There <indexterm id="I_indexterm5_d1e5735" significance="normal"><primary>freestyle build jobs</primary><secondary>Git used with</secondary><tertiary>checking out to local branch</tertiary></indexterm><indexterm id="I_indexterm5_d1e5742" significance="normal"><primary>Git</primary><secondary>checking out to local branch</secondary></indexterm>are times when you may want to create a local branch
-          from the tree you’ve specified, rather than just using a direct
-          <emphasis>detached HEAD</emphasis> checkout of the commit’s hash. In
-          this case, just specify your local branch in the “Checkout/merge to
-          a local branch” field.</para>
-          <para>This is a little easier to illustrate with an example. Without
-          specifying a local branch, the plugin would do something like
-          this:</para>
+          <title>Récupérer/fusionner sur une branche locale</title>
+          <para>Parfois <indexterm id="I_indexterm5_d1e5735" significance="normal"><primary>tâches de build free-style</primary><secondary>Git utilisé avec</secondary><tertiary>récupérer sur une branche locale</tertiary></indexterm><indexterm id="I_indexterm5_d1e5742" significance="normal"><primary>Git</primary><secondary>récupérer sur une branche locale</secondary></indexterm>vous aurez le besoin de récupérer directement 
+          le <emphasis>HEAD de manière séparée</emphasis> dans une branche au travers du 
+          hash d'un commit. Dans ce cas, spécifiez votre branche locale 
+          dans le champ “Checkout/merge to a local branch”.</para>
+          <para>Il est plus simple de l'illustrer par un exemple. Sans 
+          spécifier de branche locale, le plugin ferait quelque chose
+          comme cela : </para>
           <screen format="linespecific">git checkout 73434e4a0af0f51c242f5ae8efc51a88383afc8a</screen>
-          <para>On the other hand, if you use a local branch named <literal moreinfo="none">mylocalbranch</literal>, Jenkins would do the
-          following:</para>
-          <screen format="linespecific">git branch -D mylocalbranch
-git checkout -b mylocalbranch 73434e4a0af0f51c242f5ae8efc51a88383afc8a</screen>
+          <para>Autrement, si vous utilisiez une branche nommée <literal moreinfo="none">maBranche</literal>, Jenkins ferait la chose 
+          suivante : </para>
+          <screen format="linespecific">git branch -D maBranche
+git checkout -b maBranche 73434e4a0af0f51c242f5ae8efc51a88383afc8a</screen>
         </sect4>
         <sect4 id="local-subdirectory-for-repo">
-          <title>Local subdirectory for repo</title>
-          <para>By <indexterm id="I_indexterm5_d1e5767" significance="normal"><primary>freestyle build jobs</primary><secondary>Git used with</secondary><tertiary>workspace location, overriding</tertiary></indexterm><indexterm id="I_indexterm5_d1e5774" significance="normal"><primary>Git</primary><secondary>workspace location, overriding</secondary></indexterm>default, Jenkins will clone the Git repository
-          directly into the build job workspace. If you prefer to use a
-          different directory, you can specify it here. Note that the
-          directory you specify is relative to the build job workspace.</para>
+          <title>Dépôt dans un sous-répertoire local</title>
+          <para>Par <indexterm id="I_indexterm5_d1e5767" significance="normal"><primary>tâches de build free-style</primary><secondary>Git utilisé avec</secondary><tertiary>localisation de l'espace de travail, ecraser</tertiary></indexterm><indexterm id="I_indexterm5_d1e5774" significance="normal"><primary>Git</primary><secondary>localisation de l'espace de travail, ecraser</secondary></indexterm>défaut, Jenkins clonera le dépôt Git 
+          directement dans l'espace de travail de votre tâche de build. 
+          Si vous préférez utiliser un répertoire différent, vous pouvez 
+          le spécifier ici. Notez que ce répertoire est relatif à l'espace 
+          de travail de votre tâche de build.</para>
         </sect4>
         <sect4 id="merge-before-build">
-          <title>Merge before build</title>
-          <para>The <indexterm id="I_indexterm5_d1e5785" significance="normal"><primary>freestyle build jobs</primary><secondary>Git used with</secondary><tertiary>merging before build</tertiary></indexterm><indexterm id="I_indexterm5_d1e5792" significance="normal"><primary>Git</primary><secondary>merging before build</secondary></indexterm>typical recipe for using this option is to fold an
-          integration branch into a branch more similar to <literal moreinfo="none">master</literal>. Keep in mind that only
-          conflict-less merges will happen automatically. More complex merges
-          that require manual intervention will fail the build.</para>
-          <para>The resultant merged branch will not automatically be pushed
-          to another repository unless the later <literal moreinfo="none">push</literal>
-          post-build action is enabled.</para>
+          <title>Fusionner avant le build</title>
+          <para>Le <indexterm id="I_indexterm5_d1e5785" significance="normal"><primary>tâches de build free-style</primary><secondary>Git utilisé avec</secondary><tertiary>fusionner avant le build</tertiary></indexterm><indexterm id="I_indexterm5_d1e5792" significance="normal"><primary>Git</primary><secondary>fusionner avant le build</secondary></indexterm>cas typique d'utilisation de cette option est le remplissage 
+          d'une branche d'intégration proche de la branche <literal moreinfo="none">master</literal>. N'oubliez pas que 
+          seulement les fusions ne présentant pas de conflit seront 
+          effectuées automatiquement. Les fusions plus complexes qui 
+          requièrent une intervention manuelle feront échouer le build.</para>
+          <para>La branche fusionnée qui en résulte ne sera pas poussée 
+          automatiquement à moins que l'action de <literal moreinfo="none">push</literal> 
+          ne soit activée dans les actions post-build.</para>
         </sect4>
         <sect4 id="prune-remote-branches-before-build">
-          <title>Prune remote branches before build</title>
-          <para>Pruning <indexterm id="I_indexterm5_d1e5811" significance="normal"><primary>freestyle build jobs</primary><secondary>Git used with</secondary><tertiary>pruning branches before build</tertiary></indexterm><indexterm id="I_indexterm5_d1e5818" significance="normal"><primary>Git</primary><secondary>pruning branches before build</secondary></indexterm>removes local copies of remote branches that exist as
-          a remnant of the previous clone, but are no longer present on the
-          remote. In short, this is cleaning the local clone to be in perfect
-          sync with its remote siblings.</para>
+          <title>Tailler les branches distantes avant le build</title>
+          <para>Tailler <indexterm id="I_indexterm5_d1e5811" significance="normal"><primary>tâches de build free-style</primary><secondary>Git utilisé avec</secondary><tertiary>tailler les branches distantes avant le build</tertiary></indexterm><indexterm id="I_indexterm5_d1e5818" significance="normal"><primary>Git</primary><secondary>tailler les branches distantes avant le build</secondary></indexterm> supprime les copies locales de branches distantes qui proviennent 
+          d'un clone précédent mais qui ne sont plus présentent sur le dépôt 
+          distant. En résumé, il s'agit du nettoyage du clone local pour qu'il 
+          soit parfaitement synchronisé avec son jumeau distant.</para>
         </sect4>
         <sect4 id="clean-after-checkout">
-          <title>Clean after checkout</title>
-          <para>Activate <indexterm id="I_indexterm5_d1e5829" significance="normal"><primary>freestyle build jobs</primary><secondary>Git used with</secondary><tertiary>cleaning after checkout</tertiary></indexterm><indexterm id="I_indexterm5_d1e5836" significance="normal"><primary>Git</primary><secondary>cleaning after checkout</secondary></indexterm>Git’s facilities for purging any untracked files or
-          folders, returning your working copy to a pristine state.</para>
+          <title>Nettoyer après récupération</title>
+          <para>Active <indexterm id="I_indexterm5_d1e5829" significance="normal"><primary>tâches de build free-style</primary><secondary>Git utilisé avec</secondary><tertiary>nettoyer après récupération</tertiary></indexterm><indexterm id="I_indexterm5_d1e5836" significance="normal"><primary>Git</primary><secondary>nettoyer après récupération</secondary></indexterm> la purge de tout fichier ou répertoire non 
+          versionné, ramenant le votre copie de travail à son étât vierge.</para>
         </sect4>
         <sect4 id="recursively-update-submodules">
-          <title>Recursively update submodules</title>
-          <para>If <indexterm id="I_indexterm5_d1e5848" significance="normal"><primary>freestyle build jobs</primary><secondary>Git used with</secondary><tertiary>recursively update submodules</tertiary></indexterm><indexterm id="I_indexterm5_d1e5855" significance="normal"><primary>Git</primary><secondary>recursively update submodules</secondary></indexterm>you are using Git’s submodule facilities in the
-          project, this option lets you ensure that every submodule is
-          up-to-date with an explicit call to <literal moreinfo="none">update</literal>, even if submodules are nested
-          within other submodules.</para>
+          <title>Mise à jour récursive des sous-modules</title>
+          <para>Si <indexterm id="I_indexterm5_d1e5848" significance="normal"><primary>tâches de build free-style</primary><secondary>Git utilisé avec</secondary><tertiary>mise à jour récursive des sous-modules</tertiary></indexterm><indexterm id="I_indexterm5_d1e5855" significance="normal"><primary>Git</primary><secondary>mise à jour récursive des sous-modules</secondary></indexterm> vous utilisez les fonctionnalités de sous-modules de Git dans 
+          votre projet, cette option vous assure que chaque sous-module 
+          est à jour grâce à un appel explicite à la commande <literal moreinfo="none">update</literal>, même si les sous-modules 
+          sont imbriqués dans d'autres sous-modules.</para>
         </sect4>
         <sect4 id="use-commit-author-in-changelog">
-          <title>Use commit author in changelog</title>
-          <para>Jenkins<indexterm id="I_indexterm5_d1e5869" significance="normal"><primary>freestyle build jobs</primary><secondary>Git used with</secondary><tertiary>commit author, including in changelog</tertiary></indexterm><indexterm id="I_indexterm5_d1e5876" significance="normal"><primary>Git</primary><secondary>commit author, including in changelog</secondary></indexterm> tracks and displays the author of changed code in a
-          summarized view. Git tracks both the committer and author of code
-          distinctly, and this option lets you toggle which of those two
-          usernames is displayed in the changelog.</para>
+          <title>Utiliser l'auteur du commit dans changelog</title>
+          <para>Jenkins<indexterm id="I_indexterm5_d1e5869" significance="normal"><primary>tâches de build free-style</primary><secondary>Git utilisé avec</secondary><tertiary>auteur du commit, inclure dans le changelog</tertiary></indexterm><indexterm id="I_indexterm5_d1e5876" significance="normal"><primary>Git</primary><secondary>auteur du commit, inclure dans le changelog</secondary></indexterm> note et affiche l'auteur du changement de code dans une 
+          vue synthétique. Git note l'auteur et le commiter du code
+          distinctement, et cette option vous permet de choisir lequel 
+          apparaîtra dans le changelog.</para>
         </sect4>
         <sect4 id="wipe-out-workspace">
-          <title>Wipe out workspace</title>
-          <para>Typically<indexterm id="I_indexterm5_d1e5887" significance="normal"><primary>freestyle build jobs</primary><secondary>Git used with</secondary><tertiary>workspace, wiping out before build</tertiary></indexterm><indexterm id="I_indexterm5_d1e5894" significance="normal"><primary>Git</primary><secondary>workspace, wiping out before build</secondary></indexterm> Jenkins will reuse the workspace, merely freshening
-          the checkout as necessary and, if you activated the “Clean after
-          checkout” option, cleaning up untracked files. However, if you
-          prefer to have a completely clean workspace, you can use the “Wipe
-          out workspace” option to delete and rebuild the workspace from the
-          ground up. Bear in mind that this may significantly lengthen the
-          time it takes to initialize and build the project.</para>
+          <title>Effacer l'espace de travail</title>
+          <para>Typiquement<indexterm id="I_indexterm5_d1e5887" significance="normal"><primary>tâches de build free-style</primary><secondary>Git utilisé avec</secondary><tertiary>espace de travail, effacer avant le build</tertiary></indexterm><indexterm id="I_indexterm5_d1e5894" significance="normal"><primary>Git</primary><secondary>espace de travail, effacer avant le build</secondary></indexterm> Jenkins réutilisera l'espace de travail, le rafraîchissant simplement 
+          si nécessaire et si vous avez activé l'option “Clean after
+          checkout”, nettoiera les fichiers non versionnés. Cependant, si vous 
+          préférez avec un espace de travail complétement propre, vous pouvez
+          utiliser l'option “Wipe out workspace” pour supprimer et 
+          reconstruire l'espace de travail de zéro. Gardez à l'esprit 
+          que cela allongera significativement le temps d'initialisation 
+          et de construiction du projet.</para>
         </sect4>
         <sect4 id="choosing-strategy">
-          <title>Choosing strategy</title>
-          <para>Jenkins <indexterm id="I_indexterm5_d1e5905" significance="normal"><primary>freestyle build jobs</primary><secondary>Git used with</secondary><tertiary>branches to build</tertiary></indexterm><indexterm id="I_indexterm5_d1e5912" significance="normal"><primary>Git</primary><secondary>branches to build</secondary></indexterm>decides which branches to build based on a
-          <emphasis>strategy</emphasis> (see <xref linkend="I_figure1_id2245980"/>). Users can influence this
-          branch-search process. The default choice is to search for all
-          branch HEADs. If the Gerrit plugin is installed, additional options
-          for building all Gerrit-notified commits are displayed.</para>
+          <title>Choix de la stratégie</title>
+          <para>Jenkins <indexterm id="I_indexterm5_d1e5905" significance="normal"><primary>tâches de build free-style</primary><secondary>Git utilisé avec</secondary><tertiary>branches à construire</tertiary></indexterm><indexterm id="I_indexterm5_d1e5912" significance="normal"><primary>Git</primary><secondary>branches à construire</secondary></indexterm>decide quelle branches il doit construire en se basant sur 
+          une certaine <emphasis>stratégie</emphasis> (voir <xref linkend="I_figure1_id2245980"/>). Les utilisateurs peuvent influencer 
+          cette procédure de recherche de branche. Le choix par défaut est de rechercher tous les 
+          HEADs de branche. Si le plugin Gerrit est installé, d'autres options 
+          pour construire tous les commits notifiés par Gerrit seront affichées.</para>
           <figure float="none" id="I_figure1_id2245980">
-            <title>Choosing strategy</title>
+            <title>Choix de la stratégie</title>
             <mediaobject id="I_mediaobject5_d1e5926">
               <imageobject role="print">
                 <imagedata fileref="figs/print/jtdg_0513.pdf" format="PDF"/>
@@ -655,15 +660,16 @@ git checkout -b mylocalbranch 73434e4a0af0f51c242f5ae8efc51a88383afc8a</screen>
           </figure>
         </sect4>
         <sect4 id="git-executable">
-          <title>Git executable</title>
-          <para>In the <indexterm id="I_indexterm5_d1e5936" significance="normal"><primary>freestyle build jobs</primary><secondary>Git used with</secondary><tertiary>Git executable, specifying</tertiary></indexterm>global options of Jenkins (see <xref linkend="I_figure1_id2246035"/>), different Git executables can be
-          set up and used on a per-build basis. This is infrequently used, and
-          only when the clone or other Git operations are highly sensitive to
-          a particular version of Git. Git tends to be very version-flexible;
-          slightly older repositories can easily be cloned with a newer
-          version of Git and vice-versa.</para>
+          <title>Exécutable Git</title>
+          <para>Dans les <indexterm id="I_indexterm5_d1e5936" significance="normal"><primary>tâches de build free-style</primary><secondary>Git utilisé avec</secondary><tertiary>exécutable Git, spécifier</tertiary></indexterm>options globales de Jenkins (voir <xref linkend="I_figure1_id2246035"/>), plusieurs exécutables Git 
+          peuvent être configurés et utilisés build par build. Cela est peu 
+          régulièrement utilisé et seulement lorsqu'un clone ou d'autres opérations 
+          Git sont spécifiques à une version particulière de Git. Git tend à  
+          être très flexible quant à ses numéro de version ; les dépôts légèrement 
+          anciens peuvent être clonés très facilement avec une nouvelle version 
+          de Git et inversement.</para>
           <figure float="0" id="I_figure1_id2246035">
-            <title>Git executable global setup</title>
+            <title>Configuration globale de l'exécutable de Git</title>
             <mediaobject id="I_mediaobject5_d1e5949">
               <imageobject role="print">
                 <imagedata fileref="figs/print/jtdg_0514.pdf" format="PDF"/>
@@ -675,14 +681,15 @@ git checkout -b mylocalbranch 73434e4a0af0f51c242f5ae8efc51a88383afc8a</screen>
           </figure>
         </sect4>
         <sect4 id="repository-browser">
-          <title>Repository browser</title>
-          <para>Like <indexterm id="I_indexterm5_d1e5959" significance="normal"><primary>freestyle build jobs</primary><secondary>Git used with</secondary><tertiary>source code browsers for</tertiary></indexterm><indexterm id="I_indexterm5_d1e5966" significance="normal"><primary>Git</primary><secondary>source code browsers for</secondary></indexterm><indexterm id="I_indexterm5_d1e5971" significance="normal"><primary>source code browsers</primary><secondary sortas="Git">with Git</secondary></indexterm>Subversion, Git has several source code browsers that
-          you can use. The most common ones are Gitorious, Git Web, or
-          <indexterm id="I_indexterm5_d1e5977" significance="normal"><primary>GitHub repository</primary></indexterm>GitHub. If you provide the URL to the corresponding
-          repository browser, Jenkins will be able to display a link to the
-          source code changes that triggered a build (see <xref linkend="I_figure1_id2246089"/>).</para>
+          <title>Navigateur de dépôt</title>
+          <para>Tout comme <indexterm id="I_indexterm5_d1e5959" significance="normal"><primary>tâches de build free-style</primary><secondary>Git utilisé avec</secondary><tertiary>navigateurs de code source pour</tertiary></indexterm><indexterm id="I_indexterm5_d1e5966" significance="normal"><primary>Git</primary><secondary>navigateurs de code source pour</secondary></indexterm><indexterm id="I_indexterm5_d1e5971" significance="normal"><primary>navigateurs de code source</primary><secondary sortas="Git">avec Git</secondary></indexterm>Subversion, Git a plusieurs navigateurs de source qu'il 
+          peut utiliser. Les plus couramment utilisés sont Gitorious, Git Web, ou
+          <indexterm id="I_indexterm5_d1e5977" significance="normal"><primary>Dépôt GitHub</primary></indexterm>GitHub. Si vous fournissez l'URL 
+          correspondante à votre navigateur de dépôt, Jenkins pourra alors 
+          afficher un lien direct vers les changements de votre code source 
+          qui ont déclenché le build (voir <xref linkend="I_figure1_id2246089"/>).</para>
           <figure float="0" id="I_figure1_id2246089">
-            <title>Repository browser</title>
+            <title>Navigateur de dépôt</title>
             <mediaobject id="I_mediaobject5_d1e5986">
               <imageobject role="print">
                 <imagedata fileref="figs/print/jtdg_0515.pdf" format="PDF"/>
