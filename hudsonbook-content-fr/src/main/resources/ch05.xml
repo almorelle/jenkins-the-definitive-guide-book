@@ -702,17 +702,19 @@ git checkout -b maBranche 73434e4a0af0f51c242f5ae8efc51a88383afc8a</screen>
         </sect4>
       </sect3>
       <sect3 id="build-triggers">
-        <title>Build triggers</title>
-        <para>The <indexterm class="startofrange" id="ch05-gittrigger1" significance="normal"><primary>freestyle build jobs</primary><secondary>Git used with</secondary><tertiary>build triggers</tertiary></indexterm><indexterm class="startofrange" id="ch05-gittrigger2" significance="normal"><primary>Git</primary><secondary>build triggers</secondary></indexterm>basic Git plugin offers the ability to <emphasis>Poll
-        SCM</emphasis> on a timed basis, looking for changes since the last
-        inquiry. If changes are found, a build is started. The polling log
-        (shown in <xref linkend="I_figure1_id2246150"/>) is accessible via a
-        link on the left hand side of the page in the navigation bar when
-        viewing a specific job. It offers information on the last time the
-        repository was polled and if it replied with a list of changes (see
+        <title>Déclencheurs de build</title>
+        <para>Le <indexterm class="startofrange" id="ch05-gittrigger1" significance="normal"><primary>tâches de build free-style</primary><secondary>Git utilisé avec</secondary><tertiary>déclencheurs de build</tertiary></indexterm><indexterm class="startofrange" id="ch05-gittrigger2" significance="normal"><primary>Git</primary><secondary>déclencheurs de build</secondary></indexterm>plugin Git de base offre la possibilité de 
+        <emphasis>scruter l'outil de gestion de version</emphasis> régulièrement 
+        et de vérifier si de nouveau changements ont eu lieu depuis la dernière 
+        requête. Si des changements sont présents, un build est alors lancé. Le 
+        journal de scrutation (montré dans <xref linkend="I_figure1_id2246150"/>) est accessible 
+        par un lien dans la partie gauche de la page dans la barre de navigation 
+        lorsque vous visitez une tâche spécifique. Vous y trouverez les 
+        informations sur la dernière fois que le dépôt a été scruté et s'il a 
+        renvoyé une liste de changements (voir
         <xref linkend="I_figure1_id2246192"/>).</para>
         <figure float="0" id="I_figure1_id2246150">
-          <title>Polling log</title>
+          <title>Journal de scrutation</title>
           <mediaobject id="I_mediaobject5_d1e6019">
             <imageobject role="print">
               <imagedata fileref="figs/print/jtdg_0516.pdf" format="PDF"/>
@@ -722,11 +724,12 @@ git checkout -b maBranche 73434e4a0af0f51c242f5ae8efc51a88383afc8a</screen>
             </imageobject>
           </mediaobject>
         </figure>
-        <para>The Git polling is distilled into a more developer-useful format
-        that shows commit comments as well as hyperlinking usernames and
-        changed files to more detailed views of each.</para>
+        <para>La scrutation de Git est dilluée dans un format plus orienté 
+          développeur qui montre les commentaires de commit ainsi que des 
+          hyperliens qui vers une vue plus détaillée des utilisateurs et des 
+          fichiers modifiés.</para>
         <figure float="0" id="I_figure1_id2246192">
-          <title>Results of Git polling</title>
+          <title>Résultats de la scrutation de Git</title>
           <mediaobject id="I_mediaobject5_d1e6029">
             <imageobject role="print">
               <imagedata fileref="figs/print/jtdg_0517.pdf" format="PDF"/>
@@ -736,28 +739,27 @@ git checkout -b maBranche 73434e4a0af0f51c242f5ae8efc51a88383afc8a</screen>
             </imageobject>
           </mediaobject>
         </figure>
-        <para>Installing the <emphasis>Gerrit Build Trigger</emphasis> adds a
-        <emphasis>Gerrit event</emphasis> option that can be more efficient
-        and precise than simply polling the repository.</para>
+        <para>Installer le <emphasis>Gerrit Build Trigger</emphasis> ajoute une option 
+        <emphasis>Gerrit event</emphasis> qui peut être plus efficace et 
+        précise que de simplement scruter le dépôt.</para>
         <sect4 id="gerrit-trigger">
-          <title>Gerrit Trigger</title>
+          <title>Déclenchement par Gerrit</title>
           <para><ulink url="http://code.google.com/p/gerrit/">Gerrit</ulink>
-          is<indexterm id="I_indexterm5_d1e6049" significance="normal"><primary>Gerrit Trigger plugin</primary></indexterm><indexterm id="I_indexterm5_d1e6052" significance="normal"><primary>plugins</primary><secondary>Gerrit Trigger</secondary></indexterm> an open source web application that facilitates
-          <ulink url="https://review.source.android.com/#q,status:open,n,z">code
-          reviews</ulink> for project source hosted on a Git version control
-          system. It reads a traditional Git repository, and provides a
-          side-by-side comparison of changes. As the code is reviewed, Gerrit
-          provides a location to comment and move the patch to an
-          <emphasis>open</emphasis>, <emphasis>merged</emphasis>, or
-          <emphasis>abandoned</emphasis> status.</para>
-          <para>The <ulink url="http://wiki.hudson-ci.org/display/HUDSON/Gerrit+Trigger">Gerrit
-          Trigger</ulink> is a Jenkins plugin that can trigger a Jenkins build
-          of the code when any user-specified activity happens in a
-          user-specified project in the Git repository (see <xref linkend="I_figure1_id2246304"/>). It is a alternative to the more
-          typically-used <emphasis>Build periodically</emphasis> or
-          <emphasis>Poll SCM</emphasis>.</para>
+          est<indexterm id="I_indexterm5_d1e6049" significance="normal"><primary>Gerrit Trigger plugin</primary></indexterm><indexterm id="I_indexterm5_d1e6052" significance="normal"><primary>plugins</primary><secondary>Gerrit Trigger</secondary></indexterm> une application web open source qui 
+          facilite les <ulink url="https://review.source.android.com/#q,status:open,n,z">revues de 
+          code</ulink> pour les projets dont les sources sont gérées par Git. Il 
+          lit le dépôt Git traditionnel et apporte une comparaison côte-à-côte 
+          des changements. Lorsque le code est revu, Gerrit apporte alors un 
+          lieu pour commenter et déplacer le patch dans un état <emphasis>ouvert</emphasis>, 
+          <emphasis>fusionné</emphasis> ou <emphasis>abandonné</emphasis>.</para>
+          <para>Le <ulink url="http://wiki.hudson-ci.org/display/HUDSON/Gerrit+Trigger">Gerrit
+          Trigger</ulink> est un plugin Jenkins qui peut déclencher un build Jenkins 
+          sur du code quand n'importe quelle activité liée à un utilisateur spécifique 
+          survient dans le projet d'un utilisateur défini du dépôt Git (voir <xref linkend="I_figure1_id2246304"/>). Il s'agit d'une alternative aux options 
+          plus régulièrement utilisées comme la <emphasis>construction périodique</emphasis> ou la 
+          <emphasis>scrutation de l'outil de gestion de version</emphasis>.</para>
           <figure float="0" id="I_figure1_id2246304">
-            <title>Gerrit Trigger</title>
+            <title>Déclenchement par Gerrit</title>
             <mediaobject id="I_mediaobject5_d1e6087">
               <imageobject role="print">
                 <imagedata fileref="figs/print/jtdg_0518.pdf" format="PDF"/>
@@ -767,15 +769,15 @@ git checkout -b maBranche 73434e4a0af0f51c242f5ae8efc51a88383afc8a</screen>
               </imageobject>
             </mediaobject>
           </figure>
-          <para>The configuration for this plugin is minimal and focused on
-          the <emphasis>Project Type</emphasis> and
-          <emphasis>Pattern</emphasis> and <emphasis>Branch Type</emphasis>
-          and <emphasis>Pattern</emphasis>. In each pair, the
-          <emphasis>type</emphasis> can be <emphasis>Plain</emphasis>,
-          <emphasis>Path</emphasis>, or <phrase role="keep-together"><emphasis>RegExp</emphasis>—</phrase>pattern
-          flavors of what to watch—and then the value
-          (<emphasis>pattern</emphasis>) to evaluate using the
-          <emphasis>type</emphasis> as<indexterm id="I_indexterm5_d1e6127" class="endofrange" startref="ch05-gittrigger1" significance="normal"><primary/></indexterm><indexterm id="I_indexterm5_d1e6130" class="endofrange" startref="ch05-gittrigger2" significance="normal"><primary/></indexterm> the guide.</para>
+          <para>La configuration de ce plugin est minimale et focalisée sur 
+          le <emphasis>Type du Projet</emphasis> et son <emphasis>Pattern</emphasis> 
+          ainsi que le <emphasis>Type de Branches</emphasis>
+          et leur <emphasis>Pattern</emphasis>. Dans chaque paire, le
+          <emphasis>type</emphasis> peut être <emphasis>Plain</emphasis>,
+          <emphasis>Path</emphasis>ou bien <phrase role="keep-together"><emphasis>RegExp</emphasis> — </phrase>descriptif 
+          de ce qu'il faut observer — et la valeur
+          (<emphasis>pattern</emphasis>) à évaluer en utilisant le type
+          <emphasis>type</emphasis> comme<indexterm id="I_indexterm5_d1e6127" class="endofrange" startref="ch05-gittrigger1" significance="normal"><primary/></indexterm><indexterm id="I_indexterm5_d1e6130" class="endofrange" startref="ch05-gittrigger2" significance="normal"><primary/></indexterm> guide.</para>
         </sect4>
       </sect3>
       <sect3 id="post-build-actions">
