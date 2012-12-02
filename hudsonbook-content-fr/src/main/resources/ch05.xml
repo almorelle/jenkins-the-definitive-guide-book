@@ -843,17 +843,17 @@ git checkout -b maBranche 73434e4a0af0f51c242f5ae8efc51a88383afc8a</screen>
         </sect4>
       </sect3>
       <sect3 id="github-plugin">
-        <title>GitHub plugin</title>
-        <para>The <indexterm id="I_indexterm5_d1e6215" significance="normal"><primary>GitHub plugin</primary></indexterm><indexterm id="I_indexterm5_d1e6218" significance="normal"><primary>plugins</primary><secondary>GitHub</secondary></indexterm>GitHub plugin offers two integration points. First, it
-        offers an optional link to the project’s GitHub home page. Just enter
-        the URL for the project (without the tree/master or tree/branch part).
-        For example, <literal moreinfo="none">http://github.com/matthewmccullough/git-workshop</literal>.</para>
-        <para>Secondly, <indexterm id="I_indexterm5_d1e6229" significance="normal"><primary>GitHub repository</primary></indexterm>the GitHub plugin offers per-file-changed links that are
-        wired via the <emphasis>Repository browser</emphasis> section of a
-        job’s <emphasis>Source Code Management</emphasis> configuration (see
+        <title>Plugin GitHub</title>
+        <para>Le <indexterm id="I_indexterm5_d1e6215" significance="normal"><primary>Plugin GitHub</primary></indexterm><indexterm id="I_indexterm5_d1e6218" significance="normal"><primary>plugins</primary><secondary>GitHub</secondary></indexterm>plugin GitHub offre deux points d'intégration. Premièrement, il
+        apporte un lien optionnel vers la page de démarrage du projet sur GitHub. 
+        Entrez simplement l'URL du projet (sans la partie tree/master ou tree/branch).
+        Par exemple, <literal moreinfo="none">http://github.com/matthewmccullough/git-workshop</literal>.</para>
+        <para>Ensuite, <indexterm id="I_indexterm5_d1e6229" significance="normal"><primary>Dépôt GitHub</primary></indexterm>le plugin GitHub plugin permet d'obtenir 
+        un lien par fichier modifié qui sera relié directement au <emphasis>navigateur de dépôt</emphasis> 
+        via la section de <emphasis>gestion du code source</emphasis> (voir
         <xref linkend="I_figure1_id2246641"/>).</para>
         <figure float="0" id="I_figure1_id2246641">
-          <title>GitHub repository browser</title>
+          <title>Navigateur de dépôt GitHub</title>
           <mediaobject id="I_mediaobject5_d1e6244">
             <imageobject role="print">
               <imagedata fileref="figs/print/jtdg_0521.pdf" format="PDF"/>
@@ -863,9 +863,9 @@ git checkout -b maBranche 73434e4a0af0f51c242f5ae8efc51a88383afc8a</screen>
             </imageobject>
           </mediaobject>
         </figure>
-        <para>With the <literal moreinfo="none">githubweb</literal> repository
-        browser chosen, all changed-detected files will be linked to the
-        appropriate GitHub source-viewing <indexterm id="I_indexterm5_d1e6254" class="endofrange" startref="ch05-git1" significance="normal"><primary/></indexterm><indexterm id="I_indexterm5_d1e6256" class="endofrange" startref="ch05-git2" significance="normal"><primary/></indexterm><indexterm id="I_indexterm5_d1e6258" class="endofrange" startref="ch05-scm" significance="normal"><primary/></indexterm>web page (<xref linkend="I_figure1_id2246688"/>).</para>
+        <para>Avec le choix de <literal moreinfo="none">githubweb</literal> comme
+        navigateur de dépôt, tout fichier sur lequel des changements auront été 
+        détectés sera lié à la page web de visualisation du source appropriée sur <indexterm id="I_indexterm5_d1e6254" class="endofrange" startref="ch05-git1" significance="normal"><primary/></indexterm><indexterm id="I_indexterm5_d1e6256" class="endofrange" startref="ch05-git2" significance="normal"><primary/></indexterm><indexterm id="I_indexterm5_d1e6258" class="endofrange" startref="ch05-scm" significance="normal"><primary/></indexterm>GitHub (<xref linkend="I_figure1_id2246688"/>).</para>
         <figure float="none" id="I_figure1_id2246688">
           <title>GitHub repository browser</title>
           <mediaobject id="I_mediaobject5_d1e6266">
