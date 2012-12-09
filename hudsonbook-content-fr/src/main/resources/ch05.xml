@@ -250,7 +250,7 @@
           et construire simplement la dernière version de votre code source de
           manière régulière. Dans tous les cas, une forte intégration avec votre
           système de gestion de version est essentielle.</para>
-      <para>De part leur rôle fondamental, les options de configuration du
+      <para>De par leur rôle fondamental, les options de configuration du
           SCM sont identiques au travers de tous les types de tâches de build dans Jenkins. Jenkins <indexterm id="I_indexterm5_d1e5249" significance="normal"><primary>systèmes de gestion de version</primary><secondary>supporté par Jenkins</secondary></indexterm><indexterm id="I_indexterm5_d1e5254" significance="normal"><primary>Jenkins</primary><secondary>systèmes de gestion de version supportés par</secondary></indexterm>supporte CVS et Subversion nativement, embarque
           un support pour Git et s'intègre avec un grand nombre d'autres systèmes
           de gestion de version via des plugins. A l'écriture de ce livre, le
