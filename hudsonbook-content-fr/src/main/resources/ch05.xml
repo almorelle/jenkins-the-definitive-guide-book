@@ -353,7 +353,7 @@
           </imageobject>
         </mediaobject>
       </figure>
-      <para>Jenkins<indexterm id="I_indexterm5_d1e5352" significance="normal"><primary>tâches de build freestyle</primary><secondary>Subversion utilisé avec</secondary><tertiary>exclure des régions du déclenchement</tertiary></indexterm><indexterm id="I_indexterm5_d1e5359" significance="normal"><primary>Subversion</primary><secondary>exclure des régions du déclenchement de builds</secondary></indexterm> vous permet également d'affiner la sélection des 
+      <para>Jenkins<indexterm id="I_indexterm5_d1e5352" significance="normal"><primary>tâches de build free-style</primary><secondary>Subversion utilisé avec</secondary><tertiary>exclure des régions du déclenchement</tertiary></indexterm><indexterm id="I_indexterm5_d1e5359" significance="normal"><primary>Subversion</primary><secondary>exclure des régions du déclenchement de builds</secondary></indexterm> vous permet également d'affiner la sélection des 
       changements qui déclencherons un build. Dans la section avancée, 
       vous pouvez utiliser le champ Régions exclues pour dire à Jenkins 
       de ne pas déclencher de build si certains fichiers sont modifiés. 
@@ -881,26 +881,26 @@ git checkout -b maBranche 73434e4a0af0f51c242f5ae8efc51a88383afc8a</screen>
     </sect2>
   </sect1>
   <sect1 id="sect-build-triggers">
-    <title>Build Triggers</title>
-    <para>Once<indexterm class="startofrange" id="ch05-trigger1" significance="normal"><primary>freestyle build jobs</primary><secondary>build triggers for</secondary></indexterm><indexterm class="startofrange" id="ch05-trigger2" significance="normal"><primary>build triggers</primary><secondary sortas="free-style">for freestyle build jobs</secondary></indexterm> you have configured your version control system, you need
-    to tell Jenkins when to kick off a build. You set this up in the Build
-    Triggers section.</para>
-    <para>In a Freestyle build, there are three basic ways a build job can be
-    triggered (see <xref linkend="fig-hudson-new-job-triggers"/>):</para>
+    <title>Déclencheurs de build</title>
+    <para>Une fois que<indexterm class="startofrange" id="ch05-trigger1" significance="normal"><primary>tâches de build free-style</primary><secondary>déclencheurs de build pour</secondary></indexterm><indexterm class="startofrange" id="ch05-trigger2" significance="normal"><primary>déclencheurs de build</primary><secondary sortas="free-style">pour les tâches de build free-style</secondary></indexterm> vous avez configuré votre système de gestion de version, vous devez
+    dire à Jenkins quand démarrer un build. Vous pouvez configurer cela dans
+    la section Ce qui déclenche le build.</para>
+    <para>Dans un build free-style, il y a trois manières basiques de déclencher
+    une tâche de build (voir <xref linkend="fig-hudson-new-job-triggers"/>):</para>
     <itemizedlist>
       <listitem>
-        <para>Start a build job once another build job has completed</para>
+        <para>Démarrer une tâche de build une fois qu'une autre s'est terminée</para>
       </listitem>
       <listitem>
-        <para>Kick off builds at periodical intervals</para>
+        <para>Lancer des builds à des intervalles périodiques</para>
       </listitem>
       <listitem>
-        <para>Poll the SCM for changes</para>
+        <para>Scruter les changements sur le SCM</para>
       </listitem>
     </itemizedlist>
     <figure float="none" id="fig-hudson-new-job-triggers">
-      <title>There are many ways that you can configure Jenkins to start a
-      build job</title>
+      <title>Il y a de multiples manières de configurer Jenkins pour le 
+      démarrage d'une tâche de build</title>
       <mediaobject id="I_mediaobject5_d1e6304">
         <imageobject role="print">
           <imagedata fileref="figs/print/jtdg_0523.pdf" format="PDF"/>
@@ -911,29 +911,31 @@ git checkout -b maBranche 73434e4a0af0f51c242f5ae8efc51a88383afc8a</screen>
       </mediaobject>
     </figure>
     <sect2>
-      <title>Triggering a Build Job Once Another Build Job Has
-      Finished</title>
-      <para>The <indexterm id="I_indexterm5_d1e6314" significance="normal"><primary>build triggers</primary><secondary>when another build has finished</secondary></indexterm>first option lets you set up a build that will be run
-      whenever another build has finished. This is an easy way to set up a
-      build pipeline. For example, you might set up an initial build job to
-      run unit and integration tests, followed by another separate build job
-      to run more CPU-intensive code quality metrics. You simply enter the
-      name of the preceding build job in this field. If the build job can be
-      triggered by several other build jobs, just list their names here,
-      separated by commas. In this case, the build job will be triggered once
-      <emphasis>any</emphasis> of the build jobs in the list finish.</para>
-      <para>There is a symmetrical field in the Post-build actions section of
-      the preceding build job called (appropriately enough) “Build other
-      projects”. This field will be automatically updated in the corresponding
-      build jobs whenever you modify the “Build after other projects are
-      built” field. However, unlike the “Build after other projects are built”
-      field, this field gives you the option to trigger a build even if the
-      build is <indexterm id="I_indexterm5_d1e6325" significance="normal"><primary>build jobs</primary><secondary>unstable build from</secondary><tertiary>triggering another build after</tertiary></indexterm><indexterm id="I_indexterm5_d1e6332" significance="normal"><primary>unstable builds</primary><secondary>triggering another build job after</secondary></indexterm>unstable (see <xref linkend="fig-hudson-new-job-trigger-build-after"/>). This is useful,
-      for example, if you want to run a code quality metrics build job even if
-      there are unit test failures in the default build job.</para>
+      <title>Déclencher une tâche de build lorsqu'une autre tâche de build
+      se termine</title>
+      <para>La <indexterm id="I_indexterm5_d1e6314" significance="normal"><primary>déclencheurs de build</primary><secondary>quand un autre build se termine</secondary></indexterm>première option vous permet de configurer un build qui
+      qui le lancera à chaque fois qu'un autre build se terminera. C'est une 
+      manière facile de construire un séquenceur de build. Par exemple, vous 
+      pourriez configurer une tâche de build initiale qui lancera des tests 
+      unitaires et des tests d'intégration, suivie d'une autre tâche de build 
+      séparée qui lancera de l'analyse statique de code, plus gourmande en CPU. 
+      Vous remplissez simplement le nom du job précédent dans ce champ. Si la 
+      tâche de build peut être lancée par plusieurs autres tâches de build, 
+      listez simplement leurs noms ici en les séparant par ds virgules. Dans 
+      ce cas là, la tâche de build sera déclenchée <emphasis>chaque</emphasis> 
+      fois des tâches de build présentes dans la liste se terminera.</para>
+      <para>Il y a un champ symétrique dans la section des Actions à la suite 
+      du build appelée (logiquement) “Construire d'autres projets”. Ce champ 
+      sera mis à jourautomatiquement dans les tâches de build correspondantes 
+      dès que vous modifierez le champ “Construire à la suite d'autres projets”. 
+      Cependant, au contraire du champ “Construire à la suite d'autres projets”, 
+      ce champ vous donne la possibilité de déclencher un build même si celui-ci 
+      est <indexterm id="I_indexterm5_d1e6325" significance="normal"><primary>tâches de build</primary><secondary>build instable de</secondary><tertiary>déclencher un autre build à la suite de</tertiary></indexterm><indexterm id="I_indexterm5_d1e6332" significance="normal"><primary>builds instables</primary><secondary>déclencher une autre tâche de build à la suite de</secondary></indexterm>instable (voir <xref linkend="fig-hudson-new-job-trigger-build-after"/>). Cela est utile par exemple si vous voulez exécuter une tâche de build 
+      sur des indicateurs de qualité du code même s'il y a des tests unitaires 
+      qui ont échoués dans la première tâche de build.</para>
       <figure float="none" id="fig-hudson-new-job-trigger-build-after">
-        <title>Triggering another build job even if the current one is
-        unstable</title>
+        <title>Déclencher une autre tâche de build même si celle-ci est 
+        instable.</title>
         <mediaobject id="I_mediaobject5_d1e6343">
           <imageobject role="print">
             <imagedata fileref="figs/print/jtdg_0524.pdf" format="PDF"/>
@@ -945,89 +947,94 @@ git checkout -b maBranche 73434e4a0af0f51c242f5ae8efc51a88383afc8a</screen>
       </figure>
     </sect2>
     <sect2>
-      <title>Scheduled Build Jobs</title>
-      <para>Another<indexterm class="startofrange" id="ch05-regular" significance="normal"><primary>build triggers</primary><secondary sortas="regular">at regular intervals</secondary></indexterm> strategy is simply to trigger your build job at regular
-      intervals. It is important to note that this is not actually Continuous
-      Integration—it is simply scheduled builds, something you could also do,
-      for example, as a Unix cron job. In the early days of automated builds,
-      and even today in many shops, builds are not run in response to changes
-      committed to version control, but simply on a nightly basis. However, to
-      be effective, a Continuous Integration server should provide feedback
-      much more quickly than once a day.</para>
-      <para>There are nevertheless a few cases where scheduled builds do make
-      sense. This includes very long running build jobs, where quick feedback
-      is less critical. For example, intensive load and performance tests
-      which may take several hours to run, or <indexterm id="I_indexterm5_d1e6361" significance="normal"><primary>Sonar</primary><secondary>frequency of builds</secondary></indexterm>Sonar build jobs. Sonar is an excellent way to keep tabs
-      on code quality metrics across your projects and over time, but the
-      Sonar server only stores one set of data per day, so running Sonar
-      builds more frequently than this is not useful.</para>
-      <para>For all scheduling tasks, Jenkins uses a cron-style syntax,
-      consisting of five fields separated by white space in the following
-      format:</para>
+      <title>Tâches de build périodiques</title>
+      <para>Une autre<indexterm class="startofrange" id="ch05-regular" significance="normal"><primary>déclencheurs de builds</primary><secondary sortas="regular">à intervalles régulières</secondary></indexterm> stratégie est simplement de déclencher une tâche de build à intervalles régulières. Il est important 
+      de faire remarquer qu'il ne s'agit plus d'Intégration Continue ; il 
+      s'agit simplement de builds préiodiques, chose que vous pourriez tout 
+      aussi bien faire, par exemple, avec une tâche cron sous Unix. Aux débuts 
+      des builds automatisés, et toujours aujourd'hui dans beaucoup 
+      d'entreprises, les builds ne sont pas exécutés en réponse aux 
+      changements ajoutés dans le contrôle de version mais seulement la 
+      nuit (build nocturne journalier).Cependant, pour être efficace, le 
+      serveur d'Intégration Continue doit apporter un retour d'information 
+      beaucoup plus rapidement qu'une seule fois par jour.</para>
+      <para>Il y a toutefois quelques cas où des tâches périodiques font 
+      du sens. Cela inclue les très longues tâches de build, où un retour 
+      rapide est moins critique. Par exemple, des tests de charge et de 
+      performance intensifs qui prennent plusieurs heures à s'exécuter ou 
+      <indexterm id="I_indexterm5_d1e6361" significance="normal"><primary>Sonar</primary><secondary>fréquence des builds</secondary></indexterm>des tâches de build Sonar. Sonar est une excellente manière de conserver une 
+      vue sur vos indicateurs de qualité du code à travers vos projets et 
+      au fur et à mesure du temps mais il ne permet de conserver qu'un 
+      seul lot de données par jour. Il n'est donc pas nécessaire d'exécuter 
+      des builds Sonar plus fréquemment que cela.</para>
+      <para>Pour toutes les tâches périodiques, Jenkins utilise une 
+      syntaxe ressemblant à celle de cron. Cette syntaxe est constituée 
+      de cinq champs séparés par des espaces blancs au format suivant :</para>
       <simplelist type="vert">
-        <member>MINUTE HOUR DOM MONTH DOW</member>
+        <member>MINUTES HEURES JOURMOIS MOIS JOURSEMAINE</member>
       </simplelist>
-      <para>with the following values possible for each field:</para>
+      <para>Les valeurs suivantes sont possibles pour chaque champ :</para>
       <variablelist>
         <varlistentry>
-          <term>MINUTE</term>
+          <term>MINUTES</term>
           <listitem>
-            <para>Minutes within the hour (0–59)</para>
+            <para>Les minutes dans une heure (0-59)</para>
           </listitem>
         </varlistentry>
         <varlistentry>
-          <term>HOUR</term>
+          <term>HEURES</term>
           <listitem>
-            <para>The hour of the day (0–23) DOM</para>
+            <para>Les heures dans une journée (0-23)</para>
           </listitem>
         </varlistentry>
         <varlistentry>
-          <term>DOM</term>
+          <term>JOURMOIS</term>
           <listitem>
-            <para>The day of the month (1–31)</para>
+            <para>Le jour dans un mois (1-31)</para>
           </listitem>
         </varlistentry>
         <varlistentry>
-          <term>MONTH</term>
+          <term>MOIS</term>
           <listitem>
-            <para>The month (1–12)</para>
+            <para>Le mois (1-12)</para>
           </listitem>
         </varlistentry>
         <varlistentry>
-          <term>DOW</term>
+          <term>JOURSEMAINE</term>
           <listitem>
-            <para>The day of the week (0–7) where 0 and 7 are Sunday.</para>
+            <para>Le jour de la semaine (0-7) où 0 et 7 représentent le dimanche </para>
           </listitem>
         </varlistentry>
       </variablelist>
-      <para>There are also a few short-cuts:</para>
+      <para>Il existe également quelques raccourcis :</para>
       <itemizedlist>
         <listitem>
-          <para>“*” represents all possible values for a field. For example,
-          “* * * * *” means “once a minute.”</para>
+          <para>“*” représente l'ensemble des valeurs possibles. Par exemple,
+          “* * * * *” signifie “toutes les minutes.”</para>
         </listitem>
         <listitem>
-          <para>You can define ranges using the “M–N” notation. For example
-          “1-5” in the DOW field would mean “Monday to Friday.”</para>
+          <para>Vous pouvez définir des espaces en utilisant la notation “M–N”. Par exemple
+          “1-5” dans le champ JOURSEMAINE signifie “lundi à vendredi.”</para>
         </listitem>
         <listitem>
-          <para>You can use the slash notation to defined skips through a
-          range. For example, “*/5” in the MINUTE field would mean “every five
+          <para>Vous pouvez utiliser la notation slash pour définir des sauts dans un espace. 
+          Par exemple, “*/5” dans le champ MINUTES signifie “toutes les cinq
           minutes.”</para>
         </listitem>
         <listitem>
-          <para>A comma-separated list indicates a list of valid values. For
-          example, “15,45” in the MINUTE field would mean “at 15 and 45
-          minutes past every hour.”</para>
+          <para>Une liste dont les éléments sont séparés par des virgules indique 
+          une liste de valeur prises en compte. Par exemple, “15,45” dans le champ 
+          MINUTES signifie “aux minutes 15 et 45 de chaque heure.”</para>
         </listitem>
         <listitem>
-          <para>You can also use the shorthand values of “@yearly”,
-          “@annually”, “@monthly”, “@weekly”, “@daily”, “@midnight”, and
+          <para>Vous pouvez aussi utiliser les raccourci suivants : “@yearly”,
+          “@annually”, “@monthly”, “@weekly”, “@daily”, “@midnight”, et
           “@hourly”.</para>
         </listitem>
       </itemizedlist>
-      <para>Typically, you will only have one line in this field, but for more
-      complicated scheduling setups, you may need<indexterm id="I_indexterm5_d1e6425" class="endofrange" startref="ch05-regular" significance="normal"><primary/></indexterm> multiple lines.</para>
+      <para>Généralement vous n'aurez besoin que d'une seule ligne dans ce champ mais 
+      pour des configurations de périodicité plus compliquées, vous aurez peut-être 
+      besoin de<indexterm id="I_indexterm5_d1e6425" class="endofrange" startref="ch05-regular" significance="normal"><primary/></indexterm> plusieurs lignes.</para>
     </sect2>
     <sect2>
       <title>Polling the SCM</title>
