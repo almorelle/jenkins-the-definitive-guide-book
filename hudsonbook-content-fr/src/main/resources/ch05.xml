@@ -354,7 +354,7 @@
         </mediaobject>
       </figure>
       <para>Jenkins<indexterm id="I_indexterm5_d1e5352" significance="normal"><primary>tâches de build free-style</primary><secondary>Subversion utilisé avec</secondary><tertiary>exclure des régions du déclenchement</tertiary></indexterm><indexterm id="I_indexterm5_d1e5359" significance="normal"><primary>Subversion</primary><secondary>exclure des régions du déclenchement de builds</secondary></indexterm> vous permet également d'affiner la sélection des 
-      changements qui déclencherons un build. Dans la section avancée, 
+      changements qui déclencheront un build. Dans la section avancée, 
       vous pouvez utiliser le champ Régions exclues pour dire à Jenkins 
       de ne pas déclencher de build si certains fichiers sont modifiés. 
       Ce champ prend en compte une liste d'expressions régulières qui 
@@ -921,18 +921,17 @@ git checkout -b maBranche 73434e4a0af0f51c242f5ae8efc51a88383afc8a</screen>
       séparée qui lancera de l'analyse statique de code, plus gourmande en CPU. 
       Vous remplissez simplement le nom du job précédent dans ce champ. Si la 
       tâche de build peut être lancée par plusieurs autres tâches de build, 
-      listez simplement leurs noms ici en les séparant par ds virgules. Dans 
-      ce cas là, la tâche de build sera déclenchée <emphasis>chaque</emphasis> 
-      fois des tâches de build présentes dans la liste se terminera.</para>
+      listez simplement leurs noms ici en les séparant par des virgules. Dans 
+      ce cas là, la tâche de build sera déclenchée à <emphasis>chaque</emphasis> fois que des tâches 
+      de build présentes dans la liste se termineront.</para>
       <para>Il y a un champ symétrique dans la section des Actions à la suite 
-      du build appelée (logiquement) “Construire d'autres projets”. Ce champ 
-      sera mis à jourautomatiquement dans les tâches de build correspondantes 
-      dès que vous modifierez le champ “Construire à la suite d'autres projets”. 
-      Cependant, au contraire du champ “Construire à la suite d'autres projets”, 
-      ce champ vous donne la possibilité de déclencher un build même si celui-ci 
-      est <indexterm id="I_indexterm5_d1e6325" significance="normal"><primary>tâches de build</primary><secondary>build instable de</secondary><tertiary>déclencher un autre build à la suite de</tertiary></indexterm><indexterm id="I_indexterm5_d1e6332" significance="normal"><primary>builds instables</primary><secondary>déclencher une autre tâche de build à la suite de</secondary></indexterm>instable (voir <xref linkend="fig-hudson-new-job-trigger-build-after"/>). Cela est utile par exemple si vous voulez exécuter une tâche de build 
+      du build appelée “Construire d'autres projets”. Ce champ sera mis à jour 
+      automatiquement dans les tâches de build correspondantes en cohérence 
+      avec ce que vous aurez rempli ici. Cependant, au contraire de “Construire 
+      à la suite d'autres projets”, vous avez la possibilité de déclencher une 
+      autre tâche de build même si le build est <indexterm id="I_indexterm5_d1e6325" significance="normal"><primary>tâches de build</primary><secondary>build instable de</secondary><tertiary>déclencher un autre build à la suite de</tertiary></indexterm><indexterm id="I_indexterm5_d1e6332" significance="normal"><primary>builds instables</primary><secondary>déclencher une autre tâche de build à la suite de</secondary></indexterm>instable (voir <xref linkend="fig-hudson-new-job-trigger-build-after"/>). Cela est utile par exemple si vous voulez exécuter une tâche de build 
       sur des indicateurs de qualité du code même s'il y a des tests unitaires 
-      qui ont échoués dans la première tâche de build.</para>
+      qui ont échoué dans la première tâche de build.</para>
       <figure float="none" id="fig-hudson-new-job-trigger-build-after">
         <title>Déclencher une autre tâche de build même si celle-ci est 
         instable.</title>
@@ -958,10 +957,10 @@ git checkout -b maBranche 73434e4a0af0f51c242f5ae8efc51a88383afc8a</screen>
       nuit (build nocturne journalier). Cependant, pour être efficace, le 
       serveur d'Intégration Continue doit apporter un retour d'information 
       beaucoup plus rapidement qu'une seule fois par jour.</para>
-      <para>Il y a toutefois quelques cas où des tâches périodiques font 
-      du sens. Cela inclus les très longues tâches de build, où un retour 
-      rapide est moins critique. Par exemple, des tests de charge et de 
-      performance intensifs qui prennent plusieurs heures à s'exécuter ou 
+      <para>Il y a toutefois quelques cas où les tâches périodiques auront 
+      une utilité. Cela inclut les très longues tâches de build, lorsqu'un 
+      retour rapide est moins critique. Par exemple, des tests de charge et 
+      de performance intensifs qui prennent plusieurs heures à s'exécuter ou 
       <indexterm id="I_indexterm5_d1e6361" significance="normal"><primary>Sonar</primary><secondary>fréquence des builds</secondary></indexterm>des tâches de build Sonar. Sonar est une excellente manière de conserver une 
       vue sur vos indicateurs de qualité du code à travers vos projets et 
       au fur et à mesure du temps mais il ne permet de conserver qu'un 
@@ -1027,7 +1026,7 @@ git checkout -b maBranche 73434e4a0af0f51c242f5ae8efc51a88383afc8a</screen>
           MINUTES signifie “aux minutes 15 et 45 de chaque heure.”</para>
         </listitem>
         <listitem>
-          <para>Vous pouvez aussi utiliser les raccourci suivants : “@yearly”,
+          <para>Vous pouvez aussi utiliser les raccourcis suivants : “@yearly”,
           “@annually”, “@monthly”, “@weekly”, “@daily”, “@midnight”, et
           “@hourly”.</para>
         </listitem>
@@ -1044,9 +1043,9 @@ git checkout -b maBranche 73434e4a0af0f51c242f5ae8efc51a88383afc8a</screen>
       laquelle vous recevez ce retour et il n'y a pas d'exception en ce qui 
       concerne l'Intégration Continue. C'est pour cette raison que de scruter 
       le SCM est généralement une bien meilleure option.</para>
-      <para>La scrutation implique l'interrogation à intervalles régulières 
+      <para>La scrutation implique l'interrogation à intervalles réguliers 
       du serveur de contrôle de version pour savoir si des changements ont 
-      été ajoutés. Si des changments ont été fait dans le source code du 
+      été ajoutés. Si des changements ont été faits dans le source code du 
       projet, Jenkins lance alors un build. Scruter est habituellement une 
       opération peu coûteuse, vous pouvez donc le faire fréquemment pour vous 
       assurer qu'un build sera lancé rapidement après tout commit de code 
@@ -1077,7 +1076,7 @@ git checkout -b maBranche 73434e4a0af0f51c242f5ae8efc51a88383afc8a</screen>
       une procédure lente et fastidieuse. La meilleure solution est de migrer 
       vers un système de contrôle de version plus moderne tel que Git ou 
       Subversion. La deuxième meilleure solution sera de scruter à des intervalles 
-      beaucoup plus espacées (toutes les 30 minutes par exemple).</para>
+      beaucoup plus espacés (toutes les 30 minutes par exemple).</para>
     </sect2>
     <sect2 id="sect-build-trigger-remote">
       <title>Déclencher des builds à distance</title>
@@ -1096,13 +1095,13 @@ git checkout -b maBranche 73434e4a0af0f51c242f5ae8efc51a88383afc8a</screen>
         </member>
       </simplelist>
       <para>Par exemple, si mon serveur Jenkins est accessible à
-      <emphasis>http://myserver:8080/jenkins</emphasis>, Je pourrais démarrer la tâche de build 
+      <emphasis>http://myserver:8080/jenkins</emphasis>, je pourrais démarrer la tâche de build 
       <emphasis>gameoflife</emphasis> en invoquant l'URL suivante 
       en utilisant un outil tel que <literal moreinfo="none">wget</literal> ou 
       <literal moreinfo="none">curl</literal> :</para>
       <screen format="linespecific">$ <userinput moreinfo="none">wget http://myserver:8080/jenkins/job/gameoflife/build</userinput></screen>
       <para>L'astuce alors est de faire faire cette invocation directement 
-      par votre seveur de contrôle de version dès qu'un changement est commité. 
+      par votre serveur de contrôle de version dès qu'un changement est commité. 
       Les détails dans la manière de faire sont différent pour chaque système 
       de contrôle de version. Dans Subversion, par exemple, vous devrez écrire 
       un script exécuté automatiquement après la soumission de code pour faire 
@@ -1161,7 +1160,7 @@ UUID=`svnlook uuid $REPOS`
       <para>Cela ne fonctionnera pas si les utilisateurs ont besoin d'être authentifiés pour déclencher un build 
       (par exemple si vous utilisez une sécurité par projet ou basée sur une matrice). 
       Dans ce cas, vous aurez besoin de fournir un nom d'utilisateur et un 
-      mor de passe, comme montré dans l'exemple suivant :</para>
+      mot de passe, comme montré dans l'exemple suivant :</para>
       <?dbfo-need height=”1in”?>
       <screen format="linespecific">$ <userinput moreinfo="none">wget http://scott:tiger@myserver:8080/jenkins/job/gameoflife/build</userinput></screen>
       <para><indexterm id="I_indexterm5_d1e6554" class="endofrange" startref="ch05-remote1" significance="normal"><primary/></indexterm><indexterm id="I_indexterm5_d1e6556" class="endofrange" startref="ch05-remote2" significance="normal"><primary/></indexterm>ou :</para>
